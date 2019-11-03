@@ -1,0 +1,15 @@
+uuid: 7dab54bc-6528-43ba-ac71-fcb03c1c19cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.submission_like
+  module:
+    - flag
+id: flag_action.submission_like_unflag
+label: Unlike
+type: node
+plugin: 'flag_action:submission_like_unflag'
+configuration:
+  flag_id: submission_like
+  flag_action: unflag

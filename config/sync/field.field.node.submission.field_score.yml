@@ -1,0 +1,23 @@
+uuid: 5fc2fece-a0ba-4a3d-bf69-13d6927e885d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_score
+    - node.type.submission
+id: node.submission.field_score
+field_name: field_score
+entity_type: node
+bundle: submission
+label: Score
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

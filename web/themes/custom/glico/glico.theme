@@ -166,3 +166,16 @@ function glico_preprocess_file_link(&$variables) {
     $variables['link'] = render($video_build);
   }
 }
+
+/**
+ * Implements hook_preprocess_views_view_field().
+ */
+function glico_preprocess_views_view_field(array &$variables) {
+//  $view = $variables['view'];
+//  $field = $variables['field'];
+//  if ($view->id() == 'submission' && $view->current_display == 'page' && $field->field == 'field_score') {
+//    $row = $variables['row'];
+//    $variables['c_nid'] = $row->nid;
+//    $variables['c_score'] = $row->node__field_score_field_score_value;
+//  }
+}

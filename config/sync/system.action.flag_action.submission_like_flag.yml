@@ -1,0 +1,15 @@
+uuid: f8ab3043-70d7-4e2b-b601-991ebb682199
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.submission_like
+  module:
+    - flag
+id: flag_action.submission_like_flag
+label: Like
+type: node
+plugin: 'flag_action:submission_like_flag'
+configuration:
+  flag_id: submission_like
+  flag_action: flag

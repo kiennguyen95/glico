@@ -1,0 +1,26 @@
+uuid: aa5694a5-69e4-44c2-b493-fdba77925c0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_videozz
+    - node.type.page
+  module:
+    - video
+id: node.page.field_videozz
+field_name: field_videozz
+entity_type: node
+bundle: page
+label: Videozz
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: ''
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: video

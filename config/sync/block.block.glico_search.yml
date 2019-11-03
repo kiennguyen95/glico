@@ -1,0 +1,22 @@
+uuid: 1b12099b-11f9-45d8-b129-79e699b3cfa4
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - glico
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: glico_search
+theme: glico
+region: content
+weight: -2
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

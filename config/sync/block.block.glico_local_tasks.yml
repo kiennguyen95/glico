@@ -1,0 +1,22 @@
+uuid: beb894e6-5b5a-4e7d-9123-eb281f15b1fb
+langcode: en
+status: true
+dependencies:
+  theme:
+    - glico
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: glico_local_tasks
+theme: glico
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

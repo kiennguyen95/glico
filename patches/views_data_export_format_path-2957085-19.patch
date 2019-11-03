@@ -1,0 +1,18 @@
+diff --git a/src/Plugin/views/style/DataExport.php b/src/Plugin/views/style/DataExport.php
+index e6a6e72..45701a7 100644
+--- a/src/Plugin/views/style/DataExport.php
++++ b/src/Plugin/views/style/DataExport.php
+@@ -238,10 +238,12 @@ class DataExport extends Serializer {
+     }
+     $url_options['absolute'] = TRUE;
+
++    $type = $this->displayHandler->getContentType();
++    $url_options['query']['_format'] = $type;
++
+     $url = $url->setOptions($url_options)->toString();
+ 
+     // Add the CSV icon to the view.
+-    $type = $this->displayHandler->getContentType();
+     $this->view->feedIcons[] = [
+       '#theme' => 'feed_icon',
+       '#url' => $url,

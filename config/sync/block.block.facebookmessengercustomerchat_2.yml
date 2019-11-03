@@ -1,0 +1,20 @@
+uuid: d124578b-0581-4557-b0d3-11dbe76a7a71
+langcode: en
+status: true
+dependencies:
+  module:
+    - facebook_mcc
+  theme:
+    - bartik
+id: facebookmessengercustomerchat_2
+theme: bartik
+region: content
+weight: -7
+provider: null
+plugin: facebook_mcc_block
+settings:
+  id: facebook_mcc_block
+  label: 'Facebook Messenger Customer Chat'
+  provider: facebook_mcc
+  label_display: visible
+visibility: {  }

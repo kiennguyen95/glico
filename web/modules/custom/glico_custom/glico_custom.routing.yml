@@ -1,0 +1,7 @@
+glico_custom.submission_manage_form:
+  path: '/submission/manage'
+  defaults:
+    _form: '\Drupal\glico_custom\Form\SubmissionManageForm'
+    _title: 'Submission Manage Form'
+  requirements:
+    _access: 'TRUE'

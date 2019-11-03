@@ -21,6 +21,8 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/admin_toolbar": "^2.0",
+        "drupal/adminimal_admin_toolbar": "^1.10",
+        "drupal/adminimal_theme": "^1.5",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",
         "drupal/devel": "^2.1",
@@ -28,6 +30,8 @@
         "drupal/flag": "^4.0@beta",
         "drupal/social_auth_facebook": "^1.0",
         "drupal/video": "^1.4",
+        "drupal/views_data_export": "^1.0@beta",
+        "drupal/xls_serialization": "^1.1",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
@@ -82,6 +86,11 @@
             "initial": {
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
+            }
+        },
+        "patches": {
+            "drupal/views_data_export": {
+                "Fix format path": "patches/views_data_export_format_path-2957085-19.patch"
             }
         }
     }

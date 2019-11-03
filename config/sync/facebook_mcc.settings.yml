@@ -1,0 +1,16 @@
+facebook_mcc_page_id: '895670567259528'
+facebook_mcc_app_id: '748106385614500'
+facebook_mcc_theme_color: '#3B5998'
+facebook_mcc_logged_in_greeting: Hello
+facebook_mcc_logged_out_greeting: 'Bye bye'
+facebook_mcc_greeting_dialog_display: default
+facebook_mcc_greeting_dialog_delay: ''
+facebook_mcc_language_mapping: ''
+_core:
+  default_config_hash: 7-vz5JCm-5-JqQRa5SKV4KaNEc6Z3gyqyj6wbHvxr8k
+facebook_mcc_language_map:
+  en:
+    localization:
+      - vi_VN
+  local:
+    - vi_VN

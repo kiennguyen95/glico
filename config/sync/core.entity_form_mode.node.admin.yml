@@ -1,0 +1,10 @@
+uuid: d708e733-a6f2-48f0-9906-e8063adf8c84
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.admin
+label: Admin
+targetEntityType: node
+cache: true

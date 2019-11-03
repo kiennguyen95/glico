@@ -1,0 +1,50 @@
+uuid: 07b4577c-68d2-48aa-8e88-a25705168c52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.submission.field_caption
+    - field.field.node.submission.field_score
+    - field.field.node.submission.field_video
+    - node.type.submission
+  module:
+    - user
+    - video
+id: node.submission.default
+targetEntityType: node
+bundle: submission
+mode: default
+content:
+  field_caption:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_video:
+    weight: 2
+    label: above
+    settings:
+      width: '854'
+      height: '480'
+      autoplay: true
+      controls: true
+      loop: false
+      muted: false
+      preload: none
+    third_party_settings: {  }
+    type: video_player
+    region: content
+  flag_submission_like:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_score: true
