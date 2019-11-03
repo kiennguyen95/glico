@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Contains glico_custom.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_help().
+ */
+function glico_custom_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the glico_custom module.
+    case 'help.page.glico_custom':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Glico Custom Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function glico_custom_theme() {
+  return [
+    'glico_custom' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_create
+ */
+function glico_custom_node_create(NodeInterface $node) {
+  if ($node->getType() == 'submission') {
+    $node->title = 'Submission';
+  }
+}
