@@ -45,10 +45,50 @@
  * @ingroup themeable
  */
 #}
-
 <div class="facebook-login-wrapper">
   <a href="{{ path('social_auth_facebook.redirect_to_fb') }}">Login by Facebook</a>
 </div>
-<div class="top-user-wrapper">
+<div id="section-header">
+  <img src="../images/front/logo.png" alt="logo" class="logo">
+  <ul class="header-menu">
+    <li>Trang chủ</li>
+    <li>Thể lệ/giải thưởng</li>
+    <li>Bài dự thi</li>
+    <li>Danh sách trúng giải</li>
+    <li>Thông tin liên hệ</li>
+  </ul>
+</div>
+<div id="section-banner">
+
+</div>
+
+<div id="section-info">
+  <ul class="tabs">
+    <li>Giải thưởng</li>
+    <li>Thể lệ</li>
+    <li>Quy định</li>
+  </ul>
+  <div class="content-prize"></div>
+  <div class="content-rules"></div>
+  <div class="content-regulations"></div>
+</div>
+
+<div id="section-submission">
+
+</div>
+
+<div id="section-top-user">
   {{ page.content }}
+</div>
+
+<div id="section-footer">
+  <p>Thông tin liên hệ:</p>
+  <p>Số 02 Trần Hưng Đạo - Hoàn Kiếm - Hà Nội</p>
+  <p><span>@GlicoIcreoVietnam</span><span>|</span><span>Glico.com.vn</span></p>
+  <p>1900 555599</p>
+  <ul class="social-links">
+    <li><a href="/"></a></li>
+    <li><a href="/"></a></li>
+    <li></li>
+  </ul>
 </div>
