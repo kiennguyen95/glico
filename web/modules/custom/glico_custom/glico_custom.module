@@ -6,7 +6,12 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
 use Drupal\node\NodeInterface;
+
+define('SHORTEN_LINK_SERVICE', 'bit.ly');
+define('ROLE_ADMIN', 'administrator');
+define('ROLE_MOD', 'moderator');
 
 /**
  * Implements hook_help().
@@ -40,6 +45,16 @@ function glico_custom_theme() {
  */
 function glico_custom_node_create(NodeInterface $node) {
   if ($node->getType() == 'submission') {
-    $node->title = 'Submission';
+    $node->title = 'Video dự thi';
+  }
+}
+
+function glico_custom_node_insert(NodeInterface $node) {
+  if ($node->getType() == 'submission') {
+    $nid = $node->id();
+    $node_url = Url::fromRoute('entity.node.canonical', ['node' => $nid], ['absolute' => TRUE])->toString();
+    $node_url = str_replace('node', 'video', $node_url);
+    $node->field_shorten_link = shorten_url($node_url, SHORTEN_LINK_SERVICE);
+    $node->save();
   }
 }

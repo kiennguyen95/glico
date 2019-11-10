@@ -1,0 +1,22 @@
+uuid: 1f2887d2-ce19-4352-be38-0aa37745eb48
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: submission
+label: Submission
+type: 'canonical_entities:node'
+pattern: 'video/[node:nid]'
+selection_criteria:
+  bdbb047f-d845-41d6-ad1c-f3b71220ac54:
+    id: node_type
+    bundles:
+      submission: submission
+    negate: false
+    context_mapping:
+      node: node
+    uuid: bdbb047f-d845-41d6-ad1c-f3b71220ac54
+selection_logic: and
+weight: -5
+relationships: {  }

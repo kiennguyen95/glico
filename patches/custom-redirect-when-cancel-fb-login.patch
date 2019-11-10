@@ -1,0 +1,15 @@
+diff --git a/src/Controller/FacebookAuthController.php b/src/Controller/FacebookAuthController.php
+index 2fb3301..122941c 100644
+--- a/src/Controller/FacebookAuthController.php
++++ b/src/Controller/FacebookAuthController.php
+@@ -132,8 +132,8 @@ class FacebookAuthController extends ControllerBase {
+     // Checks if user cancel login via Facebook.
+     $error = $this->request->getCurrentRequest()->get('error');
+     if ($error == 'access_denied') {
+-      drupal_set_message($this->t('You could not be authenticated.'), 'error');
+-      return $this->redirect('user.login');
++//      drupal_set_message($this->t('You could not be authenticated.'), 'error');
++      return $this->redirect('<front>');
+     }
+ 
+     /* @var \Facebook\Facebook|false $facebook */

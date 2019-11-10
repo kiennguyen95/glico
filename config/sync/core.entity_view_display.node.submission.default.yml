@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.submission.field_caption
     - field.field.node.submission.field_score
+    - field.field.node.submission.field_shorten_link
     - field.field.node.submission.field_video
     - node.type.submission
   module:
@@ -48,3 +49,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_score: true
+  field_shorten_link: true

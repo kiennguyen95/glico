@@ -4,12 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_videozz
     - node.type.page
   module:
     - path
     - text
-    - video
 _core:
   default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
 id: node.page.default
@@ -32,17 +30,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_videozz:
-    weight: 121
-    settings:
-      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
-      uri_scheme: public
-      file_extensions: 'mp4 ogv webm'
-      max_filesize: ''
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: video_upload
-    region: content
   path:
     type: path
     weight: 30

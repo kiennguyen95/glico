@@ -12,5 +12,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'flag submission_like'
   - 'search content'
+  - 'unflag submission_like'
   - 'use text format restricted_html'

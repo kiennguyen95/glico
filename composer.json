@@ -28,6 +28,8 @@
         "drupal/devel": "^2.1",
         "drupal/facebook_mcc": "^1.2",
         "drupal/flag": "^4.0@beta",
+        "drupal/pathauto": "^1.5",
+        "drupal/shorten": "^1.0",
         "drupal/social_auth_facebook": "^1.0",
         "drupal/video": "^1.4",
         "drupal/views_data_export": "^1.0@beta",
@@ -91,6 +93,9 @@
         "patches": {
             "drupal/views_data_export": {
                 "Fix format path": "patches/views_data_export_format_path-2957085-19.patch"
+            },
+            "drupal/social_auth_facebook": {
+                "Custom redirect when cancel": "patches/custom-redirect-when-cancel-fb-login.patch"
             }
         }
     }

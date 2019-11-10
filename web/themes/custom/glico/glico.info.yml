@@ -11,6 +11,8 @@ regions:
   header: Header
   page_top: 'Page top'
   page_bottom: 'Page bottom'
+  highlighted : 'Highlighted'
+  breadcrumb : 'Breadcrumb'
   content: Content
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'

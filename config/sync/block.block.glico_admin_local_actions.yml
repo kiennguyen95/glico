@@ -1,0 +1,20 @@
+uuid: 261fccbd-f6a8-46dc-881a-7ad03eb0441f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - glico_admin
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: glico_admin_local_actions
+theme: glico_admin
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -14,6 +14,7 @@ module:
   contact: 0
   contextual: 0
   csv_serialization: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   devel_generate: 0
@@ -41,12 +42,15 @@ module:
   search: 0
   serialization: 0
   shortcut: 0
+  shorten: 0
+  shorten_cs: 0
   social_api: 0
   social_auth: 0
   social_auth_facebook: 0
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
   tour: 0
   user: 0
@@ -55,6 +59,7 @@ module:
   views_ui: 0
   xls_serialization: 0
   menu_link_content: 1
+  pathauto: 1
   views: 10
   standard: 1000
 theme:
@@ -64,6 +69,7 @@ theme:
   seven: 0
   glico: 0
   adminimal_theme: 0
+  glico_admin: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

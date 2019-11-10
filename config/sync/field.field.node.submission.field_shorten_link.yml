@@ -1,0 +1,19 @@
+uuid: 40ff1583-16e2-47cd-999d-155f19e8f633
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_shorten_link
+    - node.type.submission
+id: node.submission.field_shorten_link
+field_name: field_shorten_link
+entity_type: node
+bundle: submission
+label: 'Shorten link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

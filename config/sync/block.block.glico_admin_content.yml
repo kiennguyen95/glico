@@ -1,0 +1,22 @@
+uuid: 3fbf1a1f-b8c1-481e-8d23-c20c53801817
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - glico_admin
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: glico_admin_content
+theme: glico_admin
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 7c5f555a-8722-46a3-b160-42fa8509bb75
+langcode: en
+status: true
+dependencies:
+  theme:
+    - glico_admin
+id: glico_admin_primary_local_tasks
+theme: glico_admin
+region: header
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

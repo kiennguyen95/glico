@@ -1,0 +1,12 @@
+uuid: 75113f18-5c72-47c0-bb3c-e8fa690c565f
+langcode: en
+status: true
+dependencies: {  }
+id: moderator
+label: Moderator
+weight: 3
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'administer users'
+  - 'view the administration theme'

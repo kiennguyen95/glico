@@ -1,0 +1,8 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/glico.admin.extra.css: {}
+      css/glico.css: {}
+  js:
+    js/glico.js: {}

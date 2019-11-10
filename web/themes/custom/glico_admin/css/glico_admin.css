@@ -1,0 +1,16 @@
+.adminimal-admin-toolbar .toolbar-icon-menu-link-contente84c95d1-67f8-4695-a573-22a168528817:before {
+  background-image: url(../images/admin/barchart.svg);
+}
+
+#submission-manage-form .views-table th {
+  color: #000;
+}
+
+#submission-manage-form .form-item-type {
+  display: inline-block;
+  margin-bottom: 1.5em;
+}
+
+#submission-manage-form a#edit-export {
+  margin-left: 0;
+}
