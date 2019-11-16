@@ -1,3 +1,8 @@
+#part-list > p > img,
+#section-videos > ul > li > video {
+  display: none;
+}
+
 /* COMMON */
 @font-face {
   font-family: 'SVN-Cookies';
@@ -13,6 +18,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html * {
   font: inherit;
 }
@@ -23,13 +32,166 @@ html * {
 }
 
 #section-banner {
+  margin-top: 7vw;
   background-image: url(/themes/custom/glico/images/front/background/bg-1.png);
+  background-position-y: -7vw;
+  background-size: 100% auto;
 }
 
 #section-videos {
   background-image: url(/themes/custom/glico/images/front/background/bg-2.png);
+  background-size: 100% auto;
 }
 
 #section-winning-list {
   background-image: url(/themes/custom/glico/images/front/background/bg-3.png);
+  background-size: 100% auto;
 }
+
+/* SECTION BANNER */
+
+#section-header {
+  display: flex;
+  align-items: center;
+  height: 7vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+body.toolbar-horizontal #section-header {
+  top: 79px;
+}
+
+body.toolbar-vertical #section-header {
+  top: 38px;
+}
+
+#section-header .logo {
+  margin-left: 10.9vw;
+  width: 12vw;
+}
+
+#section-header ul.header-menu {
+  display: flex;
+  margin-left: 7.4vw;
+  margin-top: 0.7vw;
+}
+
+#section-header ul.header-menu li {
+  margin-right: 2.1vw;
+  position: relative;
+}
+
+#section-header ul.header-menu li + li:before {
+  content: "";
+  display: block;
+  border-radius: 0.2vw;
+  height: 2.6vw;
+  position: absolute;
+  left: -1.1vw;
+  top: -1vw;
+  border-left: 0.2vw solid white;
+}
+
+#section-header ul.header-menu li a {
+  color: white;
+  font-size: 1.52vw;
+}
+
+/*=================================STAGE=============================*/
+#part-stage {
+  position: relative;
+  height: 43.4vw;
+}
+
+#part-stage .disco-light {
+  position: absolute;
+  top: -1vw;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 8vw;
+}
+
+#part-stage .music-stream-1 {
+  position: absolute;
+  top: -4.5vw;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+#part-stage .guitar-bear {
+  position: absolute;
+  top: 24.5vw;
+  left: 14.5vw;
+  width: 15vw;
+}
+
+#part-stage .dancing-bear-1 {
+  position: absolute;
+  top: 26.2vw;
+  left: 36.5vw;
+  width: 12.5vw;
+}
+
+#part-stage .dancing-bear-2 {
+  position: absolute;
+  top: 22vw;
+  left: 46.5vw;
+  width: 14vw;
+}
+
+#part-stage .drum-bear {
+  position: absolute;
+  top: 24.2vw;
+  left: 68.2vw;
+  width: 20.5vw;
+}
+
+#part-stage .text-1 {
+  position: absolute;
+  top: 8.95vw;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 25vw;
+  z-index: 2;
+}
+
+#part-stage .text-2 {
+  position: absolute;
+  top: 10.8vw;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 77vw;
+  z-index: 3;
+}
+
+#part-stage .text-2-decor {
+  position: absolute;
+  top: 5.6vw;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 51vw;
+  z-index: 1;
+}
+
+
+
+/*=================================END STAGE=============================*/
+
+
+/*=================================PART INFO=============================*/
+#part-info {
+  background-color: #fff;
+  width: 78vw;
+  border-radius: 2.6vw;
+  margin: 0 auto;
+}
+/*=================================END INFO=============================*/
