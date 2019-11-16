@@ -4,5 +4,6 @@ global-styling:
     theme:
       css/glico.admin.extra.css: {}
       css/glico.css: {}
+      css/reset.css: {}
   js:
     js/glico.js: {}
