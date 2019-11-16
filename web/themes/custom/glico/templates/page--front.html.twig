@@ -52,11 +52,11 @@
 <div id="section-header">
   <img src="/themes/custom/glico/images/front/menu/logo.png" alt="logo" class="logo">
   <ul class="header-menu">
-    <li><a href="#section-banner">Trang chủ</a></li>
+    <li><a href="#">Trang chủ</a></li>
     <li><a href="#part-info">Thể lệ / giải thưởng</a></li>
     <li><a href="#section-videos">Bài dự thi</a></li>
     <li><a href="#section-winning-list">Danh sách trúng giải</a></li>
-    <li><a href="#section-footer">Thông tin liên hệ</a></li>
+    <li><a href="#part-footer">Thông tin liên hệ</a></li>
   </ul>
 </div>
 <div id="section-banner">
@@ -78,77 +78,79 @@
   <div id="part-info">
 
     <ul class="tabs">
-      <li>Giải thưởng</li>
-      <li>Thể lệ</li>
-      <li>Quy định</li>
+      <li data-target="content-prizes" class="is-active">Giải thưởng</li>
+      <li data-target="content-rules">Thể lệ</li>
+      <li data-target="content-regulations">Quy định</li>
     </ul>
 
-    <div class="content-prizes">
+    <div id="content-prizes">
       <div class="row-1">
         <img src="/themes/custom/glico/images/front/rules/bear-1st.png" alt="winner-bear">
         <div class="prize-jackpot">
           <img src="/themes/custom/glico/images/front/rules/prize-jackpot.png" alt="prize-jackpot">
-          <div>
+          <div class="title">
             <div>01</div>
             <div>
               <p>Giải Đặc biệt</p>
               <p>SIÊU SAO TOÀN DIỆN</p>
             </div>
           </div>
-          <p>3 triệu đồng tiền mặt và 5 tháng sử dụng sản phẩm Nội Địa Nhật Bản.</p>
+          <p class="details">3 triệu đồng tiền mặt và 5 tháng sử dụng sản phẩm Nội Địa Nhật Bản.</p>
         </div>
       </div>
       <div class="row-2">
         <div class="prize-1st">
           <img src="/themes/custom/glico/images/front/rules/prize-1st.png" alt="prize-1st">
-          <div>
+          <div class="title">
             <div>02</div>
             <div>
               <p>Giải nhất</p>
               <p>SIÊU NHÍ KHỎE MẠNH</p>
             </div>
           </div>
-          <p>2 triệu đồng tiền mặt và 2 tháng sử dụng sản phẩm Nội Địa Nhật Bản.</p>
+          <p class="details">2 triệu đồng tiền mặt và 2 tháng sử dụng sản phẩm Nội Địa Nhật Bản.</p>
         </div>
         <div class="prize-2nd">
           <img src="/themes/custom/glico/images/front/rules/prize-2nd.png" alt="prize-2nd">
-          <div>
+          <div class="title">
             <div>03</div>
             <div>
               <p>Giải nhì</p>
               <p>THIÊN THẦN TINH ANH</p>
             </div>
           </div>
-          <p>1 triệu đồng tiền mặt và 1 tháng sử dụng sản phẩm Nội Địa Nhật Bản.</p>
+          <p class="details">1 triệu đồng tiền mặt và 1 tháng sử dụng sản phẩm Nội Địa Nhật Bản.</p>
         </div>
         <div class="prize-3rd">
           <img src="/themes/custom/glico/images/front/rules/prize-3rd.png" alt="prize-3rd">
-          <div>
+          <div class="title">
             <div>04</div>
             <div>
               <p>Giải ba</p>
               <p>NGÔI SAO LẮC LƯ</p>
             </div>
           </div>
-          <p>1 tháng sử dụng sản phẩm Nội Địa Nhật Bản.</p>
+          <p class="details">1 tháng sử dụng sản phẩm Nội Địa Nhật Bản.</p>
         </div>
       </div>
       <div class="row-3">
         <div class="prize-weekly">
           <img src="/themes/custom/glico/images/front/rules/prize-weekly.png" alt="prize-weekly">
           <div>
-            <div>80</div>
-            <div>
-              <p>Giải tuần</p>
-              <p>ĐẠI SỨ DINH DƯỠNG</p>
+            <div class="title">
+              <div>80</div>
+              <div>
+                <p>Giải tuần</p>
+                <p>ĐẠI SỨ DINH DƯỠNG</p>
+              </div>
             </div>
+            <p class="details">với quà tặng sản phẩm Nội Địa Nhật Bản cao cấp thuận tiện, đặc biệt dành riêng cho Bố Mẹ và em bé khi đi du lịch.</p>
           </div>
-          <p>với quà tặng sản phẩm Nội Địa Nhật Bản cao cấp thuận tiện, đặc biệt dành riêng cho Bố Mẹ và em bé khi đi du lịch.</p>
         </div>
       </div>
     </div>
 
-    <div class="content-rules">
+    <div id="content-rules" style="display: none">
       <ul class="steps">
         <li>
           <img src="/themes/custom/glico/images/front/rules/rule-step-1.png" alt="step-1">
@@ -166,7 +168,7 @@
       </ul>
     </div>
 
-    <div class="content-regulations">
+    <div id="content-regulations" style="display: none">
       <p>Người chơi đạt giải phải đảm bảo các tiêu chí sau:</p>
       <ul>
         <li>+ Tất cả công dân Việt Nam, hiện đang sinh sống và làm việc tại Việt Nam, hiện đang có con nhỏ 0-4 tuổi.</li>

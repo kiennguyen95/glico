@@ -9,3 +9,5 @@ global-styling:
       css/nht.css: {}
   js:
     js/glico.js: {}
+  dependencies:
+    - core/jquery

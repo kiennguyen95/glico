@@ -5,14 +5,14 @@
 
 /* COMMON */
 @font-face {
-  font-family: 'SVN-Cookies';
+  font-family: SVN-Cookies;
   src: url('/themes/custom/glico/fonts/svn-cookies.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'UTM-Cookies';
+  font-family: UTM-Cookies;
   src: url('/themes/custom/glico/fonts/utm-cookies.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -107,6 +107,10 @@ body.toolbar-vertical #section-header {
   height: 43.4vw;
 }
 
+#part-stage img {
+  pointer-events: none;
+}
+
 #part-stage .disco-light {
   position: absolute;
   top: -1vw;
@@ -193,5 +197,150 @@ body.toolbar-vertical #section-header {
   width: 78vw;
   border-radius: 2.6vw;
   margin: 0 auto;
+  padding-top: 1.8vw;
+  height: 69vw;
+  font-family: UTM-Cookies, cursive;
 }
+
+#part-info ul.tabs {
+  text-align: center;
+}
+
+#part-info ul.tabs li {
+  display: inline-block;
+  font-family: SVN-Cookies, cursive;
+  font-size: 2.16vw;
+  color: white;
+  background-image: url(/themes/custom/glico/images/front/rules/btn-bg-tab.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 21.1vw;
+  height: 5.3vw;
+  line-height: 4.5vw;
+  margin: 0 0.25vw;
+  cursor: pointer;
+}
+
+#part-info ul.tabs li:hover,
+#part-info ul.tabs li.is-active {
+  background-image: url(/themes/custom/glico/images/front/rules/btn-bg-tab-active.png);
+}
+
+#content-prizes .row-1 {
+  display: flex;
+  align-items: flex-end;
+  width: 60vw;
+  margin: 1.5vw auto 3vw;
+}
+
+#content-prizes .row-1 > img {
+  margin-right: 3.5vw;
+  width: 26.2vw;
+}
+
+#content-prizes .row-1 .prize-jackpot > img {
+  margin: 0 auto;
+  display: block;
+  width: 9.3vw;
+}
+
+#content-prizes .title {
+  display: flex;
+  align-items: flex-end;
+  color: #f99ec6;
+}
+
+#content-prizes .row-1 .title > div:first-child {
+  font-size: 5.58vw;
+  margin-right: 0.5vw;
+}
+
+#content-prizes .row-1 .title > div:last-child {
+   font-size: 2.17vw;
+}
+
+#content-prizes .row-1 .title > div > p {
+   line-height: 1.15;
+}
+
+#content-prizes .row-1 p.details {
+  font-size: 1.74vw;
+  color: #2f4a97;
+  line-height: 1.2;
+  margin-top: 0.8vw;
+  text-align: justify;
+}
+
+#content-prizes .row-2 {
+  display: flex;
+}
+
+#content-prizes .row-2 > div {
+  margin: 0 1.9vw;
+}
+
+#content-prizes .row-2 img {
+  display: block;
+  margin: 0 auto 0.5vw;
+  width: 6.4vw;
+}
+
+#content-prizes .row-2 .title > div:first-child,
+#content-prizes .row-3 .title > div:first-child {
+  font-size: 4.34vw;
+  margin-right: 0.5vw;
+}
+
+#content-prizes .row-2 .title > div:last-child,
+#content-prizes .row-3 .title > div:last-child {
+  font-size: 1.85vw;
+}
+
+#content-prizes .row-2 .title > div > p,
+#content-prizes .row-3 .title > div > p {
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+#content-prizes .row-2 p.details {
+  font-size: 1.74vw;
+  color: #2f4a97;
+  line-height: 1.3;
+  margin: 0.8vw auto 0;
+  width: 21vw;
+}
+
+#content-prizes .row-3 .prize-weekly {
+  display: flex;
+  align-items: flex-end;
+  margin: 2vw auto 0;
+  width: 61.5vw;
+}
+
+#content-prizes .row-3 .prize-weekly > img {
+  margin-right: 1vw;
+  width: 9.4vw;
+}
+
+#content-prizes .row-3 p.details {
+  font-size: 1.74vw;
+  color: #2f4a97;
+  line-height: 1.3;
+}
+
+#content-rules {
+  text-align: center;
+  padding-top: 1.5vw;
+  font-size: 1.74vw;
+  color: #f287b7;
+}
+
+#content-rules .highlight {
+  color: #465c9f;
+}
+
+#content-rules .steps li > img {
+  margin: 2.4vw 0 1.5vw;
+}
+
 /*=================================END INFO=============================*/
