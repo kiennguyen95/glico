@@ -2,6 +2,7 @@ global-styling:
   version: VERSION
   css:
     theme:
+      https://fonts.googleapis.com/css?family=Baloo+Tammudu&display=swap : { type: external }
       css/glico.admin.extra.css: {}
       css/glico.css: {}
       css/reset.css: {}
