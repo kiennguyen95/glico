@@ -45,50 +45,170 @@
  * @ingroup themeable
  */
 #}
-<div class="facebook-login-wrapper">
-  <a href="{{ path('social_auth_facebook.redirect_to_fb') }}">Login by Facebook</a>
-</div>
+
+{#<div class="facebook-login-wrapper">#}
+  {#<a href="{{ path('social_auth_facebook.redirect_to_fb') }}">Login by Facebook</a>#}
+{#</div>#}
 <div id="section-header">
-  <img src="../images/front/logo.png" alt="logo" class="logo">
+  <img src="/themes/custom/glico/images/front/menu/logo.png" alt="logo" class="logo">
   <ul class="header-menu">
-    <li>Trang chủ</li>
-    <li>Thể lệ/giải thưởng</li>
-    <li>Bài dự thi</li>
-    <li>Danh sách trúng giải</li>
-    <li>Thông tin liên hệ</li>
+    <li><a href="#section-header">Trang chủ</a></li>
+    <li><a href="#part-info">Thể lệ/giải thưởng</a></li>
+    <li><a href="#section-videos">Bài dự thi</a></li>
+    <li><a href="#section-winning-list">Danh sách trúng giải</a></li>
+    <li><a href="#section-footer">Thông tin liên hệ</a></li>
   </ul>
 </div>
 <div id="section-banner">
 
+  <div id="part-stage"></div>
+
+  <div id="part-info">
+
+    <ul class="tabs">
+      <li>Giải thưởng</li>
+      <li>Thể lệ</li>
+      <li>Quy định</li>
+    </ul>
+
+    <div class="content-prizes">
+      <div class="row-1">
+        <img src="/themes/custom/glico/images/front/rules/bear-1st.png" alt="winner-bear">
+        <div class="prize-jackpot">
+          <img src="/themes/custom/glico/images/front/rules/prize-jackpot.png" alt="prize-jackpot">
+          <div>
+            <div>01</div>
+            <div>
+              <p>Giải Đặc biệt</p>
+              <p>SIÊU SAO TOÀN DIỆN</p>
+            </div>
+          </div>
+          <p>3 triệu đồng tiền mặt và 5 tháng sử dụng sản phẩm Nội Địa Nhật Bản.</p>
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="prize-1st">
+          <img src="/themes/custom/glico/images/front/rules/prize-1st.png" alt="prize-1st">
+          <div>
+            <div>02</div>
+            <div>
+              <p>Giải nhất</p>
+              <p>SIÊU NHÍ KHỎE MẠNH</p>
+            </div>
+          </div>
+          <p>2 triệu đồng tiền mặt và 2 tháng sử dụng sản phẩm Nội Địa Nhật Bản.</p>
+        </div>
+        <div class="prize-2nd">
+          <img src="/themes/custom/glico/images/front/rules/prize-2nd.png" alt="prize-2nd">
+          <div>
+            <div>03</div>
+            <div>
+              <p>Giải nhì</p>
+              <p>THIÊN THẦN TINH ANH</p>
+            </div>
+          </div>
+          <p>1 triệu đồng tiền mặt và 1 tháng sử dụng sản phẩm Nội Địa Nhật Bản.</p>
+        </div>
+        <div class="prize-3rd">
+          <img src="/themes/custom/glico/images/front/rules/prize-3rd.png" alt="prize-3rd">
+          <div>
+            <div>04</div>
+            <div>
+              <p>Giải ba</p>
+              <p>NGÔI SAO LẮC LƯ</p>
+            </div>
+          </div>
+          <p>1 tháng sử dụng sản phẩm Nội Địa Nhật Bản.</p>
+        </div>
+      </div>
+      <div class="row-3">
+        <div class="prize-weekly">
+          <img src="/themes/custom/glico/images/front/rules/prize-weekly.png" alt="prize-weekly">
+          <div>
+            <div>80</div>
+            <div>
+              <p>Giải tuần</p>
+              <p>ĐẠI SỨ DINH DƯỠNG</p>
+            </div>
+          </div>
+          <p>với quà tặng sản phẩm Nội Địa Nhật Bản cao cấp thuận tiện, đặc biệt dành riêng cho Bố Mẹ và em bé khi đi du lịch.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-rules">
+      <ul class="steps">
+        <li>
+          <img src="/themes/custom/glico/images/front/rules/rule-step-1.png" alt="step-1">
+          <p>Bố Mẹ quay 1 đoạn clip bé nhảy hoặc bế/địu bé nhảy theo điệu nhảy <span class="highlight">"Vũ điệu phát triển toàn diện"</span></p>
+        </li>
+        <li>
+          <img src="/themes/custom/glico/images/front/rules/rule-step-1.png" alt="step-2">
+          <p>Bố Mẹ nhấn vào mục <span class="highlight">"Tham gia ngay"</span> và làm theo hướng dẫn của BTC để tiến hành đăng tải bài dự thi.</p>
+        </li>
+        <li>
+          <img src="/themes/custom/glico/images/front/rules/rule-step-1.png" alt="step-3">
+          <p>Sau khi hoàn thành việc đăng tải, Bố Mẹ sẽ nhận được thông báo về đường link dẫn của video.</p>
+          <p>Bố Mẹ hãy nhấn nút “Share” để chia sẻ Bài dự thi về Facebook cá nhân của mình kèm hashtag <span class="highlight">#VŨ_ĐIỆU_PHÁT_TRIỂN_TOÀN_DIỆN #dinhduongcanbang_phattrientoandien #Glico_Icreo</span> và kêu gọi like, share bài dự thi từ website chính thức của cuộc thi.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content-regulations">
+      <p>Người chơi đạt giải phải đảm bảo các tiêu chí sau:</p>
+      <ul>
+        <li>+ Tất cả công dân Việt Nam, hiện đang sinh sống và làm việc tại Việt Nam, hiện đang có con nhỏ 0-4 tuổi.</li>
+        <li>+ BTC có quyền sử dụng hình ảnh tham dự cuộc thi để quảng bá và truyền thông cho chương trình.</li>
+        <li>+ Giải thưởng hiện vật không được quy đổi thành tiền mặt, đã bao gồm thuế Thu nhập cá nhân và không bao gồm chi phí nhận giải (nếu có).</li>
+        <li>+ Sau khi có thông báo trúng giải trên Fanpage Glico Icreo và website chính thức của cuộc thi [link microsite] tối đa 5 ngày, nếu người dự thi không cung cấp đủ thông tin nhận giải theo yêu cầu của BTC sẽ không đủ điều kiện nhận giải nếu bài dự thi đạt giải thưởng.</li>
+        <li>+ BTC không giới hạn số lượng bài thi nên mẹ tham gia càng nhiều càng tăng cơ hội chiến thắng. (Trong trường hợp Bố Mẹ trúng từ 02 giải trở lên, Bố Mẹ sẽ nhận được 01 giải thưởng có giá trị cao hơn).</li>
+        <li>+ BTC không phải chịu trách nhiệm về bản quyền của bài dự thi trong bất cứ trường hợp tranh chấp nào.</li>
+        <li>+ BTC được quyền loại bỏ tư cách tham gia chương trình nếu phát hiện ra các hành vi gian lận, cung cấp sai thông tin cá nhân, bài viết dự thi vi phạm văn hóa thuần phong mỹ tục hoặc pháp luật Việt Nam, bài viết dự thi liên quan đến các yếu tố chính trị mà không cần thông báo trước với người tham gia.</li>
+        <li>+ Trong trường hợp xảy ra tranh chấp, quyết định của BTC là quyết định cuối cùng.</li>
+        <li>+ Trong trường hợp xảy ra tranh chấp, quyết định của BTC là quyết định cuối cùng.</li>
+        <li>+ Tất cả các bài dự thi đăng tải lên website của cuộc thi sẽ thuộc quyền sở hữu của BTC. BTC cam kết bảo vệ thông tin cá nhân của người chơi.</li>
+      </ul>
+    </div>
+  </div>
+  <a href="#" class="btn-join">Tham gia ngay</a>
 </div>
 
-<div id="section-info">
-  <ul class="tabs">
-    <li>Giải thưởng</li>
-    <li>Thể lệ</li>
-    <li>Quy định</li>
+<div id="section-videos">
+  <div class="baloon"></div>
+  <ul class="videos">
+    <li class="video-large"><video src="/themes/custom/glico/videos/front-video-1.mp4"></video></li>
+    <li><video src="/themes/custom/glico/videos/front-video-1.mp4"></video></li>
+    <li><video src="/themes/custom/glico/videos/front-video-1.mp4"></video></li>
+    <li><video src="/themes/custom/glico/videos/front-video-1.mp4"></video></li>
   </ul>
-  <div class="content-prize"></div>
-  <div class="content-rules"></div>
-  <div class="content-regulations"></div>
+  <a href="#" class="btn-discover">Khám phá</a>
 </div>
 
-<div id="section-submission">
+<div id="section-winning-list">
+  <div id="part-list">
+    <div class="micro-bear"></div>
+    {{ page.content }}
+    <ul class="nutrients">
+      <li><img src="/themes/custom/glico/images/front/list/nucle.png" alt="nucleotides"></li>
+      <li><img src="/themes/custom/glico/images/front/list/dha.png" alt="dha"></li>
+      <li><img src="/themes/custom/glico/images/front/list/beta.png" alt="beta-carotene"></li>
+      <li><img src="/themes/custom/glico/images/front/list/axit.png" alt="axit-palmitic"></li>
+      <li><img src="/themes/custom/glico/images/front/list/galacto.png" alt="galacto-oligochiride"></li>
+    </ul>
+    <p><img src="/themes/custom/glico/images/front/list/text-3.png" alt=""></p>
+  </div>
 
+  <div id="part-footer">
+    <p>Thông tin liên hệ:</p>
+    <p>Số 02 Trần Hưng Đạo - Hoàn Kiếm - Hà Nội</p>
+    <p><span>@GlicoIcreoVietnam</span><span>|</span><span>Glico.com.vn</span></p>
+    <p>1900 555599</p>
+    <ul class="social-links">
+      <li><a href="/"></a></li>
+      <li><a href="/"></a></li>
+    </ul>
+    <div class="messenger"></div>
+  </div>
 </div>
 
-<div id="section-top-user">
-  {{ page.content }}
-</div>
 
-<div id="section-footer">
-  <p>Thông tin liên hệ:</p>
-  <p>Số 02 Trần Hưng Đạo - Hoàn Kiếm - Hà Nội</p>
-  <p><span>@GlicoIcreoVietnam</span><span>|</span><span>Glico.com.vn</span></p>
-  <p>1900 555599</p>
-  <ul class="social-links">
-    <li><a href="/"></a></li>
-    <li><a href="/"></a></li>
-    <li></li>
-  </ul>
-</div>
