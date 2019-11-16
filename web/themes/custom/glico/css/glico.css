@@ -27,7 +27,7 @@ html * {
 }
 
 #section-header {
-  font-family: 'Baloo Tammudu', cursive;
+  font-family: Baloo Tammudu, cursive;
   background-color: #f691be;
 }
 
@@ -99,6 +99,11 @@ body.toolbar-vertical #section-header {
 #section-header ul.header-menu li a {
   color: white;
   font-size: 1.52vw;
+  transition: color ease 0.2s;
+}
+
+#section-header ul.header-menu li a:hover {
+  color: #ed1c24;
 }
 
 /*=================================STAGE=============================*/
@@ -219,6 +224,7 @@ body.toolbar-vertical #section-header {
   line-height: 4.5vw;
   margin: 0 0.25vw;
   cursor: pointer;
+  transition: background ease 0.2s;
 }
 
 #part-info ul.tabs li:hover,
@@ -330,7 +336,6 @@ body.toolbar-vertical #section-header {
 
 #content-rules {
   text-align: center;
-  padding-top: 1.5vw;
   font-size: 1.74vw;
   color: #f287b7;
 }
@@ -340,7 +345,65 @@ body.toolbar-vertical #section-header {
 }
 
 #content-rules .steps li > img {
-  margin: 2.4vw 0 1.5vw;
+  margin: 2.4vw 0 1.2vw;
+  width: 8.7vw;
+}
+
+#content-rules .steps li > p {
+  margin: 0 auto;
+  line-height: 1.3;
+}
+
+#content-rules .steps li:nth-child(1) > p {
+  width: 58vw;
+}
+
+#content-rules .steps li:nth-child(2) > p {
+  width: 60vw;
+}
+
+#content-rules .steps li:nth-child(3) > p:nth-child(2) {
+  width: 58vw;
+  margin-bottom: 2vw;
+}
+
+#content-rules .steps li:nth-child(3) > p:last-child {
+  width: 63vw;
+}
+
+#content-regulations  {
+  padding-top: 3vw;
+  width: 68vw;
+  margin: 0 auto;
+}
+
+#content-regulations > p {
+  font-size: 2.18vw;
+  color: #f295bc;
+  margin-bottom: 2.5vw;
+}
+
+#content-regulations > ul li {
+  font-family: Baloo Tammudu, cursive;
+  font-size: 1.52vw;
+  color: #465c9f;
+  line-height: 1.3;
+  text-align: justify;
+  padding-left: 3.7vw;
+  position: relative;
+  margin-bottom: 1.3vw;
+}
+
+#content-regulations > ul li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2.92vw;
+  height: 2.92vw;
+  background-image: url(/themes/custom/glico/images/front/rules/bullet-check.png);
+  background-size: 100%;
+  left: 0;
+  top: calc(50% - 1.7vw);
 }
 
 /*=================================END INFO=============================*/
