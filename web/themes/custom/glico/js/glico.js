@@ -37,28 +37,28 @@ jQuery(document).ready(function ($) {
 
   // confetti
   //canvas init
-  var canvas = document.getElementById("canvas");
-  var ctx = canvas.getContext("2d");
-
-  //canvas dimensions
-  var W = window.innerWidth;
-  var H = window.innerHeight/2;
-  canvas.width = W;
-  canvas.height = H;
-
-  //snowflake particles
-  var mp = 200; //max particles
-  var particles = [];
-  for (var i = 0; i < mp; i++) {
-    particles.push({
-      x: Math.random() * W, //x-coordinate
-      y: Math.random() * H, //y-coordinate
-      r: Math.random() * 15 + 1, //radius
-      d: Math.random() * mp, //density
-      color: "rgba(" + Math.floor((Math.random() * 255)) + ", " + Math.floor((Math.random() * 255)) + ", " + Math.floor((Math.random() * 255)) + ", 0.8)",
-      tilt: Math.floor(Math.random() * 5) - 5
-    });
-  }
+  // var canvas = document.getElementById("canvas");
+  // var ctx = canvas.getContext("2d");
+  //
+  // //canvas dimensions
+  // var W = window.innerWidth;
+  // var H = window.innerHeight/2;
+  // canvas.width = W;
+  // canvas.height = H;
+  //
+  // //snowflake particles
+  // var mp = 200; //max particles
+  // var particles = [];
+  // for (var i = 0; i < mp; i++) {
+  //   particles.push({
+  //     x: Math.random() * W, //x-coordinate
+  //     y: Math.random() * H, //y-coordinate
+  //     r: Math.random() * 15 + 1, //radius
+  //     d: Math.random() * mp, //density
+  //     color: "rgba(" + Math.floor((Math.random() * 255)) + ", " + Math.floor((Math.random() * 255)) + ", " + Math.floor((Math.random() * 255)) + ", 0.8)",
+  //     tilt: Math.floor(Math.random() * 5) - 5
+  //   });
+  // }
 
   //Lets draw the flakes
   function draw() {

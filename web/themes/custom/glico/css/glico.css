@@ -52,6 +52,24 @@ html * {
   margin-top: -39.5vw;
   padding-top: 41.5vw;
   height: 218vw;
+  position: relative;
+}
+
+/*==============================ANCHOR============================*/
+.anchor {
+  position: absolute;
+}
+
+#rules {
+  top: 43.5vw;
+}
+
+#videos {
+  top: 130vw;
+}
+
+#winners {
+  top: 275vw;
 }
 
 /* SECTION BANNER */
@@ -545,6 +563,13 @@ body.toolbar-vertical #section-header {
 
 /*=================================VIDEOS=============================*/
 
+#section-videos .flag {
+  position: absolute;
+  top: 16vw;
+  left: 2vw;
+  width: 73vw;
+}
+
 #section-videos .balloon {
   position: absolute;
   top: -6vw;
@@ -677,12 +702,12 @@ body.toolbar-vertical #section-header {
   background-size: 100%;
   font-family: Baloo Tammudu, cursive;
   font-size: 2.68vw;
-  color: #6694d1;
   padding-top: 35.5vw;
   padding-left: 10vw;
   position: relative;
 }
 
+#section-winning-list .users table,
 #section-winning-list .users a {
   color: #6694d1;
 }
@@ -734,6 +759,10 @@ body.toolbar-vertical #section-header {
 
 #section-winning-list .users table tr:nth-child(n + 11) {
   display: none;
+}
+
+#section-winning-list .view-frontpage-wrapper {
+  position: relative;
 }
 
 #section-winning-list .users .pager {
@@ -831,13 +860,17 @@ body.toolbar-vertical #section-header {
 #part-footer {
   font-family: UTM-Cookies, cursive;
   font-size: 1.81vw;
-  color: black;
+  color: #191919;
   text-align: center;
   margin-top: 53vw;
   line-height: 1.5;
 }
 
-#part-footer p:nth-child(3) {
+#part-footer a {
+  color: #191919;
+}
+
+#part-footer p:nth-child(4) {
   margin-left: -4.5vw;
 }
 
@@ -895,4 +928,16 @@ body.toolbar-vertical #section-header {
 #part-footer .messenger .mess-icon {
   width: 6vw;
   cursor: pointer;
+}
+
+@media all and (max-width: 768px) {
+  #section-header ul.header-menu li + li:before {
+    top: -0.6vw;
+  }
+}
+
+@media all and (max-width: 425px) {
+  #section-header ul.header-menu li + li:before {
+    top: 0.4vw;
+  }
 }

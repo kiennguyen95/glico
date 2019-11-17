@@ -34,6 +34,7 @@
       <css-placeholder token="{{ placeholder_token }}">
       <js-placeholder token="{{ placeholder_token }}">
     {% else %}
+      <link rel="stylesheet" media="all" href="/themes/custom/glico/css/reset.css" />
       <link rel="stylesheet" media="all" href="/themes/custom/glico/css/glico.css" />
     {% endif %}
   </head>
@@ -51,6 +52,7 @@
     {% if user.hasPermission('access toolbar') %}
       <js-bottom-placeholder token="{{ placeholder_token }}">
     {% else %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="/themes/custom/glico/js/glico.js"></script>
     {% endif %}
   </body>
