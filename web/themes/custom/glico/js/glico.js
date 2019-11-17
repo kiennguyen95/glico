@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
 
   //canvas dimensions
   var W = window.innerWidth;
-  var H = window.innerHeight/2;
+  var H = window.innerHeight*0.67;
   canvas.width = W;
   canvas.height = H;
 
@@ -104,33 +104,12 @@ jQuery(document).ready(function ($) {
             color: p.color,
             tilt: p.tilt
           };
-        } else {
-          //If the flake is exitting from the right
-          if (Math.sin(angle) > 0) {
-            //Enter from the left
-            particles[i] = {
-              x: -5,
-              y: Math.random() * H,
-              r: p.r,
-              d: p.d,
-              color: p.color,
-              tilt: p.tilt
-            };
-          } else {
-            //Enter from the right
-            particles[i] = {
-              x: W + 5,
-              y: Math.random() * H,
-              r: p.r,
-              d: p.d,
-              color: p.color,
-              tilt: p.tilt
-            };
-          }
         }
       }
     }
-  }
+  };
   //animation loop
-  setInterval(draw, 20);
+  setInterval(draw, 33);
+
 });
+
