@@ -1,5 +1,4 @@
-#part-list > p > img,
-#section-videos > ul > li > video {
+#part-list > p > img {
   display: none;
 }
 
@@ -36,11 +35,19 @@ html * {
   background-image: url(/themes/custom/glico/images/front/background/bg-1.png);
   background-position-y: -7vw;
   background-size: 100% auto;
+  position: relative;
+  height: 125vw;
+  z-index: 2;
 }
 
 #section-videos {
   background-image: url(/themes/custom/glico/images/front/background/bg-2.png);
   background-size: 100% auto;
+  height: 160vw;
+  margin-top: -10.6vw;
+  position: relative;
+  z-index: 1;
+  padding-top: 22vw;
 }
 
 #section-winning-list {
@@ -109,7 +116,6 @@ body.toolbar-vertical #section-header {
 /*=================================STAGE=============================*/
 #part-stage {
   position: relative;
-  height: 43.4vw;
 }
 
 #part-stage img {
@@ -128,6 +134,14 @@ body.toolbar-vertical #section-header {
 #part-stage .music-stream-1 {
   position: absolute;
   top: -4.5vw;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+#part-stage .music-stream-2 {
+  position: absolute;
+  top: 56vw;
   right: 0;
   left: 0;
   width: 100%;
@@ -192,7 +206,6 @@ body.toolbar-vertical #section-header {
 }
 
 
-
 /*=================================END STAGE=============================*/
 
 
@@ -203,8 +216,12 @@ body.toolbar-vertical #section-header {
   border-radius: 2.6vw;
   margin: 0 auto;
   padding-top: 1.8vw;
-  height: 69vw;
+  height: 68vw;
   font-family: UTM-Cookies, cursive;
+  top: 43.4vw;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 #part-info ul.tabs {
@@ -225,6 +242,7 @@ body.toolbar-vertical #section-header {
   margin: 0 0.25vw;
   cursor: pointer;
   transition: background ease 0.2s;
+  text-shadow: 0 2px 3px #777777;
 }
 
 #part-info ul.tabs li:hover,
@@ -236,7 +254,7 @@ body.toolbar-vertical #section-header {
   display: flex;
   align-items: flex-end;
   width: 60vw;
-  margin: 1.5vw auto 3vw;
+  margin: 1.5vw auto 2.5vw;
 }
 
 #content-prizes .row-1 > img {
@@ -262,11 +280,11 @@ body.toolbar-vertical #section-header {
 }
 
 #content-prizes .row-1 .title > div:last-child {
-   font-size: 2.17vw;
+  font-size: 2.17vw;
 }
 
 #content-prizes .row-1 .title > div > p {
-   line-height: 1.15;
+  line-height: 1.15;
 }
 
 #content-prizes .row-1 p.details {
@@ -371,7 +389,7 @@ body.toolbar-vertical #section-header {
   width: 63vw;
 }
 
-#content-regulations  {
+#content-regulations {
   padding-top: 3vw;
   width: 68vw;
   margin: 0 auto;
@@ -406,4 +424,145 @@ body.toolbar-vertical #section-header {
   top: calc(50% - 1.7vw);
 }
 
+#section-banner .btn-join {
+  font-family: UTM-Cookies, cursive;
+  font-size: 4.74vw;
+  color: white;
+  background-image: url(/themes/custom/glico/images/front/rules/btn-bg-join.png);
+  width: 47vw;
+  height: 17.2vw;
+  background-size: 100%;
+  position: absolute;
+  top: 113vw;
+  left: 0;
+  right: 0;
+  margin: auto;
+  line-height: 21vw;
+  padding-left: 6vw;
+  text-shadow: 0 2px 4px #777777;
+}
+
 /*=================================END INFO=============================*/
+
+/*=================================VIDEOS=============================*/
+
+#section-videos .balloon {
+  position: absolute;
+  top: -6vw;
+  right: 1vw;
+  width: 23.5vw;
+}
+
+#section-videos ul.videos {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin: 0 2vw;
+}
+
+#section-videos ul.videos li {
+  flex: 1 auto;
+  margin-bottom: 6vw;
+}
+
+#section-videos ul.videos li.video-large {
+  flex: 1 100%;
+}
+
+#section-videos ul.videos li .video-wrapper {
+  width: 27vw;
+  height: 27vw;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 0.2vw solid #f691be;
+  position: relative;
+}
+
+#section-videos ul.videos li .video-wrapper:after {
+  content: "";
+  display: block;
+  width: 5.5vw;
+  height: 5.5vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(/themes/custom/glico/images/front/videos/btn-play.png);
+  background-size: 100% 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#section-videos ul.videos li.video-large .video-wrapper:after {
+  width: 8vw;
+  height: 8vw;
+}
+
+#section-videos ul.videos li.video-large .video-wrapper {
+  width: 50.7vw;
+  height: 50.7vw;
+  margin: auto;
+  border: none;
+}
+
+#section-videos ul.videos li .video-frame {
+  width: 27vw;
+  height: 27vw;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+}
+
+#section-videos ul.videos li.video-large .video-frame {
+  width: 54vw;
+  height: 54vw;
+  background-image: url(/themes/custom/glico/images/front/videos/video-large-bg.png);
+  background-size: 100% 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+#section-videos ul.videos li .video-frame:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -1vw;
+  width: 29vw;
+  height: 27.5vw;
+  background-image: url(/themes/custom/glico/images/front/videos/video-small-frame.png);
+  background-size: 100% 100%;
+}
+
+#section-videos ul.videos li.video-large .video-frame:after {
+  top: 1.5vw;
+  left: -3.5vw;
+  width: 60.6vw;
+  height: 54.5vw;
+  background-image: url(/themes/custom/glico/images/front/videos/video-large-frame.png);
+}
+
+#section-videos ul.videos li video {
+  margin-left: 50%;
+  margin-top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+
+
+#section-videos .btn-discover {
+  font-family: UTM-Cookies, cursive;
+  font-size: 5.43vw;
+  color: white;
+  background-image: url(/themes/custom/glico/images/front/videos/btn-bg-discover.png);
+  width: 41.6vw;
+  height: 11vw;
+  display: block;
+  background-size: 100% 100%;
+  margin: 6.8vw auto;
+  line-height: 9vw;
+  padding-left: 8vw;
+  text-shadow: 0 2px 4px #777777;
+}
+
