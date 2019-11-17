@@ -1,5 +1,5 @@
-jQuery(document).ready(function($) {
-  console.log('bb');
+jQuery(document).ready(function ($) {
+  // Tabs control
   $("#part-info ul.tabs li").click(function () {
     $(this).addClass("is-active");
     $(this).siblings("li").removeClass("is-active");
@@ -7,11 +7,26 @@ jQuery(document).ready(function($) {
     $(this).closest("ul").siblings("div:not(#" + $(this).attr("data-target") + ")").hide();
   });
 
+  // Pager control
+  $("#section-winning-list .users .pager span").click(function () {
+    $(this).addClass("is-active");
+    $(this).siblings("span").removeClass("is-active");
+    if ($(this).hasClass("pager-page-1")) {
+      $("#section-winning-list .users table tr:nth-child(-n + 10)").show();
+      $("#section-winning-list .users table tr:nth-child(n + 11)").hide();
+    }
+    else {
+      $("#section-winning-list .users table tr:nth-child(-n + 10)").hide();
+      $("#section-winning-list .users table tr:nth-child(n + 11)").show();
+    }
+  });
+
   //disco light sparkle
-  setInterval(sparkle,100);
+  setInterval(sparkle, 100);
   var imageToggle = 1;
+
   function sparkle() {
-    if(imageToggle ==1 ){
+    if (imageToggle === 1) {
       $('.disco-light-sparkle').hide();
       imageToggle = 0;
     } else {
