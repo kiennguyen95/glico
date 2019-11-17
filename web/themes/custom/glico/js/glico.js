@@ -21,6 +21,9 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  // Play video in modal
+  $(".js-video-button").modalVideo();
+
   //disco light sparkle
   setInterval(sparkle, 100);
   var imageToggle = 1;

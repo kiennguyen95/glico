@@ -3,11 +3,13 @@ global-styling:
   css:
     theme:
       https://fonts.googleapis.com/css?family=Baloo+Tammudu&display=swap : { type: external }
+      css/lib/modal-video.min.css: {}
       css/glico.admin.extra.css: {}
       css/glico.css: {}
       css/reset.css: {}
-      css/nht.css: {}
   js:
+    js/lib/jquery-modal-video.min.js: {}
+    js/lib/modal-video.min.js: {}
     js/glico.js: {}
   dependencies:
     - core/jquery

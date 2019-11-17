@@ -55,6 +55,11 @@ html * {
   position: relative;
 }
 
+/*==============================CUSTOM LIB============================*/
+.modal-video {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 /*==============================ANCHOR============================*/
 .anchor {
   position: absolute;
@@ -604,8 +609,7 @@ body.toolbar-vertical #section-header {
   position: relative;
 }
 
-#section-videos ul.videos li .video-wrapper:after {
-  content: "";
+#section-videos ul.videos li .video-wrapper .js-video-button {
   display: block;
   width: 5.5vw;
   height: 5.5vw;
@@ -619,7 +623,7 @@ body.toolbar-vertical #section-header {
   z-index: 1;
 }
 
-#section-videos ul.videos li.video-large .video-wrapper:after {
+#section-videos ul.videos li.video-large .video-wrapper .js-video-button {
   width: 8vw;
   height: 8vw;
 }
