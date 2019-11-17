@@ -37,28 +37,28 @@ jQuery(document).ready(function ($) {
 
   // confetti
   //canvas init
-  // var canvas = document.getElementById("canvas");
-  // var ctx = canvas.getContext("2d");
-  //
-  // //canvas dimensions
-  // var W = window.innerWidth;
-  // var H = window.innerHeight/2;
-  // canvas.width = W;
-  // canvas.height = H;
-  //
-  // //snowflake particles
-  // var mp = 200; //max particles
-  // var particles = [];
-  // for (var i = 0; i < mp; i++) {
-  //   particles.push({
-  //     x: Math.random() * W, //x-coordinate
-  //     y: Math.random() * H, //y-coordinate
-  //     r: Math.random() * 15 + 1, //radius
-  //     d: Math.random() * mp, //density
-  //     color: "rgba(" + Math.floor((Math.random() * 255)) + ", " + Math.floor((Math.random() * 255)) + ", " + Math.floor((Math.random() * 255)) + ", 0.8)",
-  //     tilt: Math.floor(Math.random() * 5) - 5
-  //   });
-  // }
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+
+  //canvas dimensions
+  var W = window.innerWidth;
+  var H = window.innerHeight*0.67;
+  canvas.width = W;
+  canvas.height = H;
+
+  //snowflake particles
+  var mp = 200; //max particles
+  var particles = [];
+  for (var i = 0; i < mp; i++) {
+    particles.push({
+      x: Math.random() * W, //x-coordinate
+      y: Math.random() * H, //y-coordinate
+      r: Math.random() * 15 + 1, //radius
+      d: Math.random() * mp, //density
+      color: "rgba(" + Math.floor((Math.random() * 255)) + ", " + Math.floor((Math.random() * 255)) + ", " + Math.floor((Math.random() * 255)) + ", 0.8)",
+      tilt: Math.floor(Math.random() * 5) - 5
+    });
+  }
 
   //Lets draw the flakes
   function draw() {
@@ -104,33 +104,12 @@ jQuery(document).ready(function ($) {
             color: p.color,
             tilt: p.tilt
           };
-        } else {
-          //If the flake is exitting from the right
-          if (Math.sin(angle) > 0) {
-            //Enter from the left
-            particles[i] = {
-              x: -5,
-              y: Math.random() * H,
-              r: p.r,
-              d: p.d,
-              color: p.color,
-              tilt: p.tilt
-            };
-          } else {
-            //Enter from the right
-            particles[i] = {
-              x: W + 5,
-              y: Math.random() * H,
-              r: p.r,
-              d: p.d,
-              color: p.color,
-              tilt: p.tilt
-            };
-          }
         }
       }
     }
-  }
+  };
   //animation loop
-  setInterval(draw, 20);
+  setInterval(draw, 33);
+
 });
+
