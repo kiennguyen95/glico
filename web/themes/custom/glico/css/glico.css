@@ -118,6 +118,10 @@ body.toolbar-vertical #section-header {
   position: relative;
 }
 
+#part-stage canvas {
+  display: block;
+}
+
 #part-stage img {
   pointer-events: none;
 }
@@ -129,6 +133,17 @@ body.toolbar-vertical #section-header {
   left: 0;
   margin: auto;
   width: 8vw;
+}
+
+#part-stage .disco-light-sparkle {
+  position: absolute;
+  top: 1vw;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 8vw;
+  animation: sparkle 0.1s;
+  animation-iteration-count: infinite;
 }
 
 #part-stage .music-stream-1 {
@@ -152,6 +167,19 @@ body.toolbar-vertical #section-header {
   top: 24.5vw;
   left: 14.5vw;
   width: 15vw;
+  animation: dancing-guitar-bear 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dancing-guitar-bear {
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
 }
 
 #part-stage .dancing-bear-1 {
@@ -159,6 +187,19 @@ body.toolbar-vertical #section-header {
   top: 26.2vw;
   left: 36.5vw;
   width: 12.5vw;
+  animation: dancing-bear-1 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dancing-bear-1 {
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate(0, -4px);
+    transform: translate(0, -4px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate(0, 2px);
+    transform: translate(0, 2px);
+  }
 }
 
 #part-stage .dancing-bear-2 {
@@ -166,6 +207,19 @@ body.toolbar-vertical #section-header {
   top: 22vw;
   left: 46.5vw;
   width: 14vw;
+  animation: dancing-bear-2 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dancing-bear-2 {
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
 }
 
 #part-stage .drum-bear {
@@ -173,9 +227,22 @@ body.toolbar-vertical #section-header {
   top: 24.2vw;
   left: 68.2vw;
   width: 20.5vw;
+  animation: dancing-drum-bear 3s;
+  animation-iteration-count: infinite;
 }
 
-#part-stage .text-1 {
+@keyframes dancing-drum-bear {
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: rotate(1deg);
+    transform: rotate(1deg);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+  }
+}
+
+#part-stage .text-wrapper-1 {
   position: absolute;
   top: 8.95vw;
   left: 0;
@@ -183,6 +250,39 @@ body.toolbar-vertical #section-header {
   margin: auto;
   width: 25vw;
   z-index: 2;
+  display: inline-block;
+}
+
+#part-stage .text-wrapper-1:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient( to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0.0) 100%);
+  animation: shine 2s 1s;
+  animation-delay: 5s;
+  /*animation-iteration-count: infinite;*/
+}
+
+@keyframes shine {
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+#part-stage .text-1 {
+  width: 100%;
+  animation: zoomIn 3s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes zoomIn {
+  from{transform:scale(0)} to{transform:scale(1)}
 }
 
 #part-stage .text-2 {
