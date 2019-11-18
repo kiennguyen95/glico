@@ -814,13 +814,13 @@ body.toolbar-vertical #section-header {
 }
 
 .add-zoomin-animate {
-  animation: zoomin-animate 2s;
+  animation: zoomin-animate 1s;
   animation-iteration-count: infinite;
 }
 
 @keyframes zoomin-animate {
   to {
-    transform: scale(1.1);
+    transform: scale(1.3);
   }
 }
 
