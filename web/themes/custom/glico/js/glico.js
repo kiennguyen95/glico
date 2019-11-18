@@ -32,6 +32,8 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  $(".music-stream-1-wrapper").css("width", "100%");
+
   // Play video in modal
   $(".js-video-button").modalVideo();
 
@@ -128,8 +130,8 @@ jQuery(document).ready(function ($) {
   $('#part-stage #dancing-bear-2').addClass('add-dancing-bear-2');
   $('#part-stage .guitar-bear').addClass('add-dancing-guitar-bear');
   $('#part-stage #drum-bear').addClass('add-drum-bear');
-  $('#part-stage .music-stream-1').show();
-  $('#part-stage .music-stream-1').addClass('add-music-stream-1');
+  // $('#part-stage .music-stream-1').show();
+  // $('#part-stage .music-stream-1').addClass('add-music-stream-1');
   $('#prize-jackpot-img, #prize-1st-img, #prize-2nd-img, #prize-3rd-img, #prize-weekly-img').hover(function () {
     $(this).addClass('add-prize-animate');
   });

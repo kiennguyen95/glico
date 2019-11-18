@@ -177,8 +177,16 @@ body.toolbar-vertical #section-header {
   animation-iteration-count: infinite;
 }
 
+#part-stage .music-stream-1-wrapper {
+  position: absolute;
+  top: -4.5vw;
+  overflow: hidden;
+  width: 0;
+  transition: width linear 2s;
+}
+
 #part-stage .music-stream-1 {
-  display: none;
+  width: 100vw;
 }
 
 .add-music-stream-1 {
