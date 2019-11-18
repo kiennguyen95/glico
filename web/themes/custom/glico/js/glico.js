@@ -1,4 +1,15 @@
 jQuery(document).ready(function ($) {
+  // Hamburger menu control
+  $("#btn-hamburger").click(function () {
+    $(".header-menu-bg").show();
+    $(".header-menu").slideDown();
+  });
+
+  $(".header-menu-bg, .header-menu li a").click(function () {
+    $(".header-menu-bg").hide();
+    $(".header-menu").slideUp();
+  });
+
   // Tabs control
   $("#part-info ul.tabs li").click(function () {
     $(this).addClass("is-active");
