@@ -44,10 +44,16 @@ jQuery(document).ready(function ($) {
   var ctx = canvas.getContext("2d");
 
   //canvas dimensions
-  var W = window.innerWidth;
+  var W = $('#part-stage').width();
   var H = window.innerHeight*0.67;
-  canvas.width = W;
-  canvas.height = H;
+  $( window ).resize(function() {
+    W = $('#part-stage').width();
+    H = W*0.33;
+    canvas.width = W;
+    canvas.height = H;
+
+    console.log(canvas.width + "  "+ canvas.height);
+  });
 
   //snowflake particles
   var mp = 200; //max particles
@@ -132,7 +138,10 @@ jQuery(document).ready(function ($) {
     $(this).removeClass('add-zoomin-animate');
   })
   AOS.init({
-    duration: 3000
+    duration: 200
+  });
+  $(window).scroll(function(event){
+    console.log($(window).scrollTop());
   });
 });
 
