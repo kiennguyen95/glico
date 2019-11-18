@@ -185,10 +185,6 @@ body.toolbar-vertical #section-header {
   transition: width linear 2s;
 }
 
-#part-stage .music-stream-1 {
-  width: 100vw;
-}
-
 .add-music-stream-1 {
   position: absolute;
   top: -4.5vw;

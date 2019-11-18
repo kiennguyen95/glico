@@ -32,6 +32,7 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  $(".music-stream-1").css("width", $("#part-stage").width() + "px");
   $(".music-stream-1-wrapper").css("width", "100%");
 
   // Play video in modal
@@ -58,14 +59,14 @@ jQuery(document).ready(function ($) {
 
   //canvas dimensions
   var W = $('#part-stage').width();
-  var H = window.innerHeight*0.67;
+  var H = W * 0.33;
+  canvas.width = W;
+  canvas.height = H;
   $( window ).resize(function() {
     W = $('#part-stage').width();
-    H = W*0.33;
+    H = W * 0.33;
     canvas.width = W;
     canvas.height = H;
-
-    console.log(canvas.width + "  "+ canvas.height);
   });
 
   //snowflake particles
