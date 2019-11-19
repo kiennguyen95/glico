@@ -1010,11 +1010,12 @@ body.toolbar-vertical #section-header {
   background-image: url(/themes/custom/glico/images/front/videos/video-large-frame.png);
 }
 
-#section-videos ul.videos li video {
+#section-videos ul.videos li img {
   margin-left: 50%;
   margin-top: 50%;
   transform: translate(-50%, -50%);
   height: 100%;
+  position: relative;
 }
 
 
