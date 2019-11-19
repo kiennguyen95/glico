@@ -1016,6 +1016,9 @@ body.toolbar-vertical #section-header {
   transform: translate(-50%, -50%);
   height: 100%;
   position: relative;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 

@@ -177,12 +177,6 @@ jQuery(document).ready(function ($) {
   })
   $('#content-prizes .prize-details').mouseout(function () {
     $(this).removeClass('add-zoomin-animate');
-  })
-  AOS.init({
-    duration: 200
-  });
-  $(window).scroll(function(event){
-    console.log($(window).scrollTop());
   });
 });
 
