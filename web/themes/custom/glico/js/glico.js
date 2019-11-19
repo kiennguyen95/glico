@@ -1,17 +1,17 @@
 jQuery(document).ready(function ($) {
 
   // Hamburger menu control
-  if ($(window).width() <= 400) {
-    $("#btn-hamburger").click(function () {
-      $(".header-menu-bg").show();
-      $(".header-menu").slideDown();
-    });
+  $("#btn-hamburger").click(function () {
+    $(".header-menu-bg").show();
+    $(".header-menu").slideDown();
+  });
 
     $(".header-menu-bg, .header-menu li a").click(function () {
-      $(".header-menu-bg").hide();
-      $(".header-menu").slideUp();
+      if ($(window).width() <= 400) {
+        $(".header-menu-bg").hide();
+        $(".header-menu").slideUp();
+      }
     });
-  }
 
   // Tabs control
   $("#part-info ul.tabs li").click(function () {
@@ -86,6 +86,12 @@ jQuery(document).ready(function ($) {
   //canvas dimensions
   var W = $('#part-stage').width();
   var H = W * 0.33;
+  var thick = W/100;
+
+  if (W < 500) {
+    thick = W/200;
+  }
+
   canvas.width = W;
   canvas.height = H;
   $( window ).resize(function() {
@@ -93,17 +99,18 @@ jQuery(document).ready(function ($) {
     H = W * 0.33;
     canvas.width = W;
     canvas.height = H;
+
     $(".music-stream-1, .music-stream-2").css("width", W + "px");
   });
 
   //snowflake particles
-  var mp = 200; //max particles
+  var mp = 150; //max particles
   var particles = [];
   for (var i = 0; i < mp; i++) {
     particles.push({
       x: Math.random() * W, //x-coordinate
       y: Math.random() * H, //y-coordinate
-      r: Math.random() * 15 + 1, //radius
+      r: Math.random() * thick + 1, //radius
       d: Math.random() * mp, //density
       color: "rgba(" + Math.floor((Math.random() * 255)) + ", " + Math.floor((Math.random() * 255)) + ", " + Math.floor((Math.random() * 255)) + ", 0.8)",
       tilt: Math.floor(Math.random() * 5) - 5
