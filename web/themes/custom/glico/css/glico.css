@@ -1949,4 +1949,16 @@ body.toolbar-vertical #section-header {
   .modal-video-body {
     max-width: 100%;
   }
+
+  #rules {
+    top: 48.5vw;
+  }
+
+  #videos {
+    top: 185vw;
+  }
+
+  #winners {
+    top: 453vw;
+  }
 }
