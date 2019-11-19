@@ -1328,27 +1328,35 @@ body.toolbar-vertical #section-header {
 }
 
 @keyframes fly-up-5 {
-  from { -webkit-transform: rotate(0deg) translateX(5vw) rotate(0deg); }
-  to   { -webkit-transform: rotate(360deg) translateX(5vw) rotate(-360deg); }
+  from { -webkit-transform: rotate(0deg) translateX(2vw) rotate(0deg); }
+  to   { -webkit-transform: rotate(360deg) translateX(2vw) rotate(-360deg); }
 }
 
 #section-winning-list .nutrients img.text-3 {
-  top: 20vw;
+  top: 23vw;
+  width: 82vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+#section-winning-list .nutrients img.text-3-decor {
+  top: 25vw;
   width: 100%;
 }
 
-#section-winning-list .nutrients .text-wrapper-3 {
-  position: absolute;
-  top: 18vw;
-  width: 10%;
-  height: 20vw;
-  transform: rotate(30deg);
-  right: 89%;
-  background: rgba(255, 255, 255, 0.13);
-  background: linear-gradient( to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0.0) 100%);
-  animation: shine-2 3s;
-  animation-iteration-count: infinite;
-}
+/*#section-winning-list .nutrients .text-wrapper-3 {*/
+  /*position: absolute;*/
+  /*top: 18vw;*/
+  /*width: 10%;*/
+  /*height: 20vw;*/
+  /*transform: rotate(30deg);*/
+  /*right: 89%;*/
+  /*background: rgba(255, 255, 255, 0.13);*/
+  /*background: linear-gradient( to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0.0) 100%);*/
+  /*animation: shine-2 3s;*/
+  /*animation-iteration-count: infinite;*/
+/*}*/
 
 
 @keyframes shine-2 {
