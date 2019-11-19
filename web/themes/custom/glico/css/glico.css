@@ -185,24 +185,17 @@ body.toolbar-vertical #section-header {
   transition: width linear 2s;
 }
 
-.add-music-stream-1 {
-  position: absolute;
-  top: -4.5vw;
-  right: 0;
-  width: 100%;
-  animation: music-fade-1 2s;
-}
-
-@keyframes music-fade-1 {
-  from{left:-300px;opacity:0} to{left:0;opacity:1}
-}
-
-#part-stage .music-stream-2 {
+#part-stage .music-stream-2-wrapper {
   position: absolute;
   top: 56vw;
   right: 0;
-  left: 0;
-  width: 100%;
+  width: 0;
+  transition: width ease-in-out 2s;
+  overflow: hidden;
+}
+
+#part-stage .music-stream-2 {
+  float: right;
 }
 
 #part-stage .guitar-bear {
@@ -1222,10 +1215,18 @@ body.toolbar-vertical #section-header {
   }
 }
 
-#section-winning-list .music-stream-3 {
+#section-winning-list .music-stream-3-wrapper {
   position: absolute;
   top: -27vw;
   right: 0;
+  width: 46vw;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+  transition: height linear 4s;
+}
+
+#section-winning-list .music-stream-3 {
   width: 46vw;
   pointer-events: none;
 }

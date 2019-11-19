@@ -32,8 +32,31 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  $(".music-stream-1").css("width", $("#part-stage").width() + "px");
-  $(".music-stream-1-wrapper").css("width", "100%");
+  $.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementTop < viewportBottom;
+  };
+
+
+  $(".music-stream-1, .music-stream-2").css("width", $("#part-stage").width() + "px");
+  setTimeout(function(){
+    $(".music-stream-1-wrapper").css("width", "100%")
+    ;}, 500);
+
+  $(window).on('resize scroll', function() {
+    if ($("#content-prizes .prize-2nd .details").isInViewport()) {
+      $(".music-stream-2-wrapper").css("width", "100%");
+    }
+
+    if ($("#section-winning-list .view-frontpage-wrapper").isInViewport()) {
+      $(".music-stream-3-wrapper").css("height", "147vw");
+    }
+  });
 
   // Play video in modal
   $(".js-video-button").modalVideo();
@@ -67,6 +90,7 @@ jQuery(document).ready(function ($) {
     H = W * 0.33;
     canvas.width = W;
     canvas.height = H;
+    $(".music-stream-1, .music-stream-2").css("width", W + "px");
   });
 
   //snowflake particles
