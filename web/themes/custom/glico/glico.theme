@@ -33,3 +33,20 @@ function glico_preprocess_views_view(&$variables) {
     $variables['#attached']['library'][] = 'glico/view-discover';
   }
 }
+
+function glico_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  if ($node->bundle() != 'submission') return;
+  $frame = $node->field_frame->value;
+  if ($frame) {
+    $variables['video_frame'] = $frame;
+  }
+  $variables['#attached']['library'][] = 'glico/video-detail';
+}
+
+function glico_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (!empty($node) && $node->bundle() == 'submission') {
+    $suggestions[] = 'page__node__submission';
+  }
+}

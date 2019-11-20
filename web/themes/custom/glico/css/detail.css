@@ -1,0 +1,153 @@
+html {
+  font-size: 62.5%;
+}
+
+.page-node-content {
+  margin-top: 7vw;
+  background-image: url(/themes/custom/glico/images/discover/discovery-bg.png);
+  background-size: 100%;
+}
+
+.submission-content-wrapper {
+  max-width: 1200px;
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  font-family: Baloo Tammudu, cursive;
+}
+
+.submission-content-wrapper .field-video-wrapper {
+  flex-basis: 70%;
+  margin-right: 1%;
+ }
+
+.submission-content-wrapper .field-video-wrapper video[style] {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 1vw;
+}
+
+.field-video {
+  position: relative;
+}
+
+.field-video:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 102%;
+  height: 105%;
+  background-size: 100% 100%;
+  top: -3.5%;
+  left: -2%;
+}
+
+.field-video.video-frame-1:before {
+  background-image: url(/modules/custom/glico_submission/upload/frame-1.png);
+}
+
+.field-video.video-frame-2:before {
+  background-image: url(/modules/custom/glico_submission/upload/frame-2.png);
+}
+
+.field-video.video-frame-3:before {
+  background-image: url(/modules/custom/glico_submission/upload/frame-3.png);
+}
+
+.video-control {
+  margin-top: 2%;
+  padding-top: 1%;
+  border-top: 3px solid white;
+}
+
+.video-control .btn-play,
+.video-control .btn-mute {
+  width: 5rem;
+  height: 5rem;
+  background-size: 100% 100%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.video-control .btn-play {
+  background-image: url(/modules/custom/glico_submission/upload/btn-play-control.png);
+  margin-right: 0.5rem;
+}
+
+.video-control .btn-mute {
+  background-image: url(/modules/custom/glico_submission/upload/btn-mute-control.png);
+}
+
+.video-control .btn-fullscreen {
+  padding: 14px 10px 2px 10px;
+  float: right;
+  display: inline-block;
+  font-size: 2.2rem;
+  color: white;
+  background-color: #F99EC6;
+  border-radius: 25px;
+  border: 2px solid white;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.info-wrapper {
+  background-color: white;
+  flex-grow: 1;
+  border-radius: 3vw;
+  padding: 25px 26px;
+  border: 2px solid #ffd3e8;
+}
+
+.info-wrapper .baby-name {
+  font-size: 2.5rem;
+  color: #6081C4;
+  text-align: center;
+}
+
+.info-wrapper .caption {
+  font-size: 2rem;
+  color: #6081C4;
+  border: 1px solid #F99EC6;
+  padding: 2rem 1rem 1rem 1rem;
+  border-radius: 5rem;
+  margin: 1rem 0 2rem;
+}
+
+.field-flag .flag {
+  display: flex;
+  align-items: center;
+}
+
+.field-flag .flag > a {
+  display: block;
+  width: 4.3rem;
+  height: 4rem;
+  background-size: 100% 100%;
+  margin-right: 1rem;
+}
+
+.field-flag .action-unflag > a {
+  background-image: url(/themes/custom/glico/images/discover/btn-like.png);
+}
+
+.field-flag .action-flag > a {
+  background-image: url(/themes/custom/glico/images/discover/btn-like.png);
+}
+
+.field-flag .flag .like-count,
+.btn-share {
+  font-size: 2rem;
+  color: #F691BE;
+}
+
+.btn-share {
+  font-size: 2rem;
+  padding-left: 5.3rem;
+  background-image: url(/themes/custom/glico/images/discover/btn-share.png);
+  background-size: 4rem 4.3rem;
+  background-repeat: no-repeat;
+  line-height: 5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}

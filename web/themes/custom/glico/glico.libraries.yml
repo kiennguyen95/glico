@@ -33,3 +33,13 @@ frontpage:
     js/front.js: {}
   dependencies:
     - core/jquery
+
+video-detail:
+  version: VERSION
+  css:
+    theme:
+      css/detail.css: {}
+  js:
+    js/detail.js: {}
+  dependencies:
+    - core/jquery
