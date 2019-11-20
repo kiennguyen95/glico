@@ -13,3 +13,23 @@ global-styling:
     js/glico.js: {}
   dependencies:
     - core/jquery
+
+view-discover:
+  version: VERSION
+  css:
+    theme:
+      css/discover.css: {}
+  js:
+    js/discover.js: {}
+  dependencies:
+    - core/jquery
+    -
+frontpage:
+  version: VERSION
+  css:
+    theme:
+      css/front.css: {}
+  js:
+    js/front.js: {}
+  dependencies:
+    - core/jquery
