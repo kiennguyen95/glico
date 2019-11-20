@@ -45,8 +45,39 @@
  * @ingroup themeable
  */
 #}
+<div id="section-header">
+  <img src="/themes/custom/glico/images/front/menu/logo.png" alt="logo" class="logo">
+  <img src="/themes/custom/glico/images/front/menu/icon-bars.png" alt="logo" id="btn-hamburger">
+  <div class="header-menu-bg"></div>
 
-<div class="view-discover-content">
-  {{ page.content }}
+  <ul class="header-menu">
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="#rules">Thể lệ / giải thưởng</a></li>
+    <li><a href="#videos">Bài dự thi</a></li>
+    <li><a href="#winners">Danh sách trúng giải</a></li>
+    <li><a href="#contact">Thông tin liên hệ</a></li>
+  </ul>
 </div>
+
+<div id="content-wrapper">
+  <div id="banner-img">
+    <img src="/themes/custom/glico/images/discover/bear-decor-1.png" alt = "bear-decor-1.png" />
+  </div>
+
+  <div id="btn-wrapper">
+    <div id="btn-myvideo">Video của bố mẹ</div>
+    <div id="btn-newvideo">Video mới nhất</div>
+  </div>
+
+  <div id="video-wrapper">
+    <div class="view-discover-content">
+      {{ page.content }}
+    </div>
+  </div>
+
+  <div id="footer-wrapper">
+
+  </div>
+</div>
+
 

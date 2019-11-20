@@ -1,0 +1,71 @@
+/* COMMON */
+@font-face {
+  font-family: SVN-Cookies;
+  src: url('/themes/custom/glico/fonts/svn-cookies.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: UTM-Cookies;
+  src: url('/themes/custom/glico/fonts/utm-cookies.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html * {
+  font: inherit;
+}
+
+#section-header {
+  font-family: Baloo Tammudu, cursive;
+  background-color: #f691be;
+}
+
+#content-wrapper {
+  margin-top: 7vw;
+  background-image: url(/themes/custom/glico/images/discover/discovery-bg.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: 178vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#content-wrapper #banner-img {
+  width: 27vw;
+  margin-top: 7vw;
+}
+
+#content-wrapper #banner-img img {
+  width: 100%;
+}
+
+#content-wrapper #btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 2vw;
+}
+
+#content-wrapper #btn-wrapper div {
+  display: inline-block;
+  font-family: SVN-Cookies, cursive;
+  font-size: 2.16vw;
+  color: white;
+  background-image: url(/themes/custom/glico/images/front/rules/btn-bg-tab.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 22.1vw;
+  height: 5.3vw;
+  line-height: 4.5vw;
+  margin: 0 0.25vw;
+  cursor: pointer;
+  transition: background ease 0.2s;
+  text-shadow: 0 2px 3px #777777;
+  padding-left: 1.4vw;
+}
