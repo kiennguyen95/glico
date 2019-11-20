@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains glico_submission.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function glico_submission_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the glico_submission module.
+    case 'help.page.glico_submission':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module for Glico site Submission') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function glico_submission_theme() {
+  return [
+    'glico_submission' => [
+      'render element' => 'children',
+    ],
+    'glico_submission_preview' => [
+      'render element' => 'form',
+      'template' => 'submission-preview',
+    ],
+  ];
+}

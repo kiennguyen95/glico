@@ -1,0 +1,19 @@
+uuid: 4747ec69-616a-4c1b-8d5a-13a363f44016
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_baby_name
+    - node.type.submission
+id: node.submission.field_baby_name
+field_name: field_baby_name
+entity_type: node
+bundle: submission
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

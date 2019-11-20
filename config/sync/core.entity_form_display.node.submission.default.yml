@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.submission.field_baby_name
     - field.field.node.submission.field_caption
+    - field.field.node.submission.field_frame
     - field.field.node.submission.field_score
     - field.field.node.submission.field_shorten_link
     - field.field.node.submission.field_video
@@ -22,6 +24,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_baby_name:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_caption:
     weight: 6
     settings:
@@ -29,6 +39,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_frame:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_video:
     weight: 7
