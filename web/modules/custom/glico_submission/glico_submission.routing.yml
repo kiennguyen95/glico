@@ -1,0 +1,7 @@
+glico_submission.glico_submission_form:
+  path: '/glico-submission'
+  defaults:
+    _form: '\Drupal\glico_submission\Form\GlicoSubmissionForm'
+    _title: 'GlicoSubmissionForm'
+  requirements:
+    _access: 'TRUE'

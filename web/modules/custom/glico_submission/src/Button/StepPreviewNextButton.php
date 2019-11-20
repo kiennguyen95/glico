@@ -1,0 +1,40 @@
+<?php
+
+namespace Drupal\glico_submission\Button;
+
+use Drupal\glico_submission\Step\StepsEnum;
+
+/**
+ * Class StepOneNextButton.
+ *
+ * @package Drupal\glico_submission\Button
+ */
+class StepPreviewNextButton extends BaseButton {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getKey() {
+    return 'next';
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function build() {
+    return [
+      '#type' => 'submit',
+      '#value' => t('Gửi bài ngay'),
+      '#goto_step' => StepsEnum::STEP_FINALIZE,
+      '#submit_handler' => 'storeValues',
+    ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getSubmitHandler() {
+    return 'submitIntake';
+  }
+
+}

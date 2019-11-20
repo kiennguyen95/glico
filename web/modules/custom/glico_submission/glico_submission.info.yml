@@ -1,0 +1,5 @@
+name: 'Glico Submission'
+type: module
+description: 'Module for Glico site Submission'
+core: 8.x
+package: 'Custom'
