@@ -34,6 +34,10 @@ function glico_submission_theme() {
     'glico_submission_preview' => [
       'render element' => 'form',
       'template' => 'submission-preview',
+      'variables' => [
+        'variables' => NULL,
+      ],
+
     ],
   ];
 }
