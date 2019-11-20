@@ -1,0 +1,19 @@
+uuid: ad99aef8-bf6e-4ca1-a011-4dfc485afef9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_frame
+    - node.type.submission
+id: node.submission.field_frame
+field_name: field_frame
+entity_type: node
+bundle: submission
+label: Frame
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

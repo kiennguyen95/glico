@@ -4,11 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.submission.field_caption
+    - field.field.node.submission.field_frame
     - field.field.node.submission.field_score
     - field.field.node.submission.field_shorten_link
+    - field.field.node.submission.field_thumbnail
     - field.field.node.submission.field_video
     - node.type.submission
   module:
+    - image
     - user
     - video
 id: node.submission.default
@@ -22,6 +25,23 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_frame:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_thumbnail:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_video:
     weight: 2

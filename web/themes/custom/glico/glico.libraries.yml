@@ -23,7 +23,7 @@ view-discover:
     js/discover.js: {}
   dependencies:
     - core/jquery
-    -
+
 frontpage:
   version: VERSION
   css:

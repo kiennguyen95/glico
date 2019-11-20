@@ -1,33 +1,46 @@
-uuid: c3d325cd-249f-49fb-9b83-80bcbbc13e72
+uuid: 806c192e-fb21-4c0b-b800-9b44bf62539c
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
-    - field.storage.node.field_shorten_link
+    - field.storage.node.field_frame
+    - field.storage.node.field_thumbnail
+    - image.style.large
     - node.type.submission
   module:
+    - image
     - node
-_core:
-  default_config_hash: ezK5Dw8P_4bqJdDQIiecSAJak9p1Wf1yDwHzTutGFuQ
-id: frontpage
-label: Frontpage
-module: node
-description: 'All content promoted to the front page.'
-tag: default
+    - user
+id: discover
+label: Discover
+module: views
+description: ''
+tag: ''
 base_table: node_field_data
 base_field: nid
 core: 8.x
 display:
   default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
-      empty: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
       exposed_form:
         type: basic
         options:
@@ -38,96 +51,43 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            submission: submission
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
       pager:
-        type: some
+        type: mini
         options:
-          items_per_page: 20
+          items_per_page: 6
           offset: 0
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      row:
-        type: 'entity:node'
-        options:
-          view_mode: teaser
-      sorts:
-        field_score_value:
-          id: field_score_value
-          table: node__field_score
-          field: field_score_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
           expose:
-            label: ''
-          plugin_id: standard
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
       style:
-        type: table
+        type: default
+      row:
+        type: fields
         options:
-          row_class: ''
-          default_row_class: true
-      title: ''
-      header: {  }
-      footer: {  }
-      relationships: {  }
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
+        field_thumbnail:
+          id: field_thumbnail
+          table: node__field_thumbnail
+          field: field_thumbnail
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -145,14 +105,14 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 10
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
             strip_tags: false
-            trim: true
+            trim: false
             preserve_tags: ''
             html: false
           element_type: ''
@@ -168,10 +128,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_label
+          type: image
           settings:
-            link: false
-          group_column: target_id
+            image_style: large
+            image_link: content
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -181,13 +142,11 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: uid
           plugin_id: field
-        field_shorten_link:
-          id: field_shorten_link
-          table: node__field_shorten_link
-          field: field_shorten_link
+        field_frame:
+          id: field_frame
+          table: node__field_frame
+          field: field_frame
           relationship: none
           group_type: group
           admin_label: ''
@@ -247,55 +206,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        nothing_1:
-          id: nothing_1
-          table: views
-          field: nothing
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: '|'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: false
-          plugin_id: custom
         nothing:
           id: nothing
           table: views
@@ -307,7 +217,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="{{ field_shorten_link }}" target="_blank">{{ field_shorten_link }}</a>'
+            text: '<div class="video-frame-{{ field_frame }}">{{ field_thumbnail }} <span class="btn-play"></span></div>'
             make_link: false
             path: ''
             absolute: false
@@ -345,34 +255,139 @@ display:
           empty_zero: false
           hide_alter_empty: false
           plugin_id: custom
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            submission: submission
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        uid_current:
+          id: uid_current
+          table: users
+          field: uid_current
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: Current
+            description: ''
+            use_operator: false
+            operator: uid_current_op
+            identifier: uid_current
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              moderator: '0'
+          is_grouped: true
+          group_info:
+            label: Type
+            description: ''
+            identifier: uid_current
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: '1'
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'My video'
+                operator: '='
+                value: '1'
+          entity_type: user
+          plugin_id: user_current
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: Discover
+      header: {  }
+      footer: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<div class=\"empty-message\">\r\n  <p>Rất tiếc bố mẹ chưa có video nào!</p>\r\n  <p>Hãy click vào \"Tham gia ngay\" để tạo cho bé video thật đáng yêu và có cơ hội nhận được các giải thưởng hấp dẫn trị giá lên tới 60 triệu đồng</p>\r\n  <div class=\"bear-decor\"></div>\r\n</div>"
+            format: full_html
+          plugin_id: text
+      relationships:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: author
+          required: false
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
-      use_ajax: false
-    display_plugin: default
-    display_title: Master
-    id: default
-    position: 0
+      use_ajax: true
     cache_metadata:
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
         - 'user.node_grants:view'
-      max-age: -1
+        - user.permissions
       tags:
-        - 'config:field.storage.node.field_shorten_link'
+        - 'config:field.storage.node.field_frame'
+        - 'config:field.storage.node.field_thumbnail'
   page_1:
-    display_options:
-      path: node
-      display_extenders: {  }
     display_plugin: page
-    display_title: Page
     id: page_1
+    display_title: Page
     position: 1
+    display_options:
+      display_extenders: {  }
+      path: video
     cache_metadata:
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
         - 'user.node_grants:view'
-      max-age: -1
+        - user.permissions
       tags:
-        - 'config:field.storage.node.field_shorten_link'
+        - 'config:field.storage.node.field_frame'
+        - 'config:field.storage.node.field_thumbnail'
