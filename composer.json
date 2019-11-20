@@ -97,6 +97,9 @@
             },
             "drupal/social_auth_facebook": {
                 "Custom redirect when cancel": "patches/custom-redirect-when-cancel-fb-login.patch"
+            },
+            "drupal/php_ffmpeg": {
+                "Fix warning": "patches/cache_needs_to_return_string-2851222-7.patch"
             }
         }
     }

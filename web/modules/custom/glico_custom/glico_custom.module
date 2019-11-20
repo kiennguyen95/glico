@@ -8,6 +8,8 @@
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 use Drupal\node\NodeInterface;
+use FFMpeg\Coordinate\TimeCode;
+use Drupal\file\Entity\File;
 
 define('SHORTEN_LINK_SERVICE', 'bit.ly');
 define('ROLE_ADMIN', 'administrator');
@@ -55,6 +57,39 @@ function glico_custom_node_insert(NodeInterface $node) {
     $node_url = Url::fromRoute('entity.node.canonical', ['node' => $nid], ['absolute' => TRUE])->toString();
     $node_url = str_replace('node', 'video', $node_url);
     $node->field_shorten_link = shorten_url($node_url, SHORTEN_LINK_SERVICE);
+
+    $video_url = $node->field_video->entity->getFileUri();
+
+    $real_path = \Drupal::service('file_system')->realpath($video_url);
+
+    $thumbnail_path = 'thumbnail_images/vid_thumb_' . $node->id() . '.png';
+    $thumbnail_real_path = 'sites/default/files/' . $thumbnail_path;
+
+    $drupal_path = 'public://' . $thumbnail_path;
+
+    $ffmpeg = \Drupal::service('php_ffmpeg');
+    $video = $ffmpeg->open($real_path);
+    $video->frame(TimeCode::fromSeconds(1))->save($thumbnail_real_path);
+
+
+    // Check if file exist
+    $files = \Drupal::entityTypeManager()
+      ->getStorage('file')
+      ->loadByProperties(['uri' => $drupal_path]);
+    $file = reset($files);
+
+    // If not then create a file
+    if (!$file) {
+      $file = File::create([
+        'uri' => $drupal_path,
+      ]);
+      $file->save();
+    }
+
+    $node->field_thumbnail[] = [
+      'target_id' => $file->id(),
+    ];
+
     $node->save();
   }
 }

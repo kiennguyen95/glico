@@ -1,0 +1,16 @@
+diff --git a/src/PHPFFMpegCache.php b/src/PHPFFMpegCache.php
+index cee0823..f4ff1a5 100644
+--- a/src/PHPFFMpegCache.php
++++ b/src/PHPFFMpegCache.php
+@@ -41,7 +41,10 @@ class PHPFFMpegCache implements Cache {
+    * @inheritdoc
+    */
+   public function fetch($id) {
+-    return $this->cache->get($this->getCid($id));
++    if ($cache = $this->cache->get($this->getCid($id))) {
++      return $cache->data;
++    }
++    return FALSE;
+   }
+ 
+   /**
