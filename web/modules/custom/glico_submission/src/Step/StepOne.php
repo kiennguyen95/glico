@@ -34,7 +34,7 @@ class StepOne extends BaseStep {
   public function buildStepFormElements() {
     $form['video_file'] = [
       '#type' => 'managed_file',
-      '#title' => t("Bố mẹ hãy tải video của bé lên đây nhé"),
+      '#title' => t("Bố mẹ hãy tải video dự thi của bé lên tại đây nhé"),
       '#required' => TRUE,
       '#default_value' => isset($this->getValues()['video_file']) ? $this->getValues()['video_file'] : NULL,
       '#upload_validators' => array(
@@ -62,7 +62,7 @@ class StepOne extends BaseStep {
   public function getFieldsValidators() {
     return [
       'video_file' => [
-        new ValidatorRequired("Hey stranger, please tell me your name. I would like to get to know you."),
+        new ValidatorRequired("Hãy upload video dự thi để chuyển đến bước tiếp theo"),
       ],
     ];
   }

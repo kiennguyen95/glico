@@ -1,0 +1,6 @@
+submission-form:
+  css:
+    theme:
+      css/submission_form.css: {}
+  js:
+    js/submission_form.js: {}

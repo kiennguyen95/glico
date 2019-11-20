@@ -24,7 +24,7 @@ class StepThreeNextButton extends BaseButton {
   public function build() {
     return [
       '#type' => 'submit',
-      '#value' => t('Next'),
+      '#value' => t('Xong'),
       '#goto_step' => StepsEnum::STEP_PREVIEW,
       '#submit_handler' => 'storeValues',
     ];

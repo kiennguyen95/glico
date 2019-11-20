@@ -33,7 +33,7 @@ class StepFinalize extends BaseStep {
   public function buildStepFormElements() {
 
     $form['completed'] = [
-      '#markup' => t('Bố mẹ hãy chia sẻ bài dự thi để được tính là hợp lệ nhé'),
+      '#markup' => t('Bố mẹ hãy chia sẻ bài dự thi về Facebook để được tính là hợp lệ nhé'),
     ];
 
     return $form;

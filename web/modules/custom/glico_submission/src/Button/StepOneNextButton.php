@@ -24,7 +24,7 @@ class StepOneNextButton extends BaseButton {
   public function build() {
     return [
       '#type' => 'submit',
-      '#value' => t('Next'),
+      '#value' => t('Tiếp theo'),
       '#goto_step' => StepsEnum::STEP_TWO,
       '#submit_handler' => 'storeValues',
     ];

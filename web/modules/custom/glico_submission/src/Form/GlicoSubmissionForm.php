@@ -3,12 +3,17 @@
 namespace Drupal\glico_submission\Form;
 
 use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\CloseModalDialogCommand;
 use Drupal\Core\Ajax\HtmlCommand;
+use Drupal\Core\Ajax\RedirectCommand;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\Core\Url;
 use Drupal\glico_submission\Manager\StepManager;
 use Drupal\glico_submission\Step\StepsEnum;
+use Drupal\node\Entity\Node;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
  * Class GlicoSubmissionForm.
@@ -56,6 +61,8 @@ class GlicoSubmissionForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $form['#attached']['library'][] = 'glico_submission/submission-form';
+
     $form['wrapper-messages'] = [
       '#type' => 'container',
       '#attributes' => [
@@ -138,7 +145,9 @@ class GlicoSubmissionForm extends FormBase {
     // Update Form.
     $response->addCommand(new HtmlCommand('#form-wrapper',
       $form['wrapper']));
-
+    if ($this->step->getStep() === StepsEnum::STEP_FINALIZE) {
+      $response->addCommand(new CloseModalDialogCommand());
+    }
     return $response;
   }
 
@@ -184,8 +193,11 @@ class GlicoSubmissionForm extends FormBase {
     if (isset($triggering_element['#submit_handler'])) {
       $this->{$triggering_element['#submit_handler']}($form, $form_state);
     }
-
-    $form_state->setRebuild(TRUE);
+    if ($this->step->getStep() !== StepsEnum::STEP_FINALIZE) {
+      $form_state->setRebuild(TRUE);
+    } else {
+      $form_state->setRebuild(FALSE);
+    }
   }
 
   /**
@@ -210,8 +222,8 @@ class GlicoSubmissionForm extends FormBase {
     if (isset($input['baby_name'])) {
       $tempstore->set('baby_name', $input['baby_name']);
     }
-    if (isset($input['comment'])) {
-      $tempstore->set('comment', $input['comment']);
+    if (isset($input['caption'])) {
+      $tempstore->set('caption', $input['caption']);
     }
   }
 
@@ -229,8 +241,15 @@ class GlicoSubmissionForm extends FormBase {
     $file = $tempstore->get('file');
     $frame = $tempstore->get('frame');
     $baby_name = $tempstore->get('baby_name');
-    $comment = $tempstore->get('comment');
-    $zz = 1;
+    $caption = $tempstore->get('caption');
+    Node::create([
+      'type'        => 'submission',
+      'title'       => $baby_name,
+      'field_frame' => $frame,
+      'field_caption' => $caption,
+      'field_video' => [
+        'target_id' => $file,
+      ],
+    ])->save();
   }
-
 }

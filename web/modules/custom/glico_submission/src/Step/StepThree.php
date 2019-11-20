@@ -51,7 +51,7 @@ class StepThree extends BaseStep {
       '#required' => TRUE,
     ];
 
-    $form['name_and_comment']['comment'] = [
+    $form['name_and_comment']['caption'] = [
       '#type' => 'textarea',
       '#attributes' => array(
         'placeholder' => t('Bố mẹ hãy chia sẻ cảm nhận về video này nhé!'),
