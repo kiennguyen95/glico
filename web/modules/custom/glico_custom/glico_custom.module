@@ -69,7 +69,7 @@ function glico_custom_node_insert(NodeInterface $node) {
 
     $ffmpeg = \Drupal::service('php_ffmpeg');
     $video = $ffmpeg->open($real_path);
-    $video->frame(TimeCode::fromSeconds(1))->save($thumbnail_real_path);
+//    $video->frame(TimeCode::fromSeconds(1))->save($thumbnail_real_path);
 
 
     // Check if file exist
