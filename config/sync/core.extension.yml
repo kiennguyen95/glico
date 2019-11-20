@@ -27,6 +27,7 @@ module:
   filter: 0
   flag: 0
   glico_custom: 0
+  glico_submission: 0
   help: 0
   history: 0
   image: 0
