@@ -5,3 +5,11 @@ glico_custom.submission_manage_form:
     _title: 'Submissions Manager'
   requirements:
     _custom_access: '\Drupal\glico_custom\Form\SubmissionManageForm::access'
+
+glico_custom.test_controller_test:
+  path: '/test'
+  defaults:
+    _controller: '\Drupal\glico_custom\Controller\TestController::test'
+    _title: 'test'
+  requirements:
+    _permission: 'access content'
