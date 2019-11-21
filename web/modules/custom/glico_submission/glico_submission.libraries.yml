@@ -2,6 +2,7 @@ submission-form:
   css:
     theme:
       css/submission_form.css: {}
+      css/submission_form_support.css: {}
   js:
     js/submission_form.js: {}
   dependencies:
