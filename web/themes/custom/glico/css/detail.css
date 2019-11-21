@@ -61,6 +61,14 @@ html {
 
 .field-video.video-frame-3:before {
   background-image: url(/modules/custom/glico_submission/upload/frame-3.png);
+  width: 106%;
+  height: 110%;
+  top: -5.1%;
+  left: -2.5%;
+}
+
+.submission-content-wrapper .field-video-wrapper .video-frame-3 video[style] {
+  border-radius: 8%;
 }
 
 .video-control {
