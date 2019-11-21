@@ -43,6 +43,11 @@ class StepTwo extends BaseStep {
       '#required' => TRUE,
     ];
 
+    $form['pick_frame'] = [
+      '#theme' => 'glico_pick_frame',
+      '#variables' => NULL,
+    ];
+
     return $form;
   }
 

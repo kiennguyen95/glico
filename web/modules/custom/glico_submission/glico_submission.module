@@ -37,7 +37,13 @@ function glico_submission_theme() {
       'variables' => [
         'variables' => NULL,
       ],
-
+    ],
+    'glico_pick_frame' => [
+      'render element' => 'form',
+      'template' => 'pick-frame',
+      'variables' => [
+        'variables' => NULL,
+      ],
     ],
   ];
 }
