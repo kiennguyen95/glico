@@ -8,7 +8,8 @@ body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-titlebar {
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .form-item-video-file label,
-body .ui-dialog.ui-widget.ui-widget-content .form-item-frame label {
+body .ui-dialog.ui-widget.ui-widget-content .form-item-frame label,
+body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-name-and-comment"] span.fieldset-legend {
   font-size: 1.2rem;
   color: #DB75AF;
 }
@@ -17,10 +18,23 @@ body .ui-dialog.ui-widget.ui-widget-content .form-item-video-file .form-managed-
   height: 25%;
 }
 
+body .ui-dialog.ui-widget.ui-widget-content .pick-frame-col-left {
+  float: left;
+  width: 50%;
+}
+
+body .ui-dialog.ui-widget.ui-widget-content .pick-frame-col-right {
+  float: right;
+  width: 50%;
+}
+
 body .ui-dialog.ui-widget.ui-widget-content .pick-frame {
   background-color: #FFD4E8;
-  width: 25%;
-  height: 100px;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  width: 200px;
+  height: 117px;
+  margin: 10px 20px;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .pick-frame.frame-1 {
@@ -36,4 +50,49 @@ body .ui-dialog.ui-widget.ui-widget-content .pick-frame.frame-2 {
 body .ui-dialog.ui-widget.ui-widget-content .pick-frame.frame-3 {
   background-image: url("../upload/frame-3.png");
   background-size: cover;
+}
+
+body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content {
+  text-align: center;
+}
+
+body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions {
+  float: none;
+}
+
+body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions button.submission-btn,
+body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions button.submission-to-preview-btn {
+  width: 150px;
+  font-size: 0.8rem;
+  height: 35px;
+  border-radius: 15px;
+  background-color: #F99EC7;
+  color: #FFFFFF;
+  font-weight: 900;
+}
+
+body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-name-and-comment"] div.fieldset-wrapper {
+  margin: 30px;
+}
+
+body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-baby-name"] {
+  height: 35px;
+  width: 100%;
+  border-radius: 20px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #5D5D5D;
+}
+
+body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-caption"] {
+  height: 300px;
+  width: 100%;
+  border-radius: 20px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #5D5D5D;
 }

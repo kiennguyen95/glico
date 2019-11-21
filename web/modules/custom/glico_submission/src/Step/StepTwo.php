@@ -40,7 +40,6 @@ class StepTwo extends BaseStep {
       '#default_value' => isset($this->getValues()['interests']) ? $this->getValues()['interests'] : [],
       '#size' => 60,
       '#maxlength' => 128,
-      '#required' => TRUE,
     ];
 
     $form['pick_frame'] = [

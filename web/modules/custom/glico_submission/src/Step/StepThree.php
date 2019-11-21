@@ -26,7 +26,6 @@ class StepThree extends BaseStep {
    */
   public function getButtons() {
     return [
-      new StepThreePreviousButton(),
       new StepThreeNextButton(),
     ];
   }

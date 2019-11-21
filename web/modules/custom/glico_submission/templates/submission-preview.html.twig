@@ -2,22 +2,24 @@
 {{ form.form_token }}
 {{ form.form_id }}
 
-<div class="right-part">
-    <div class="thumbnail-img {{ variables.frame }}">
-        <video src="{{ variables.video_src }}" alt="" controls>
+<div class="preview-wrapper">
+    <div class="right-part">
+        <div class="thumbnail-img {{ variables.frame }}">
+            <video src="{{ variables.video_src }}" alt="" controls>
+        </div>
     </div>
-</div>
-<div class="left-par">
-    <div class="submitter">
-        {{ variables.submitter.name }}
-    </div>
-    <div class="submission-detail">
-        <p>VŨ ĐIỆU</p>
-        <p>PHÁT TRIỂN TOÀN DIỆN</p>
-        <p>CỦA BÉ</p>
-        {{ variables.title }}
-        <div class="caption">
-            {{ variables.caption }}
+    <div class="left-par">
+        <div class="submitter">
+            {{ variables.submitter.name }}
+        </div>
+        <div class="submission-detail">
+            <p>VŨ ĐIỆU</p>
+            <p>PHÁT TRIỂN TOÀN DIỆN</p>
+            <p>CỦA BÉ</p>
+            {{ variables.title }}
+            <div class="caption">
+                {{ variables.caption }}
+            </div>
         </div>
     </div>
 </div>

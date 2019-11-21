@@ -24,9 +24,12 @@ class StepTwoPreviousButton extends BaseButton {
   public function build() {
     return [
       '#type' => 'submit',
-      '#value' => t('Previous'),
+      '#value' => t('Chọn lại video'),
       '#goto_step' => StepsEnum::STEP_ONE,
       '#skip_validation' => TRUE,
+      '#attributes' => [
+        'class' => ['submission-btn'],
+      ],
     ];
   }
 

@@ -27,6 +27,9 @@ class StepThreeNextButton extends BaseButton {
       '#value' => t('Xong'),
       '#goto_step' => StepsEnum::STEP_PREVIEW,
       '#submit_handler' => 'storeValues',
+      '#attributes' => [
+        'class' => ['submission-to-preview-btn'],
+      ],
     ];
   }
 }
