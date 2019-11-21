@@ -39,6 +39,6 @@
 {% set attributes = attributes.setAttribute('rel', 'nofollow') %}
 {% set count = flagcount(flag, flaggable) %}
 
-<div class="{{classes|join(' ')}}"><a{{ attributes }}></a><div class="like-count">{% if count > 0 %} {{ count }} người thích{% else %}Chưa có người thích{% endif %}</div>
+<div class="{{classes|join(' ')}}"><a{{ attributes }}></a><div class="like-count" data-like-count="{{ count }}">{% if count > 0 %} {{ count }} người thích{% else %}Chưa có người thích{% endif %}</div>
 </div>
 {% endspaceless %}

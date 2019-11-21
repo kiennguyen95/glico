@@ -8,15 +8,11 @@
         href: window.location.href,
         hashtag: '#GlicoDance',
         quote: 'quote',
-      }, function(response) {
-        // if(response && response.post_id){
-        //
-        // }
-        // else{}
-        // if (typeof response !== 'undefined') {
-        //   alert('Thanks for sharing');
-        // }
-      });
+      }, function(response){});
+    });
+
+    $('.video-control .btn-play').click(function(){
+      $('.field-video video').get(0).play();
     });
   });
 

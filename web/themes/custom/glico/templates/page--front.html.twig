@@ -46,9 +46,11 @@
  */
 #}
 {{ attach_library('glico/frontpage') }}
-{#<div class="facebook-login-wrapper">#}
-  {#<a href="{{ path('social_auth_facebook.redirect_to_fb') }}">Login by Facebook</a>#}
-{#</div>#}
+
+{% if redirected %}
+  <div id="redirected" style="display: none"></div>
+{% endif %}
+
 <div id="rules" class="anchor"></div>
 <div id="videos" class="anchor"></div>
 <div id="winners" class="anchor"></div>
@@ -220,12 +222,21 @@
     </div>
   </div>
   <div class="btn-join-glow"></div>
-  <a href="glico-submission" class="use-ajax btn-join" data-dialog-type="modal" data-dialog-options='{"width":500, "height":550}'>Tham gia ngay</a>
+  {% if logged_in %}
+    <a href="{{ path('glico_submission.glico_submission_form') }}" class="use-ajax btn-join" data-dialog-type="modal" data-dialog-options='{"width":500, "height":550}'>Tham gia ngay</a>
+  {% else %}
+    <a href="{{ path('social_auth_facebook.redirect_to_fb') }}" class="btn-join">Tham gia ngay</a>
+  {% endif %}
 </div>
 
 <div id="section-videos">
-  <div class="btn-join-glow-sp"></div>
-  <a href="#" class="btn-join-sp">Tham gia ngay</a>
+  <div class="btn-join-glow-sp" ></div>
+  {% if logged_in %}
+    <a href="{{ path('glico_submission.glico_submission_form') }}" class="use-ajax btn-join-sp" data-dialog-type="modal" data-dialog-options='{"width":500, "height":550}'>Tham gia ngay</a>
+  {% else %}
+    <a href="{{ path('social_auth_facebook.redirect_to_fb') }}" class="btn-join-sp">Tham gia ngay</a>
+  {% endif %}
+
   <img src="/themes/custom/glico/images/front/videos/flag.png" alt class="flag">
   <div id="balloon-bear" class="group-image">
     <img src="/themes/custom/glico/images/front/videos/balloon-bear-hand-1.png" alt class="balloon-bear-hand-1">
@@ -238,8 +249,8 @@
     <li class="video-large">
       <div class="video-frame">
         <div class="video-wrapper">
-          <img src="themes/custom/glico/images/front/videos/video-thumbnail.jpg">
-          <a href="#" class="js-video-button" data-channel="video" data-video-url="/themes/custom/glico/videos/front-video-1.mp4"></a>
+          <img src="themes/custom/glico/videos/video-thumbnail-1.png">
+          <a href="#" class="js-video-button" data-channel="video" data-video-url="/themes/custom/glico/videos/front-video-1.webm"></a>
         </div>
       </div>
     </li>
@@ -247,7 +258,7 @@
       <div class="video-frame">
         <div class="video-wrapper">
           <img src="themes/custom/glico/images/front/videos/video-thumbnail.jpg">
-          <a href="#" class="js-video-button" data-channel="video" data-video-url="/themes/custom/glico/videos/front-video-1.mp4"></a>
+          <a href="#" class="js-video-button" data-channel="video" data-video-url="/themes/custom/glico/videos/front-video-sample.mp4"></a>
         </div>
       </div>
     </li>
@@ -255,7 +266,7 @@
       <div class="video-frame">
         <div class="video-wrapper">
           <img src="themes/custom/glico/images/front/videos/video-thumbnail.jpg">
-          <a href="#" class="js-video-button" data-channel="video" data-video-url="/themes/custom/glico/videos/front-video-1.mp4"></a>
+          <a href="#" class="js-video-button" data-channel="video" data-video-url="/themes/custom/glico/videos/front-video-sample.mp4"></a>
         </div>
       </div>
     </li>
@@ -263,7 +274,7 @@
       <div class="video-frame">
         <div class="video-wrapper">
           <img src="themes/custom/glico/images/front/videos/video-thumbnail.jpg">
-          <a href="#" class="js-video-button" data-channel="video" data-video-url="/themes/custom/glico/videos/front-video-1.mp4"></a>
+          <a href="#" class="js-video-button" data-channel="video" data-video-url="/themes/custom/glico/videos/front-video-sample.mp4"></a>
         </div>
       </div>
     </li>

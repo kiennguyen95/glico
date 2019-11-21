@@ -2,6 +2,9 @@
 
   $(document).ready(function ($) {
 
+    if ($("#redirected").length) {
+      $(".btn-join").click();
+    }
     // Tabs control
     $("#part-info ul.tabs li").click(function () {
       $(this).addClass("is-active");

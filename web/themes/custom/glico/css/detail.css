@@ -58,6 +58,7 @@ html {
   margin-top: 2%;
   padding-top: 1%;
   border-top: 3px solid white;
+  position: relative;
 }
 
 .video-control .btn-play,
@@ -78,6 +79,14 @@ html {
   background-image: url(/modules/custom/glico_submission/upload/btn-mute-control.png);
 }
 
+.video-control .text-time {
+  font-size: 2.5rem;
+  color: white;
+  position: absolute;
+  top: 2.5rem;
+  margin-left: 1.5rem;
+}
+
 .video-control .btn-fullscreen {
   padding: 14px 10px 2px 10px;
   float: right;
@@ -89,6 +98,7 @@ html {
   border: 2px solid white;
   margin-top: 2px;
   cursor: pointer;
+  height: 46rem;
 }
 
 .info-wrapper {
@@ -136,12 +146,12 @@ html {
 }
 
 .field-flag .flag .like-count,
-.btn-share {
+#btn-share {
   font-size: 2rem;
   color: #F691BE;
 }
 
-.btn-share {
+#btn-share {
   font-size: 2rem;
   padding-left: 5.3rem;
   background-image: url(/themes/custom/glico/images/discover/btn-share.png);
@@ -150,4 +160,8 @@ html {
   line-height: 5rem;
   margin-top: 1rem;
   cursor: pointer;
+}
+
+.ajax-progress-throbber {
+  display: none;
 }
