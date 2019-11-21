@@ -44,6 +44,10 @@ class StepOne extends BaseStep {
       ),
     ];
 
+    $form['submit-video'] = [
+      '#markup' => '<div class="submit-video"><span id="submit-video-submission">Chọn video để tải lên</span></div>'
+    ];
+
     return $form;
   }
 
