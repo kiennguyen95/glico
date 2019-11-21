@@ -54,6 +54,7 @@ body .ui-dialog.ui-widget.ui-widget-content .pick-frame.frame-3 {
 
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content {
   text-align: center;
+  background-color: #FEE5FB;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions {
@@ -95,4 +96,22 @@ body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-caption"
   font-size: 0.8rem;
   font-weight: 900;
   color: #5D5D5D;
+}
+
+body .ui-dialog.ui-widget.ui-widget-content div.preview-wrapper {
+  display: flex;
+}
+
+body .ui-dialog.ui-widget.ui-widget-content div.preview-wrapper .left-part video {
+  width: 95%;
+}
+
+body .ui-dialog.ui-widget.ui-widget-content div.preview-wrapper .right-part {
+  background-color: white;
+  flex-grow: 1;
+  border-radius: 3vw;
+  padding: 20px 26px;
+  border: 2px solid #ffd3e8;
+  height: 15rem;
+  max-width: 29%;
 }

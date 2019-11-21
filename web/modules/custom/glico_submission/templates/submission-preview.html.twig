@@ -3,13 +3,14 @@
 {{ form.form_id }}
 
 <div class="preview-wrapper">
-    <div class="right-part">
+    <div class="left-part">
         <div class="thumbnail-img {{ variables.frame }}">
             <video src="{{ variables.video_src }}" alt="" controls>
         </div>
     </div>
-    <div class="left-par">
+    <div class="right-part">
         <div class="submitter">
+            <img src="{{ variables.submitter.img_src }}" alt="">
             {{ variables.submitter.name }}
         </div>
         <div class="submission-detail">
