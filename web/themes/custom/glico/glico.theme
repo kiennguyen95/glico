@@ -38,6 +38,18 @@ function glico_preprocess_node(&$variables) {
   $node = $variables['node'];
   if ($node->bundle() != 'submission') return;
   $frame = $node->field_frame->value;
+  $user = $node->getOwner();
+  $username = $user->getUsername();
+
+  if (!$user->user_picture->isEmpty()) {
+    $avatar_url = file_url_transform_relative(file_create_url($user->user_picture->entity->getFileUri()));
+  } else {
+    $avatar_url = '/themes/custom/glico/images/other/no-avatar.png';
+  }
+
+  $variables['username'] = $username;
+  $variables['avatar_url'] = $avatar_url;
+
   if ($frame) {
     $variables['video_frame'] = $frame;
   }

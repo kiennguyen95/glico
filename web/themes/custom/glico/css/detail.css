@@ -104,15 +104,29 @@ html {
   background-color: white;
   flex-grow: 1;
   border-radius: 3vw;
-  padding: 25px 26px;
+  padding: 20px 26px;
   border: 2px solid #ffd3e8;
-  height: 46rem;
+  height: 55rem;
+  max-width: 29%;
+}
+
+.info-wrapper .baby-name-label {
+  font-size: 2.5rem;
+  color: #F99EC7;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .info-wrapper .baby-name {
   font-size: 2.5rem;
-  color: #6081C4;
+  color: white;
   text-align: center;
+  background-color: #F99EC7;
+  border-radius: 2rem;
+  line-height: 3rem;
+  padding-top: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 
 .info-wrapper .caption {
@@ -120,8 +134,10 @@ html {
   color: #6081C4;
   border: 1px solid #F99EC6;
   padding: 2rem 1rem 1rem 1rem;
-  border-radius: 5rem;
+  border-radius: 2rem;
   margin: 1rem 0 2rem;
+  height: 19rem;
+  overflow: hidden;
 }
 
 .field-flag .flag {
@@ -164,4 +180,25 @@ html {
 
 .ajax-progress-throbber {
   display: none;
+}
+
+.info-wrapper .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.info-wrapper .user-info .avatar {
+  width: 5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.info-wrapper .user-info .username {
+  font-size: 2.5rem;
+  color: #6081C4;
+  text-align: center;
+  padding-top: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
