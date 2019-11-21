@@ -42,15 +42,6 @@ function glico_custom_theme() {
   ];
 }
 
-/**
- * Implements hook_ENTITY_TYPE_create
- */
-function glico_custom_node_create(NodeInterface $node) {
-  if ($node->getType() == 'submission') {
-    $node->title = 'Video dự thi';
-  }
-}
-
 function glico_custom_node_insert(NodeInterface $node) {
   if ($node->getType() == 'submission') {
     $nid = $node->id();

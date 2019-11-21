@@ -33,9 +33,9 @@
     <css-placeholder token="{{ placeholder_token }}">
       <js-placeholder token="{{ placeholder_token }}">
   {#<meta property="og:url"           content="https://www.your-domain.com/your-page.html" />#}
-  {#<meta property="og:type"          content="website" />#}
+  <meta property="og:type"          content="website" />
   <meta property="og:title"         content="Cùng xem bài dự thi của mình tại Glico Dance" />
-  <meta property="og:description"   content="Your description" />
+  <meta property="og:description"   content="Chỉ là mô tả" />
   {#<meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />#}
 </head>
 <body{{ attributes }}>
@@ -50,12 +50,20 @@
 {{ page }}
 {{ page_bottom }}
 <js-bottom-placeholder token="{{ placeholder_token }}">
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
+  {#<div id="fb-root"></div>#}
+  <script>  window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '748106385614500',
+        xfbml      : true,
+        version    : 'v2.3'
+      });
+    };
+
+    (function(d, s, id){
       var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
+      if (d.getElementById(id)) {return;}
       js = d.createElement(s); js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+      js.src = "//connect.facebook.net/vi_VN/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 </body>
