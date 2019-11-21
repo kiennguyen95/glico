@@ -98,7 +98,6 @@ html {
   border: 2px solid white;
   margin-top: 2px;
   cursor: pointer;
-  height: 46rem;
 }
 
 .info-wrapper {
@@ -107,6 +106,7 @@ html {
   border-radius: 3vw;
   padding: 25px 26px;
   border: 2px solid #ffd3e8;
+  height: 46rem;
 }
 
 .info-wrapper .baby-name {
