@@ -157,7 +157,7 @@ html * {
   width: 16vw;
   animation: fly-up-3 17s;
   animation-iteration-count: infinite;
-  top: 166vw;
+  top: 178vw;
 }
 
 @keyframes fly-up-3 {

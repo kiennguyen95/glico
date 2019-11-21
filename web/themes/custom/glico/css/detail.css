@@ -2,6 +2,34 @@ html {
   font-size: 62.5%;
 }
 
+#content-wrapper {
+  margin-top: 6vw;
+  background-image: url(/themes/custom/glico/images/discover/discovery-bg.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: 176vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#content-wrapper #banner-img {
+  width: 27vw;
+  margin-top: 7vw;
+}
+
+#content-wrapper #banner-img img {
+  width: 100%;
+}
+
+#content-wrapper #banner-img {
+  width: 27vw;
+  margin-top: 7vw;
+}
+
+#content-wrapper #banner-img img {
+  width: 100%;
+}
+
 .page-node-content {
   margin-top: 7vw;
   background-image: url(/themes/custom/glico/images/discover/discovery-bg.png);
@@ -14,7 +42,6 @@ html {
   margin: 0 auto;
   display: flex;
   font-family: Baloo Tammudu, cursive;
-  padding-top: 10rem;
 }
 
 .submission-content-wrapper .field-video-wrapper {
@@ -218,4 +245,178 @@ html {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#btn-apply {
+  display: inline-block;
+  font-family: SVN-Cookies, cursive;
+  font-size: 4.63vw;
+  color: white;
+  background-image: url(/themes/custom/glico/images/front/videos/btn-bg-discover.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 41.6vw;
+  height: 11vw;
+  line-height: 9vw;
+  margin: 0 0.25vw;
+  cursor: pointer;
+  transition: background ease 0.2s;
+  text-shadow: 0 2px 3px #777777;
+  padding-left: 2.4vw;
+  margin-top: 70vw;
+}
+
+#discover-section-winning-list .nutrients img {
+  position: absolute;
+}
+
+#discover-section-winning-list .nutrients img:nth-child(1) {
+  top: 126vw;
+  left: 1vw;
+  width: 17.5vw;
+  animation: fly-up-1 30s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fly-up-1 {
+  0%   {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+#discover-section-winning-list .nutrients img:nth-child(2) {
+  top: 162vw;
+  left: 8.5vw;
+  width: 15.5vw;
+  animation: fly-up-2 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fly-up-2 {
+  0%   {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+#discover-section-winning-list .nutrients img:nth-child(3) {
+  left: 53vw;
+  width: 16vw;
+  animation: fly-up-3 17s;
+  animation-iteration-count: infinite;
+  top: 178vw;
+}
+
+@keyframes fly-up-3 {
+  0%   {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+#discover-section-winning-list .nutrients img:nth-child(4) {
+  top: 146vw;
+  left: 24vw;
+  width: 19.5vw;
+  animation: fly-up-4 25s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fly-up-4 {
+  0%   {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+#discover-section-winning-list .nutrients img:nth-child(5) {
+  top: 139vw;
+  left: 60.5vw;
+  width: 20vw;
+  animation: fly-up-5 30s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fly-up-5 {
+  from { -webkit-transform: rotate(0deg) translateX(2vw) rotate(0deg); }
+  to   { -webkit-transform: rotate(360deg) translateX(2vw) rotate(-360deg); }
+}
+
+#empty-message-img #dancing-bear-1 {
+  top: 8vw;
+  left: 29vw;
+}
+#empty-message-img .dancing-bear-1 {
+  top: -1vw;
+  left: 2vw;
+  width: 10vw;
+}
+#empty-message-img .dancing-bear-1-hand-1 {
+  top: 2.2vw;
+  left: 1.5vw;
+  width: 5vw;
+  transform: rotate(-5deg);
+  transform-origin: bottom right;
+  animation: dancing-bear-1-hand-1 0.75s;
+  animation-iteration-count: infinite;
+}
+
+#empty-message-img .dancing-bear-1-hand-2 {
+  top: 1.4vw;
+  left: 9vw;
+  width: 6vw;
+  z-index: 0;
+  transform: rotate(5deg);
+  transform-origin: top right;
+  animation: dancing-bear-2-hand-2 0.75s;
+  animation-iteration-count: infinite;
+}
+#empty-message-img #dancing-bear-2 {
+  top: -6vw;
+  left: 19vw;
+}
+#empty-message-img .dancing-bear-2 {
+  top: -2vw;
+  left: 0vw;
+  width: 13.5vw;
+}
+#empty-message-img .dancing-bear-2-hand-1 {
+  top: 1.2vw;
+  left: 0;
+  width: 6.5vw;
+  transform: rotate(-5deg);
+  transform-origin: bottom right;
+  animation: dancing-bear-2-hand-1 0.75s;
+  animation-iteration-count: infinite;
+}
+#empty-message-img .dancing-bear-2-hand-2 {
+  top: 4.4vw;
+  left: 5vw;
+  width: 6vw;
+  z-index: 1;
+  transform: rotate(5deg);
+  transform-origin: top right;
+  animation: dancing-bear-2-hand-2 0.75s;
+  animation-iteration-count: infinite;
 }
