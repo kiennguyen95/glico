@@ -115,6 +115,7 @@ body.toolbar-vertical #section-header {
   display: flex;
   margin-left: 7.4vw;
   margin-top: 0.7vw;
+  line-height: 1;
 }
 
 #section-header ul.header-menu li {

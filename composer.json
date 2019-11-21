@@ -29,7 +29,6 @@
         "drupal/facebook_mcc": "^1.2",
         "drupal/flag": "^4.0@beta",
         "drupal/pathauto": "^1.5",
-        "drupal/php_ffmpeg": "^1.0",
         "drupal/shorten": "^1.0",
         "drupal/social_auth_facebook": "^1.0",
         "drupal/video": "^1.4",
