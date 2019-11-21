@@ -409,7 +409,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: "<div class=\"empty-message\">\r\n  <p>Rất tiếc bố mẹ chưa có video nào!</p>\r\n  <p>Hãy click vào \"Tham gia ngay\" để tạo cho bé video thật đáng yêu và có cơ hội nhận được các giải thưởng hấp dẫn trị giá lên tới 60 triệu đồng</p>\r\n  <div class=\"bear-decor\"></div>\r\n</div>"
+            value: "<div class=\"empty-message\">\r\n  <p>Rất tiếc bố mẹ chưa có video nào!</p>\r\n<br>\r\n  <p>Hãy click vào \"Tham gia ngay\" để tạo cho bé video thật đáng</p>\r\n <p> yêu và có cơ hội nhận được các giải thưởng hấp dẫn trị giá </p>\r\n<p>lên tới 60 triệu đồng</p>\r\n  <div id=\"empty-message-img\">\r\n  <div id=\"dancing-bear-1\" class=\"group-image add-dancing-bear-1\">\r\n    <img src=\"/themes/custom/glico/images/front/stage/dancing-bear-1-hand-1.png\" alt=\"\" class=\"dancing-bear-1-hand-1\">\r\n    <img src=\"/themes/custom/glico/images/front/stage/dancing-bear-1-hand-2.png\" alt=\"\" class=\"dancing-bear-1-hand-2\">\r\n    <img src=\"/themes/custom/glico/images/front/stage/dancing-bear-1.png\" alt=\"dancing-bear-1\" class=\"dancing-bear-1\">\r\n  </div>\r\n  <div id=\"dancing-bear-2\" class=\"group-image add-dancing-bear-2\">\r\n    <img src=\"/themes/custom/glico/images/front/stage/dancing-bear-2-hand-1.png\" alt=\"\" class=\"dancing-bear-2-hand-1\">\r\n    <img src=\"/themes/custom/glico/images/front/stage/dancing-bear-2-hand-2.png\" alt=\"\" class=\"dancing-bear-2-hand-2\">\r\n    <img src=\"/themes/custom/glico/images/front/stage/dancing-bear-2.png\" alt=\"dancing-bear-2\" class=\"dancing-bear-2\">\r\n  </div>\r\n</div>\r\n</div>"
             format: full_html
           plugin_id: text
       relationships:
