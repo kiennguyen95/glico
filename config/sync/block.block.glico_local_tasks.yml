@@ -1,6 +1,6 @@
 uuid: beb894e6-5b5a-4e7d-9123-eb281f15b1fb
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - glico

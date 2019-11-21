@@ -2,7 +2,7 @@ auth:
   social_auth_facebook:
     route: social_auth_facebook.redirect_to_fb
     img_path: modules/contrib/social_auth_facebook/img/facebook_logo.svg
-post_login: '<front>'
+post_login: '/?redirect=fb'
 redirect_user_form: false
 disable_admin_login: false
 disabled_roles:

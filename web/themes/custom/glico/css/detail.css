@@ -14,6 +14,7 @@ html {
   margin: 0 auto;
   display: flex;
   font-family: Baloo Tammudu, cursive;
+  padding-top: 10rem;
 }
 
 .submission-content-wrapper .field-video-wrapper {
@@ -48,6 +49,14 @@ html {
 
 .field-video.video-frame-2:before {
   background-image: url(/modules/custom/glico_submission/upload/frame-2.png);
+  width: 105%;
+  height: 123%;
+  top: -14.5%;
+  left: -4%;
+}
+
+.submission-content-wrapper .field-video-wrapper .video-frame-2 video[style] {
+  border-radius: 4vw;
 }
 
 .field-video.video-frame-3:before {
