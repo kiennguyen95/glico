@@ -26,7 +26,7 @@ class StepPreviewNextButton extends BaseButton {
       '#type' => 'submit',
       '#value' => t('Gửi bài ngay'),
       '#goto_step' => StepsEnum::STEP_FINALIZE,
-      '#submit_handler' => 'storeValues',
+      '#submit_handler' => 'submitValues',
     ];
   }
 

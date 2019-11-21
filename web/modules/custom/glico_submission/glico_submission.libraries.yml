@@ -4,3 +4,6 @@ submission-form:
       css/submission_form.css: {}
   js:
     js/submission_form.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

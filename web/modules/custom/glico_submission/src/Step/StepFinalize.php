@@ -35,6 +35,13 @@ class StepFinalize extends BaseStep {
     $form['completed'] = [
       '#markup' => t('Bố mẹ hãy chia sẻ bài dự thi về Facebook để được tính là hợp lệ nhé'),
     ];
+    $form['#attached'] = [
+      'drupalSettings' => [
+        'variables' => [
+          'link' => 'https://www.google.com.vn/',
+        ],
+      ],
+    ];
 
     return $form;
   }
