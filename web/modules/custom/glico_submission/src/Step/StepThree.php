@@ -58,7 +58,6 @@ class StepThree extends BaseStep {
       ),
       '#size' => 60,
       '#maxlength' => 128,
-      '#required' => TRUE,
     ];
 
     return $form;

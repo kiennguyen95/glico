@@ -42,15 +42,6 @@ function glico_custom_theme() {
   ];
 }
 
-/**
- * Implements hook_ENTITY_TYPE_create
- */
-function glico_custom_node_create(NodeInterface $node) {
-  if ($node->getType() == 'submission') {
-    $node->title = 'Video dự thi';
-  }
-}
-
 function glico_custom_node_insert(NodeInterface $node) {
   if ($node->getType() == 'submission') {
     $nid = $node->id();
@@ -69,7 +60,7 @@ function glico_custom_node_insert(NodeInterface $node) {
 
     $ffmpeg = \Drupal::service('php_ffmpeg');
     $video = $ffmpeg->open($real_path);
-    $video->frame(TimeCode::fromSeconds(1))->save($thumbnail_real_path);
+//    $video->frame(TimeCode::fromSeconds(1))->save($thumbnail_real_path);
 
 
     // Check if file exist
