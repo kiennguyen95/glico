@@ -39,10 +39,10 @@
         $(this).siblings(".pick-frame").removeClass("is-active");
         $('form.glico-submission-form input[name="frame"]').val($(this).attr("data-frame-value"));
       });
-
+      console.log('checkmate');
       $(".btn-send-submission").click(function () {
         console.log("submit");
-        $("form.glico-submission-form .form-actions button.form-submit").click();
+        $("button.submission-to-submit-btn.button").click();
       });
 
     }

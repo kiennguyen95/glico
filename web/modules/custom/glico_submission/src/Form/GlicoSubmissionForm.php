@@ -96,6 +96,10 @@ class GlicoSubmissionForm extends FormBase {
           'callback' => [$this, 'loadStep'],
           'wrapper' => 'form-wrapper',
           'effect' => 'fade',
+          'progress' => [
+            'type' => 'throbber',
+            'message' => NULL
+          ],
         ];
       }
 
