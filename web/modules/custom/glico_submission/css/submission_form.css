@@ -1,6 +1,7 @@
 body .ui-dialog.ui-widget.ui-widget-content {
   background-color: #FEE5FB;
   font-size: 62.5%;
+  border-radius: 2rem;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-titlebar {
@@ -30,11 +31,12 @@ body .ui-dialog.ui-widget.ui-widget-content .pick-frame-col-right {
 
 body .ui-dialog.ui-widget.ui-widget-content .pick-frame {
   background-color: #FFD4E8;
-  background-repeat:   no-repeat;
+  background-repeat: no-repeat;
   background-position: center center;
-  width: 200px;
-  height: 117px;
-  margin: 10px 20px;
+  width: 17rem;
+  height: 10rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .pick-frame.frame-1 {
@@ -55,6 +57,8 @@ body .ui-dialog.ui-widget.ui-widget-content .pick-frame.frame-3 {
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content {
   text-align: center;
   background-color: #FEE5FB;
+  border: none;
+  border-radius: 5rem;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions {
@@ -64,16 +68,23 @@ body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-cont
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions button.submission-btn,
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions button.submission-to-preview-btn {
   width: 150px;
-  font-size: 0.8rem;
-  height: 35px;
+  font-size: 1.2rem;
+  height: 2.3rem;
+  line-height: 2.3rem;
   border-radius: 15px;
   background-color: #F99EC7;
   color: #FFFFFF;
-  font-weight: 900;
+  margin-bottom: 2rem;
+  border: none;
+  font-family: Baloo Tammudu, cursive;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-name-and-comment"] div.fieldset-wrapper {
   margin: 30px;
+}
+
+body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-name-and-comment"] div.fieldset-wrapper .form-item-caption > div {
+  height: 0;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-baby-name"] {
@@ -82,9 +93,9 @@ body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-baby-nam
   border-radius: 20px;
   margin: 10px 0;
   padding: 10px;
-  font-size: 0.8rem;
-  font-weight: 900;
+  font-size: 1.2rem;
   color: #5D5D5D;
+  font-family: Baloo Tammudu, cursive;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-caption"] {
@@ -93,13 +104,14 @@ body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-caption"
   border-radius: 20px;
   margin: 10px 0;
   padding: 10px;
-  font-size: 0.8rem;
-  font-weight: 900;
+  font-size: 1.2rem;
   color: #5D5D5D;
+  font-family: Baloo Tammudu, cursive;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content div.preview-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content div.preview-wrapper .left-part video {
@@ -114,4 +126,241 @@ body .ui-dialog.ui-widget.ui-widget-content div.preview-wrapper .right-part {
   border: 2px solid #ffd3e8;
   height: 15rem;
   max-width: 29%;
+}
+
+form.glico-submission-form video {
+  width: 27rem;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+form.glico-submission-form .select-video-real input[value="Remove"] {
+  display: none;
+}
+
+form.glico-submission-form input[name="frame"] {
+  display: none;
+}
+
+.pick-frame-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 36rem;
+  margin: 0 auto;
+}
+
+.pick-frame-wrapper .pick-frame {
+  position: relative;
+  cursor: pointer;
+}
+
+.pick-frame-wrapper .pick-frame:hover:after,
+.pick-frame-wrapper .pick-frame.is-active:after {
+  display: block;
+  content: "";
+  width: 103%;
+  height: 104%;
+  position: absolute;
+  top: -3%;
+  left: -2%;
+  border: 2px solid #f376a1;
+  border-radius: 0.5rem;
+}
+
+.preview-wrapper {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background: #FEE5FB;
+  height: 47rem;
+  max-width: 1200px;
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  font-family: Baloo Tammudu, cursive;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.preview-wrapper * {
+  font-size: 1.5rem;
+}
+
+.preview-wrapper .field-video-wrapper {
+  flex-basis: 70%;
+  margin-right: 1%;
+}
+
+.preview-wrapper .field-video-wrapper video {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 1vw;
+}
+
+.field-video {
+  position: relative;
+}
+
+.field-video:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 102%;
+  height: 105%;
+  background-size: 100% 100%;
+  top: -3.5%;
+  left: -2%;
+}
+
+.field-video.video-frame-1:before {
+  background-image: url(/modules/custom/glico_submission/upload/frame-1.png);
+}
+
+.field-video.video-frame-2:before {
+  background-image: url(/modules/custom/glico_submission/upload/frame-2.png);
+  width: 105%;
+  height: 123%;
+  top: -14.5%;
+  left: -4%;
+}
+
+.preview-wrapper .field-video-wrapper .video-frame-2 video[style] {
+  border-radius: 4vw;
+}
+
+.field-video.video-frame-3:before {
+  background-image: url(/modules/custom/glico_submission/upload/frame-3.png);
+  width: 106%;
+  height: 110%;
+  top: -5.1%;
+  left: -2.5%;
+}
+
+.preview-wrapper .field-video-wrapper .video-frame-3 video[style] {
+  border-radius: 8%;
+}
+
+.video-control {
+  margin-top: 2%;
+  padding-top: 1%;
+  border-top: 3px solid white;
+  position: relative;
+}
+
+.video-control .btn-play,
+.video-control .btn-mute {
+  width: 3rem;
+  height: 3rem;
+  background-size: 100% 100%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.video-control .btn-play {
+  background-image: url(/modules/custom/glico_submission/upload/btn-play-control.png);
+  margin-right: 0.1rem;
+}
+
+.video-control .btn-mute {
+  background-image: url(/modules/custom/glico_submission/upload/btn-mute-control.png);
+}
+
+.video-control .text-time {
+  font-size: 1.5rem;
+  color: white;
+  position: absolute;
+  top: 1.5rem;
+  margin-left: 1rem;
+}
+
+.video-control .btn-fullscreen {
+  padding: 14px 10px 2px 10px;
+  float: right;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #F99EC6;
+  border-radius: 25px;
+  border: 2px solid white;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.info-wrapper {
+  background-color: white;
+  flex-grow: 1;
+  border-radius: 2vw;
+  padding: 20px 26px;
+  border: 2px solid #ffd3e8;
+  height: 34rem;
+  max-width: 29%;
+}
+
+.info-wrapper .baby-name-label {
+  font-size: 1.5rem;
+  color: #F99EC7;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.info-wrapper .baby-name {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  background-color: #F99EC7;
+  border-radius: 2rem;
+  line-height: 1rem;
+  padding-top: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.info-wrapper .caption {
+  font-size: 1.2rem;
+  color: #6081C4;
+  border: 1px solid #F99EC6;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem 0 2rem;
+  height: 16rem;
+  overflow: hidden;
+}
+
+
+.info-wrapper .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.info-wrapper .user-info .avatar {
+  width: 3.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.info-wrapper .user-info .username {
+  font-size: 1.5rem;
+  color: #6081C4;
+  text-align: center;
+  padding-top: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.preview-wrapper .btn-send-submission {
+  font-family: UTM-Cookies, cursive;
+  font-size: 2.7rem;
+  color: white;
+  background-image: url(/modules/custom/glico_submission/upload/btn-submit-bg.png);
+  width: 26rem;
+  height: 9rem;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  line-height: 12rem;
+  padding-left: 5rem;
+  text-shadow: 0 2px 4px #777777;
+  cursor: pointer;
 }

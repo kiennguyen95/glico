@@ -42,9 +42,12 @@ class StepOne extends BaseStep {
         // Pass the maximum file size in bytes
         'file_validate_size' => array(1024*1024*1024),
       ),
+      '#attributes' => [
+        'class' => ['select-video-real'],
+      ]
     ];
 
-    $form['submit-video'] = [
+    $form['submit_video'] = [
       '#markup' => '<div class="submit-video"><span id="submit-video-submission">Chọn video để tải lên</span></div>'
     ];
 
