@@ -427,4 +427,40 @@ html * {
   #content-wrapper #banner-img {
     margin-top: 13vw;
   }
+
+  #btn-apply {
+    top: 160vw;
+  }
+
+  #content-wrapper #btn-wrapper div {
+    font-size: 3.3vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(1) {
+    top: 135vw;
+  }
+
+  @keyframes fly-up-1 {
+    0%   {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(70%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(2) {
+    top: 167vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(3) {
+    top: 176vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(4) {
+    top: 143vw;
+  }
 }
