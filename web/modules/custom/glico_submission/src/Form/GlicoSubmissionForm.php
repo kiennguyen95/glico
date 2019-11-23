@@ -246,7 +246,7 @@ class GlicoSubmissionForm extends FormBase {
     $frame = $tempstore->get('frame');
     $baby_name = $tempstore->get('baby_name');
     $caption = $tempstore->get('caption');
-    Node::create([
+    $node = Node::create([
       'type'        => 'submission',
       'title'       => $baby_name,
       'field_frame' => $frame,
@@ -254,6 +254,8 @@ class GlicoSubmissionForm extends FormBase {
       'field_video' => [
         'target_id' => $file,
       ],
-    ])->save();
+    ]);
+    $node->save();
+    $tempstore->set('nid', $node->id());
   }
 }

@@ -20,6 +20,13 @@
               type: "POST",
               url: "/glico_submission/shared/submission",
               async: true,
+              success: function (response) {
+                var url = response[0].url;
+                if (url !== null) {
+                  window.location.href = url;
+                }
+                console.log(url);
+              }
             });
           } else {
             $.ajax({
@@ -28,7 +35,7 @@
               async: true,
             });
           }
-          $('button.ui-dialog-titlebar-close').click();
+          $('#drupal-modal').remove();
         });
       });
 
