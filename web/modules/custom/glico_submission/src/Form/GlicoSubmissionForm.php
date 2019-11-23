@@ -261,6 +261,7 @@ class GlicoSubmissionForm extends FormBase {
       'field_video' => [
         'target_id' => $file,
       ],
+      'status' => 0,
     ]);
     $node->save();
     $tempstore->set('nid', $node->id());
