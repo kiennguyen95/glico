@@ -10,29 +10,29 @@
       }(document, 'script', 'facebook-jssdk'));
       $('.fb-share-submission').click(function () {
         FB.ui({
-          method: 'feed',
-          link: settings.variables.link,
-          caption: 'Test Caption',
-          id: '748106385614500'
+          method: 'share',
+          href: settings.variables.link,
+          hashtag: '#GlicoDance',
+          quote: 'quote',
         }, function(response){
+          console.log(response);
           if (typeof response === 'undefined') {
-            $.ajax({
-              type: "POST",
-              url: "/glico_submission/shared/submission",
-              async: true,
-              success: function (response) {
-                var url = response[0].url;
-                if (url !== null) {
-                  window.location.href = url;
-                }
-                console.log(url);
-              }
-            });
-          } else {
             $.ajax({
               type: "POST",
               url: "/glico_submission/not-shared/submission",
               async: true,
+            });
+          } else {
+            $.ajax({
+              type: "POST",
+              url: "/glico_submission/shared/submission",
+              async: true,
+              success: function (ajx_response) {
+                var url = ajx_response[0].url;
+                if (url !== null) {
+                  window.location.href = url;
+                }
+              }
             });
           }
           $('#drupal-modal').remove();

@@ -101,6 +101,11 @@ class GlicoSubmissionForm extends FormBase {
             'message' => NULL
           ],
         ];
+        if ($this->step->getStep() === StepsEnum::STEP_FINALIZE) {
+          $form['wrapper']['actions'][$button->getKey()]['#ajax']['progress'] = [
+            'type' => 'none'
+          ];
+        }
       }
 
       $callable = [$this, $button->getSubmitHandler()];
