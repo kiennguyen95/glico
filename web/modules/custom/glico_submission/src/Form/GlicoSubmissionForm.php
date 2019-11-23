@@ -153,7 +153,10 @@ class GlicoSubmissionForm extends FormBase {
     // Update Form.
     $response->addCommand(new HtmlCommand('#form-wrapper', $form['wrapper']));
     if ($this->step->getStep() === StepsEnum::STEP_THREE) {
-      $response->addCommand(new RedirectCommand(\Drupal::request()->getSchemeAndHttpHost()));
+      $tempstore = \Drupal::service('user.private_tempstore')->get('glico_submission');
+      $nid = $tempstore->get('nid');
+      $response->addCommand(new CloseModalDialogCommand());
+      $response->addCommand(new RedirectCommand(Url::fromRoute('glico_submission.submission_preview', ['nid' => $nid])->toString()));
     }
     return $response;
   }
