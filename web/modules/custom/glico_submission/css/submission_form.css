@@ -1,17 +1,16 @@
-.ajax-progress .message {
-  display:none;
+form.glico-submission-form #form-wrapper {
+  /*position: relative;*/
 }
 
-body .ui-dialog.ui-widget.ui-widget-content .ajax-progress-throbber .throbber {
-  display: inline;
-  padding: 1px 5px 2px;
-  background: transparent url(/modules/custom/glico_submission/images/loading.gif) no-repeat 0 center;
+.ajax-progress .message {
+  display:none;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content {
   background-color: #FEE5FB;
   font-size: 62.5%;
   border-radius: 2rem;
+  z-index: 101;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-titlebar {
@@ -69,6 +68,7 @@ body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-cont
   background-color: #FEE5FB;
   border: none;
   border-radius: 5rem;
+  padding: 0;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions {
@@ -84,7 +84,7 @@ body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-cont
   border-radius: 15px;
   background-color: #F99EC7;
   color: #FFFFFF;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
   border: none;
   font-family: Baloo Tammudu, cursive;
 }
@@ -148,8 +148,50 @@ form.glico-submission-form .select-video-real input[value="Remove"] {
   display: none;
 }
 
+form.glico-submission-form .select-video-real .ajax-progress {
+  position: absolute;
+  display: block;
+  width: 23rem;
+  height: 14rem;
+  top: 9rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+form.glico-submission-form .select-video-real .ajax-progress .throbber {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 6rem;
+  height: 6rem;
+  background-image: url(/modules/custom/glico_submission/images/loading.gif);
+  background-size: 100% 100%;
+  z-index: 102;
+  transform: translate(-50%, -50%);
+}
+
 form.glico-submission-form input[name="frame"] {
   display: none;
+}
+
+form.glico-submission-form #form-wrapper .form-actions .ajax-progress {
+  display: block;
+  margin-top: 2rem;
+}
+
+form.glico-submission-form #form-wrapper .form-actions .ajax-progress .throbber {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-image: url(/modules/custom/glico_submission/images/loading.gif);
+  background-size: 100% 100%;
+  margin: 0 auto;
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
 }
 
 .pick-frame-wrapper {
@@ -220,7 +262,7 @@ form.glico-submission-form input[name="frame"] {
   width: 102%;
   height: 105%;
   background-size: 100% 100%;
-  top: -3.5%;
+  top: -3%;
   left: -2%;
 }
 
@@ -234,6 +276,10 @@ form.glico-submission-form input[name="frame"] {
   height: 123%;
   top: -14.5%;
   left: -4%;
+}
+
+.field-video.video-frame-2 video {
+  border-radius: 8vw;
 }
 
 .preview-wrapper .field-video-wrapper .video-frame-2 video[style] {
@@ -396,9 +442,21 @@ form.glico-submission-form input[name="frame"] {
   width: 26rem;
   height: 5rem;
   background-size: 100% 100%;
-  margin: 3rem auto 3rem;
+  margin: 11rem auto 3rem;
   line-height: 4rem;
   padding-left: 5rem;
   cursor: pointer;
   text-shadow: 0 2px 4px #777777;
+}
+
+button.submission-to-submit-btn ơ{
+  display: none;
+}
+
+.send-ajax-loading {
+  margin: 0 auto;
+  width: 6rem;
+  height: 6rem;
+  background-image: url(/modules/custom/glico_submission/images/loading.gif);
+  background-size: 100% 100%;
 }

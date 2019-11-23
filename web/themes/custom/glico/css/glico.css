@@ -1974,11 +1974,12 @@ body .ui-widget-overlay {
 
 body .ui-dialog .ui-dialog-content {
   overflow: visible;
+  position: static;
 }
 
 form.glico-submission-form,
 form.glico-submission-form input {
-  position: relative;
+  /*position: relative;*/
   font-family: Baloo Tammudu, cursive;
   font-size: 2rem;
 }
@@ -1994,7 +1995,7 @@ form.glico-submission-form:before {
   background-image: url(/themes/custom/glico/images/discover/bear-decor-1.png);
   width: 14rem;
   height: 13.5rem;
-  top: -14rem;
+  top: -12rem;
   left: 0;
   right: 0;
   margin: 0 auto;

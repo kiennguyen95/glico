@@ -32,6 +32,19 @@
       if($("form.glico-submission-form video").length) {
         $("form.glico-submission-form .submit-video").hide();
       }
+      else {
+        $("form.glico-submission-form .submit-video").show();
+      }
+
+      // $('form.glico-submission-form .select-video-real input[value="Remove"]').click(function () {
+      //   $("form.glico-submission-form .select-video-real").replaceWith('<div class="remove-ajax-loading">Loading</div>');
+      // });
+
+      // if($("form.glico-submission-form .select-video-real").length) {
+      //   $("form.glico-submission-form .remove-ajax-loading").remove();
+      // }
+
+
 
       // Select frame
       $(".pick-frame-wrapper .pick-frame").click(function () {
@@ -41,6 +54,7 @@
       });
 
       $(".btn-send-submission").click(function () {
+        $(this).replaceWith('<div class="send-ajax-loading"></div>');
         $("button.submission-to-submit-btn.button").click();
       });
 
