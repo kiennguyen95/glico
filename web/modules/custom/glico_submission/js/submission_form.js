@@ -1,6 +1,11 @@
 (function ($, Drupal) {
   Drupal.behaviors.submissionForm = {
     attach: function (context, settings) {
+      FB.init({
+        appId      : '748106385614500',
+        xfbml      : true,
+        version    : 'v2.3'
+      });
       (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
@@ -11,32 +16,37 @@
       $('.fb-share-submission').click(function () {
         FB.ui({
           method: 'feed',
-          link: settings.variables.link,
-          caption: 'Test Caption',
-          id: '748106385614500'
+          link: 'https://developers.facebook.com/docs/plugins/', //settings.variables.link
+          hashtag: '#GlicoDance',
+          id: '748106385614500',
+          version: 'v2.3'
         }, function(response){
+          console.log(response);
           if (typeof response === 'undefined') {
-            $.ajax({
-              type: "POST",
-              url: "/glico_submission/shared/submission",
-              async: true,
-              success: function (response) {
-                var url = response[0].url;
-                if (url !== null) {
-                  window.location.href = url;
-                }
-                console.log(url);
-              }
-            });
-          } else {
             $.ajax({
               type: "POST",
               url: "/glico_submission/not-shared/submission",
               async: true,
             });
+          } else {
+            $.ajax({
+              type: "POST",
+              url: "/glico_submission/shared/submission",
+              async: true,
+              success: function (ajx_response) {
+                var url = ajx_response[0].url;
+                if (url !== null) {
+                  window.location.href = url;
+                }
+              }
+            });
           }
           $('#drupal-modal').remove();
         });
+      });
+
+      $('#back-to-home-page').click(function () {
+        $('#drupal-modal').remove();
       });
 
       $("form.glico-submission-form #submit-video-submission").click(function () {
@@ -64,7 +74,13 @@
       $(".pick-frame-wrapper .pick-frame").click(function () {
         $(this).addClass("is-active");
         $(this).siblings(".pick-frame").removeClass("is-active");
-        $('form.glico-submission-form input[name="frame"]').val($(this).attr("data-frame-value"));
+        var frame = $(this).attr("data-frame-value");
+        $('form.glico-submission-form input[name="frame"]').val(frame);
+        $('#pick-frame-video').removeClass().addClass('field-video video-frame-' + frame);
+      });
+
+      $(".toggle-pick-frame").click(function () {
+        $("div#pick-frame-wrapper-div").css("visibility", "visible");
       });
 
       $(".btn-send-submission").click(function () {

@@ -15,7 +15,7 @@ class StepThreeNextButton extends BaseButton {
    * {@inheritdoc}
    */
   public function getKey() {
-    return 'next';
+    return 'finish';
   }
 
   /**
@@ -25,8 +25,7 @@ class StepThreeNextButton extends BaseButton {
     return [
       '#type' => 'submit',
       '#value' => t('Xong'),
-      '#goto_step' => StepsEnum::STEP_PREVIEW,
-      '#submit_handler' => 'storeValues',
+      '#submit_handler' => 'submitValues',
       '#attributes' => [
         'class' => ['submission-to-preview-btn'],
       ],
