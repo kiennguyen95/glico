@@ -42,8 +42,8 @@ body .ui-dialog.ui-widget.ui-widget-content .pick-frame {
   background-color: #FFD4E8;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 17rem;
-  height: 10rem;
+  width: 12rem;
+  height: 7rem;
   margin: 0.5rem;
   border-radius: 0.5rem;
 }
@@ -72,7 +72,7 @@ body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-cont
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions {
-  float: none;
+  margin-right: 60px;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions button.submission-btn,
@@ -459,4 +459,55 @@ button.submission-to-submit-btn ơ{
   height: 6rem;
   background-image: url(/modules/custom/glico_submission/images/loading.gif);
   background-size: 100% 100%;
+}
+
+div#back-to-home-page {
+  width: 215px;
+  font-size: 1.2rem;
+  height: 2.3rem;
+  line-height: 2.3rem;
+  border-radius: 15px;
+  background-color: #F99EC7;
+  color: #FFFFFF;
+  margin: 0 0 2rem 0;
+  border: none;
+  font-family: Baloo Tammudu, cursive;
+  position: absolute;
+  bottom: 3px;
+  left: 70px;
+}
+
+.toggle-pick-frame {
+  width: 150px;
+  font-size: 1.2rem;
+  height: 2.3rem;
+  line-height: 2.3rem;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  color: #5B5B5B;
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+  font-family: Baloo Tammudu, cursive;
+}
+
+form.glico-submission-form #pick-frame-video video {
+  width: 18rem;
+}
+
+form.glico-submission-form #pick-frame-video:before {
+  width: 51%;
+  height: 116%;
+  top: -8%;
+  left: 24%;
+}
+
+.pick-frame-video-wrapper .video-control .btn-play {
+  position: absolute;
+  top: -118px;
+  right: 287px;
+}
+
+div#pick-frame-wrapper-div {
+  visibility: hidden;
 }

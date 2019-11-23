@@ -13,7 +13,6 @@ use Drupal\Core\Url;
 use Drupal\glico_submission\Manager\StepManager;
 use Drupal\glico_submission\Step\StepsEnum;
 use Drupal\node\Entity\Node;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
  * Class GlicoSubmissionForm.
@@ -152,10 +151,9 @@ class GlicoSubmissionForm extends FormBase {
     }
 
     // Update Form.
-    $response->addCommand(new HtmlCommand('#form-wrapper',
-      $form['wrapper']));
-    if ($this->step->getStep() === StepsEnum::STEP_FINALIZE) {
-//      $response->addCommand(new CloseModalDialogCommand());
+    $response->addCommand(new HtmlCommand('#form-wrapper', $form['wrapper']));
+    if ($this->step->getStep() === StepsEnum::STEP_THREE) {
+      $response->addCommand(new RedirectCommand(\Drupal::request()->getSchemeAndHttpHost()));
     }
     return $response;
   }
@@ -202,7 +200,7 @@ class GlicoSubmissionForm extends FormBase {
     if (isset($triggering_element['#submit_handler'])) {
       $this->{$triggering_element['#submit_handler']}($form, $form_state);
     }
-    if ($this->step->getStep() !== StepsEnum::STEP_FINALIZE) {
+    if ($this->step->getStep() !== StepsEnum::STEP_THREE) {
       $form_state->setRebuild(TRUE);
     } else {
       $form_state->setRebuild(FALSE);
@@ -249,8 +247,9 @@ class GlicoSubmissionForm extends FormBase {
     $tempstore = \Drupal::service('user.private_tempstore')->get('glico_submission');
     $file = $tempstore->get('file');
     $frame = $tempstore->get('frame');
-    $baby_name = $tempstore->get('baby_name');
-    $caption = $tempstore->get('caption');
+    $input = $form_state->getUserInput();
+    $baby_name = $input['baby_name'];
+    $caption = $input['caption'];
     $node = Node::create([
       'type'        => 'submission',
       'title'       => $baby_name,

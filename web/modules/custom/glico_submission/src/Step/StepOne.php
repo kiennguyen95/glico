@@ -3,6 +3,7 @@
 namespace Drupal\glico_submission\Step;
 
 use Drupal\glico_submission\Button\StepOneNextButton;
+use Drupal\glico_submission\Button\StepOnePreviousButton;
 use Drupal\glico_submission\Validator\ValidatorRequired;
 
 /**
@@ -24,6 +25,7 @@ class StepOne extends BaseStep {
    */
   public function getButtons() {
     return [
+      new StepOnePreviousButton(),
       new StepOneNextButton(),
     ];
   }

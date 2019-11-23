@@ -2,6 +2,7 @@
 
 namespace Drupal\glico_submission\Step;
 
+use Drupal\file\Entity\File;
 use Drupal\glico_submission\Button\StepTwoNextButton;
 use Drupal\glico_submission\Button\StepTwoPreviousButton;
 use Drupal\glico_submission\Validator\ValidatorRequired;
@@ -42,9 +43,15 @@ class StepTwo extends BaseStep {
       '#maxlength' => 128,
     ];
 
+    $tempstore = \Drupal::service('user.private_tempstore')->get('glico_submission');
+    $file = $tempstore->get('file');
+    $file = File::load($file);
+
     $form['pick_frame'] = [
       '#theme' => 'glico_pick_frame',
-      '#variables' => NULL,
+      '#variables' => [
+        'video_src' => $file === NULL ? NULL : file_create_url($file->getFileUri()),
+      ],
     ];
 
     return $form;

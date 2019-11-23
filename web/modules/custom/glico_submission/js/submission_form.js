@@ -1,6 +1,11 @@
 (function ($, Drupal) {
   Drupal.behaviors.submissionForm = {
     attach: function (context, settings) {
+      FB.init({
+        appId      : '748106385614500',
+        xfbml      : true,
+        version    : 'v2.3'
+      });
       (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
@@ -10,10 +15,11 @@
       }(document, 'script', 'facebook-jssdk'));
       $('.fb-share-submission').click(function () {
         FB.ui({
-          method: 'share',
-          href: settings.variables.link,
+          method: 'feed',
+          link: 'https://developers.facebook.com/docs/plugins/', //settings.variables.link
           hashtag: '#GlicoDance',
-          quote: 'quote',
+          id: '748106385614500',
+          version: 'v2.3'
         }, function(response){
           console.log(response);
           if (typeof response === 'undefined') {
@@ -37,6 +43,10 @@
           }
           $('#drupal-modal').remove();
         });
+      });
+
+      $('#back-to-home-page').click(function () {
+        $('#drupal-modal').remove();
       });
 
       $("form.glico-submission-form #submit-video-submission").click(function () {
@@ -64,7 +74,13 @@
       $(".pick-frame-wrapper .pick-frame").click(function () {
         $(this).addClass("is-active");
         $(this).siblings(".pick-frame").removeClass("is-active");
-        $('form.glico-submission-form input[name="frame"]').val($(this).attr("data-frame-value"));
+        var frame = $(this).attr("data-frame-value");
+        $('form.glico-submission-form input[name="frame"]').val(frame);
+        $('#pick-frame-video').removeClass().addClass('field-video video-frame-' + frame);
+      });
+
+      $(".toggle-pick-frame").click(function () {
+        $("div#pick-frame-wrapper-div").css("visibility", "visible");
       });
 
       $(".btn-send-submission").click(function () {
