@@ -47,3 +47,7 @@ function glico_submission_theme() {
     ],
   ];
 }
+
+function glico_submission_ajax_render_alter(array &$data) {
+//  sleep(600);
+}

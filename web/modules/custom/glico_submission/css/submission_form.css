@@ -5,7 +5,7 @@
 body .ui-dialog.ui-widget.ui-widget-content .ajax-progress-throbber .throbber {
   display: inline;
   padding: 1px 5px 2px;
-  background: transparent url(../images/loading.gif) no-repeat 0 center;
+  background: transparent url(/modules/custom/glico_submission/images/loading.gif) no-repeat 0 center;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content {
@@ -373,4 +373,32 @@ form.glico-submission-form input[name="frame"] {
   padding-left: 5rem;
   text-shadow: 0 2px 4px #777777;
   cursor: pointer;
+}
+
+.message-share {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 73%;
+  color: #DF75B3;
+  margin: 0 auto;
+  padding-top: 6rem;
+}
+
+.ui-dialog .ui-dialog-buttonpane button.fb-share-submission {
+  display: none;
+}
+
+.btn-share-fake {
+  font-family: UTM-Cookies, cursive;
+  font-size: 2.7rem;
+  color: white;
+  background-image: url(/modules/custom/glico_submission/upload/btn-share-bg.png);
+  width: 26rem;
+  height: 5rem;
+  background-size: 100% 100%;
+  margin: 3rem auto 3rem;
+  line-height: 4rem;
+  padding-left: 5rem;
+  cursor: pointer;
+  text-shadow: 0 2px 4px #777777;
 }

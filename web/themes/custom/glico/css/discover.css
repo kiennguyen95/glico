@@ -185,7 +185,7 @@ html * {
 #content-wrapper nav .js-pager__items a[rel="prev"] {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 45%;
   display: block;
   width: 4rem;
   height: 4rem;

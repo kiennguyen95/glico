@@ -24,7 +24,7 @@ class StepFinalizeNextButton extends BaseButton {
   public function build() {
     return [
       '#type' => 'button',
-      '#value' => t('Chia sẻ ngay'),
+      '#value' => t('CHIA SẺ NGAY'),
       '#attributes' => [
         'class' => ['fb-share-submission'],
       ],

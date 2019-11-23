@@ -5,7 +5,7 @@
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        js.src = "https://connect.facebook.net/vi_VN/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
       $('.fb-share-submission').click(function () {
@@ -39,10 +39,13 @@
         $(this).siblings(".pick-frame").removeClass("is-active");
         $('form.glico-submission-form input[name="frame"]').val($(this).attr("data-frame-value"));
       });
-      console.log('checkmate');
+
       $(".btn-send-submission").click(function () {
-        console.log("submit");
         $("button.submission-to-submit-btn.button").click();
+      });
+
+      $(".btn-share-fake").click(function () {
+        $("button.fb-share-submission").click();
       });
 
     }
