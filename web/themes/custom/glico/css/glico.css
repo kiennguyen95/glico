@@ -2049,3 +2049,19 @@ form.glico-submission-form #submit-video-submission {
   color: #676767;
   cursor: pointer;
 }
+
+/*=============================RESPONSIVE PC================================*/
+/*@media all and (min-width: 1280px) {*/
+  /*#section-header {*/
+    /*height: 6vw;*/
+  /*}*/
+
+  /*#section-header .logo {*/
+    /*margin-left: 11.9vw;*/
+    /*width: 11vw;*/
+  /*}*/
+
+  /*#section-header ul.header-menu li a {*/
+    /*font-size: 1.4vw;*/
+  /*}*/
+/*}*/

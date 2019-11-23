@@ -19,3 +19,114 @@
   z-index: 102;
   transform: translate(-50%, -50%);
 }
+
+/*=============================RESPONSIVE PC================================*/
+/*@media all and (min-width: 1280px) {*/
+  /*#section-header {*/
+    /*height: 6vw;*/
+  /*}*/
+
+  /*#section-header .logo {*/
+    /*margin-left: 11.9vw;*/
+    /*width: 11vw;*/
+  /*}*/
+
+  /*#section-header ul.header-menu li a {*/
+    /*font-size: 1.4vw;*/
+  /*}*/
+
+  /*#section-banner {*/
+    /*margin-top: 6vw;*/
+  /*}*/
+
+  /*#part-info ul.tabs li {*/
+    /*font-size: 1.62vw;*/
+    /*background-size: 100% 100%;*/
+    /*width: 15.8vw;*/
+    /*height: 4vw;*/
+    /*line-height: 3.4vw;*/
+    /*margin: 0 0.2vw;*/
+  /*}*/
+
+  /*#part-info {*/
+    /*!*width: 78vw;*!*/
+    /*border-radius: 1.95vw;*/
+    /*padding-top: 1.35vw;*/
+    /*height: 68vw;*/
+  /*}*/
+
+  /*#content-prizes .row-1 {*/
+    /*width: 45vw;*/
+    /*margin: 1.1vw auto 1.9vw;*/
+  /*}*/
+
+  /*#content-prizes .row-1 > img {*/
+    /*margin-right: 2.63vw;*/
+    /*width: 20vw;*/
+  /*}*/
+
+  /*#content-prizes .row-1 #prize-jackpot-img {*/
+    /*width: 7vw;*/
+    /*height: 7.3vw;*/
+  /*}*/
+
+  /*#content-prizes .row-1 .title > div:first-child {*/
+    /*font-size: 4.2vw;*/
+    /*margin-right: 0.38vw;*/
+  /*}*/
+
+  /*#content-prizes .row-1 .title > div:last-child {*/
+    /*font-size: 1.63vw;*/
+  /*}*/
+
+  /*#content-prizes .row-1 p.details {*/
+    /*font-size: 1.3vw;*/
+    /*line-height: 1.2;*/
+    /*margin-top: 0.6vw;*/
+  /*}*/
+
+  /*#content-prizes .row-2 {*/
+    /*width: 58vw;*/
+    /*margin: 0 auto;*/
+  /*}*/
+
+  /*#content-prizes .row-2 > div {*/
+    /*margin: 0 1.4vw;*/
+  /*}*/
+
+  /*#content-prizes .row-2 .prize-img {*/
+    /*margin: 0 auto 0.38vw;*/
+    /*width: 4.8vw;*/
+    /*height: 7vw;*/
+  /*}*/
+
+  /*#content-prizes .row-2 .title > div:first-child, #content-prizes .row-3 .title > div:first-child {*/
+    /*font-size: 3.3vw;*/
+    /*margin-right: 0.38vw;*/
+  /*}*/
+
+  /*#content-prizes .row-2 .title > div:last-child, #content-prizes .row-3 .title > div:last-child {*/
+    /*font-size: 1.4vw;*/
+  /*}*/
+
+  /*#content-prizes .row-2 p.details {*/
+    /*font-size: 1.3vw;*/
+    /*margin: 0.6vw auto 0;*/
+    /*width: 15.8vw;*/
+  /*}*/
+
+  /*#content-prizes .row-3 .prize-weekly {*/
+    /*margin: 1.5vw auto 0;*/
+    /*width: 46vw;*/
+  /*}*/
+
+  /*#content-prizes .row-3 #prize-weekly-img {*/
+    /*margin-right: 0.75vw;*/
+    /*width: 12.75vw;*/
+    /*height: 7.5vw;*/
+  /*}*/
+
+  /*#content-prizes .row-3 p.details {*/
+    /*font-size: 1.3vw;*/
+  /*}*/
+/*}*/

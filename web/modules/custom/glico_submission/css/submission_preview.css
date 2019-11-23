@@ -1,0 +1,297 @@
+html {
+  font-size: 62.5%;
+}
+
+.preview-bg {
+  background-image: url(/modules/custom/glico_submission/upload/bg-submit.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding-top: 7vw;
+  font-size: 0;
+}
+
+.preview-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.preview-content #banner-img {
+  width: 27vw;
+  max-width: 20rem;
+  margin: 1rem auto;
+}
+
+.preview-content #banner-img img {
+  width: 100%;
+}
+
+.preview-wrapper {
+  max-width: 1200px;
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  font-family: Baloo Tammudu, cursive;
+}
+
+.preview-wrapper * {
+  font-size: 1.5rem;
+}
+
+.preview-wrapper .field-video-wrapper {
+  flex-basis: 70%;
+  margin-right: 1%;
+}
+
+.preview-wrapper .field-video-wrapper video {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 1vw;
+}
+
+.field-video {
+  position: relative;
+}
+
+.field-video:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 102%;
+  height: 105%;
+  background-size: 100% 100%;
+  top: -3%;
+  left: -2%;
+}
+
+.field-video.video-frame-1:before {
+  background-image: url(/modules/custom/glico_submission/upload/frame-1.png);
+}
+
+.field-video.video-frame-2:before {
+  background-image: url(/modules/custom/glico_submission/upload/frame-2.png);
+  width: 105%;
+  height: 123%;
+  top: -14.5%;
+  left: -4%;
+}
+
+.field-video.video-frame-2 video {
+  border-radius: 8vw;
+}
+
+.preview-wrapper .field-video-wrapper .video-frame-2 video[style] {
+  border-radius: 4vw;
+}
+
+.field-video.video-frame-3:before {
+  background-image: url(/modules/custom/glico_submission/upload/frame-3.png);
+  width: 106%;
+  height: 110%;
+  top: -5.1%;
+  left: -2.5%;
+}
+
+.preview-wrapper .field-video-wrapper .video-frame-3 video[style] {
+  border-radius: 8%;
+}
+
+.video-control {
+  margin-top: 2%;
+  padding-top: 1%;
+  border-top: 3px solid white;
+  position: relative;
+}
+
+.video-control .btn-play,
+.video-control .btn-mute {
+  width: 3rem;
+  height: 3rem;
+  background-size: 100% 100%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.video-control .btn-play {
+  background-image: url(/modules/custom/glico_submission/upload/btn-play-control.png);
+  margin-right: 0.1rem;
+}
+
+.video-control .btn-mute {
+  background-image: url(/modules/custom/glico_submission/upload/btn-mute-control.png);
+}
+
+.video-control .text-time {
+  font-size: 1.5rem;
+  color: white;
+  position: absolute;
+  top: 1.5rem;
+  margin-left: 1rem;
+}
+
+.video-control .btn-fullscreen {
+  padding: 14px 10px 2px 10px;
+  float: right;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #F99EC6;
+  border-radius: 25px;
+  border: 2px solid white;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.info-wrapper {
+  background-color: white;
+  flex-grow: 1;
+  border-radius: 2vw;
+  padding: 20px 26px;
+  border: 2px solid #ffd3e8;
+  height: 34rem;
+  max-width: 29%;
+}
+
+.info-wrapper .baby-name-label {
+  font-size: 1.5rem;
+  color: #F99EC7;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.info-wrapper .baby-name {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  background-color: #F99EC7;
+  border-radius: 2rem;
+  line-height: 1rem;
+  padding-top: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.info-wrapper .caption {
+  font-size: 1.2rem;
+  color: #6081C4;
+  border: 1px solid #F99EC6;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem 0 2rem;
+  height: 16rem;
+  overflow: hidden;
+}
+
+
+.info-wrapper .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.info-wrapper .user-info .avatar {
+  width: 3.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.info-wrapper .user-info .username {
+  font-size: 1.5rem;
+  color: #6081C4;
+  text-align: center;
+  padding-top: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-send-submission {
+  font-family: UTM-Cookies, cursive;
+  font-size: 4.5vw;
+  color: white;
+  background-image: url(/modules/custom/glico_submission/upload/btn-submit-bg.png);
+  width: 108vw;
+  height: 22.5vw;
+  background-size: 100% 100%;
+  margin-top: -5rem;
+  line-height: 1;
+  padding-left: 40.5vw;
+  padding-top: 15vw;
+  text-shadow: 0 2px 4px #777777;
+  pointer-events: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-send-submission span {
+  pointer-events: initial;
+  cursor: pointer;
+}
+
+.decor-bottom-img {
+  width: 100%;
+}
+
+.share-modal-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #a5dcfdc7;
+  z-index: 101;
+}
+
+.share-modal {
+  font-family: Baloo Tammudu, cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+  background: #ffe5fc;
+  border-radius: 2rem;
+  padding: 6rem 0 4rem;
+}
+
+.share-modal:before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url(/themes/custom/glico/images/discover/bear-decor-1.png);
+  width: 14rem;
+  height: 13.5rem;
+  top: -10.5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-size: 100% 100%;
+}
+
+.share-modal .message-share {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 73%;
+  color: #DF75B3;
+  margin: 0 auto;
+}
+
+.btn-share-fb,
+.btn-back {
+  font-family: UTM-Cookies, cursive;
+  font-size: 2.7rem;
+  color: white;
+  background-image: url(/modules/custom/glico_submission/upload/btn-share-bg.png);
+  width: 26rem;
+  height: 5rem;
+  background-size: 100% 100%;
+  margin: 5rem auto 0;
+  line-height: 4rem;
+  padding-left: 5rem;
+  cursor: pointer;
+  text-shadow: 0 2px 4px #777777;
+}
+
+.btn-back {
+  padding-left: 4rem;
+  display: block;
+}

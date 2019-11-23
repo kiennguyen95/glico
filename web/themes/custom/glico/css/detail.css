@@ -12,14 +12,6 @@ html {
   flex-direction: column;
   align-items: center;
 }
-#content-wrapper #banner-img {
-  width: 27vw;
-  margin-top: 7vw;
-}
-
-#content-wrapper #banner-img img {
-  width: 100%;
-}
 
 #content-wrapper #banner-img {
   width: 27vw;

@@ -8,3 +8,12 @@ submission-form:
   dependencies:
     - core/jquery
     - core/drupalSettings
+
+submission-preview:
+  css:
+    theme:
+      css/submission_preview.css: {}
+  js:
+    js/submission_preview.js: {}
+  dependencies:
+    - core/jquery

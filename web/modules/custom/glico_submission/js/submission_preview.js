@@ -1,14 +1,65 @@
 (function ($) {
 
   $(document).ready(function ($) {
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '748106385614500',
+        xfbml      : true,
+        version    : 'v2.3'
+      });
+    };
 
-    $(".info-wrapper #btn-share").click(function() {
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/vi_VN/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    $('#btn-share-fb').click(function () {
       FB.ui({
-        method: 'share',
-        href: window.location.href,
+        method: 'feed',
+        // link: $(this).attr("data-share-url"),
+        link: 'https://www.google.com/',
+        caption: 'Test Caption',
         hashtag: '#GlicoDance',
-        quote: 'quote',
-      }, function(response){});
+        // quote: 'Test',
+        id: '748106385614500'
+      }, function (response) {
+        // console.log(response);
+        if (typeof response !== 'undefined') {
+          button = $("#btn-share-fb");
+          button.siblings(".message-share").html("Gửi bài dự thi thành công!");
+          button.replaceWith('<a href="/" class="btn-back">VỀ TRANG CHỦ</a>');
+
+          // $.ajax({
+          //   type: "POST",
+          //   url: "/submission/complete/" + $(this).attr("data-id") + "/1",
+          //   async: true,
+          //   // success: function (response) {
+          //   //   var url = response[0].url;
+          //   //   if (url !== null) {
+          //   //     window.location.href = url;
+          //   //   }
+          //   //   console.log(url);
+          //   // }
+          // });
+
+
+        } else {
+          $(".share-modal-bg").fadeOut();
+          $.ajax({
+            type: "POST",
+            url: "/submission/complete/" + $(this).attr("data-id") + "/0",
+            async: true,
+          });
+        }
+      });
+    });
+
+    $(".btn-send-submission span").click(function () {
+      $(".share-modal-bg").fadeIn();
     });
 
     $('.video-control .btn-play').click(function(){
@@ -34,7 +85,6 @@
     }, false);
 
     setFullscreen();
-
   });
 
   function videoControl() {

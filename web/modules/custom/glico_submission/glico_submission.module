@@ -32,8 +32,7 @@ function glico_submission_theme() {
       'render element' => 'children',
     ],
     'glico_submission_preview' => [
-      'render element' => 'form',
-      'template' => 'submission-preview',
+      'render element' => 'children',
       'variables' => [
         'variables' => NULL,
       ],

@@ -7,9 +7,17 @@ glico_submission.glico_submission_form:
     _access: 'TRUE'
 
 glico_submission.create_submission_controller_create:
-  path: '/glico_submission/{flg}/submission'
+  path: '/submission/complete/{nid}/{shared}'
   defaults:
     _controller: '\Drupal\glico_submission\Controller\AjaxSubmissionController::submission'
     _title: 'delete'
+  requirements:
+    _permission: 'access content'
+
+glico_submission.submission_preview:
+  path: '/submission/preview/{nid}'
+  defaults:
+    _controller: '\Drupal\glico_submission\Controller\SubmissionPreviewController::preview'
+    _title: 'Tham gia ngay'
   requirements:
     _permission: 'access content'
