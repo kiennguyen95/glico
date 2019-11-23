@@ -18,10 +18,24 @@
           if (typeof response === 'undefined') {
             $.ajax({
               type: "POST",
-              url: "/glico_submission/delete",
+              url: "/glico_submission/shared/submission",
+              async: true,
+              success: function (response) {
+                var url = response[0].url;
+                if (url !== null) {
+                  window.location.href = url;
+                }
+                console.log(url);
+              }
+            });
+          } else {
+            $.ajax({
+              type: "POST",
+              url: "/glico_submission/not-shared/submission",
               async: true,
             });
           }
+          $('#drupal-modal').remove();
         });
       });
 
