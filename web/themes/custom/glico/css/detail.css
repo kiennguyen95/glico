@@ -362,3 +362,115 @@ html {
   from { -webkit-transform: rotate(0deg) translateX(2vw) rotate(0deg); }
   to   { -webkit-transform: rotate(360deg) translateX(2vw) rotate(-360deg); }
 }
+
+/*css for Ipad Pro*/
+@media only screen and (max-width: 1279px) {
+  #block-glico-content .info-wrapper {
+    height: 35rem;
+  }
+
+  #block-glico-content .info-wrapper .user-info {
+    height: 9%;
+  }
+
+  #block-glico-content .info-wrapper .user-info .avatar {
+    width: 4vw;
+  }
+
+  #block-glico-content .info-wrapper .user-info .username {
+    font-size: 2.3vw;
+    padding-top: 1vw;
+  }
+
+  #block-glico-content .info-wrapper .baby-name-label {
+    font-size: 1.5vw;
+    margin: 0.5rem 0;
+  }
+
+  #block-glico-content .info-wrapper .baby-name {
+    font-size: 2vw;
+    height: 4vw;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 18%;
+    margin-bottom: 0;
+  }
+
+  #block-glico-content .caption div {
+    font-size: 0.9em;
+  }
+
+  .video-control .btn-play, .video-control .btn-mute {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .video-control .text-time {
+    font-size: 1.5rem;
+    top: 1.5rem;
+  }
+
+  .video-control .btn-fullscreen {
+    padding: 10px 10px 2px 10px;
+    font-size: 1.5rem;
+  }
+
+  #block-glico-content .info-wrapper {
+    height: 43vw;
+    max-height: 50%;
+  }
+
+  .field-flag .action-flag > a {
+    width: 2vw;
+    height: 2vw;
+    margin-right: 1.2vw;
+  }
+
+  #btn-share {
+    background-size: 2vw;
+    font-size: 1.7vw;
+    margin-top: 0.4vw;
+    line-height: 3vw;
+    padding-left: 3.2vw;
+  }
+
+  .info-wrapper .caption {
+    height: 17vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .field-flag .flag {
+    margin-top: -0.8vw;
+  }
+
+  .field-flag .flag .like-count {
+    font-size: 1.7vw;
+    color: #F691BE;
+    line-height: 2vw;
+    margin-top: 0.8vw;
+  }
+
+  #btn-apply {
+    margin-top: 60vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(3) {
+    top: 171vw;
+  }
+  #discover-section-winning-list .nutrients img:nth-child(4) {
+    top: 143vw;
+  }
+}
+
+@media only screen and (min-width: 780px) and (max-width: 1279px) {
+  .info-wrapper .caption {
+    height: 17vw;
+    margin-bottom: 2.5vw;
+  }
+}
+
+/*css for Ipad*/
+@media only screen and (max-width: 1023px) {
+
+}
