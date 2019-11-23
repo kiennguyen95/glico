@@ -150,7 +150,7 @@ class GlicoSubmissionForm extends FormBase {
     $response->addCommand(new HtmlCommand('#form-wrapper',
       $form['wrapper']));
     if ($this->step->getStep() === StepsEnum::STEP_FINALIZE) {
-      $response->addCommand(new CloseModalDialogCommand());
+//      $response->addCommand(new CloseModalDialogCommand());
     }
     return $response;
   }

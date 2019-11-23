@@ -18,10 +18,17 @@
           if (typeof response === 'undefined') {
             $.ajax({
               type: "POST",
-              url: "/glico_submission/delete",
+              url: "/glico_submission/shared/submission",
+              async: true,
+            });
+          } else {
+            $.ajax({
+              type: "POST",
+              url: "/glico_submission/not-shared/submission",
               async: true,
             });
           }
+          $('button.ui-dialog-titlebar-close').click();
         });
       });
 
