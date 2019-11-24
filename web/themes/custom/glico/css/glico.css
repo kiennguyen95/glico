@@ -1110,11 +1110,11 @@ body.toolbar-vertical #section-header {
 }
 
 #section-winning-list .users table tr td:nth-child(1) {
-  width: 15.5vw;
+  width: 23.5vw;
 }
 
 #section-winning-list .users table tr td:nth-child(2) {
-  width: 8vw;
+  width: 5vw;
   text-align: center;
 }
 
