@@ -12,7 +12,6 @@ html {
 .preview-content {
   max-width: 1280px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .preview-content #banner-img {
@@ -98,14 +97,14 @@ html {
 .video-control {
   margin-top: 2%;
   padding-top: 1%;
-  border-top: 3px solid white;
+  border-top: 0.21vw solid white;
   position: relative;
 }
 
 .video-control .btn-play,
 .video-control .btn-mute {
-  width: 3rem;
-  height: 3rem;
+  width: 3.5vw;
+  height: 3.5vw;
   background-size: 100% 100%;
   display: inline-block;
   cursor: pointer;
@@ -121,23 +120,23 @@ html {
 }
 
 .video-control .text-time {
-  font-size: 1.5rem;
+  font-size: 1.74vw;
   color: white;
   position: absolute;
-  top: 1.5rem;
-  margin-left: 1rem;
+  top: 1.74vw;
+  margin-left: 1.1vw;
 }
 
 .video-control .btn-fullscreen {
-  padding: 14px 10px 2px 10px;
+  padding: 0.97vw 0.7vw 0.14vw 0.7vw;
   float: right;
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.52vw;
   color: white;
   background-color: #F99EC6;
-  border-radius: 25px;
-  border: 2px solid white;
-  margin-top: 2px;
+  border-radius: 1.74vw;
+  border: 0.14vw solid white;
+  margin-top: 0.14vw;
   cursor: pointer;
 }
 
@@ -145,39 +144,40 @@ html {
   background-color: white;
   flex-grow: 1;
   border-radius: 2vw;
-  padding: 20px 26px;
-  border: 2px solid #ffd3e8;
-  height: 34rem;
+  padding: 1.4vw 1.8vw;
+  border: 0.14vw solid #ffd3e8;
+  height: 37.8vw;
   max-width: 29%;
+  max-height: 620px;
 }
 
 .info-wrapper .baby-name-label {
-  font-size: 1.5rem;
+  font-size: 1.74vw;
   color: #F99EC7;
   text-align: center;
-  margin: 1rem 0;
+  margin: 0.7vw 0;
 }
 
 .info-wrapper .baby-name {
-  font-size: 1.5rem;
+  font-size: 1.74vw;
   color: white;
   text-align: center;
   background-color: #F99EC7;
-  border-radius: 2rem;
-  line-height: 1rem;
-  padding-top: 1rem;
+  border-radius: 1.4vw;
+  line-height: 2.1vw;
+  padding-top: 0.97vw;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 1.4vw;
 }
 
 .info-wrapper .caption {
-  font-size: 1.2rem;
+  font-size: 1.4vw;
   color: #6081C4;
-  border: 1px solid #F99EC6;
-  padding: 1rem;
-  border-radius: 1rem;
-  margin: 1rem 0 2rem;
-  height: 16rem;
+  border: 0.07vw solid #F99EC6;
+  padding: 1.4vw 0.7vw 0.7vw 0.7vw;
+  border-radius: 1.4vw;
+  margin: 0.7vw 0 1.4vw;
+  height: 13.19vw;
   overflow: hidden;
 }
 
@@ -188,16 +188,16 @@ html {
 }
 
 .info-wrapper .user-info .avatar {
-  width: 3.5rem;
+  width: 3.5vw;
   border-radius: 50%;
-  margin-right: 1rem;
+  margin-right: 0.7vw;
 }
 
 .info-wrapper .user-info .username {
-  font-size: 1.5rem;
+  font-size: 1.74vw;
   color: #6081C4;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 0.7vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -211,7 +211,7 @@ html {
   width: 108vw;
   height: 22.5vw;
   background-size: 100% 100%;
-  margin-top: -5rem;
+  margin-top: -5.6vw;
   line-height: 1;
   padding-left: 40.5vw;
   padding-top: 15vw;
@@ -393,3 +393,82 @@ html {
     /*display: none;*/
   /*}*/
 /*}*/
+
+@media screen and (max-width: 400px) {
+  #content-wrapper #banner-img {
+    margin-top: 13vw;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #content-wrapper #banner-img {
+    margin-top: 13vw;
+  }
+
+  .video-control {
+    border-top: 3px solid white;
+  }
+
+  .video-control .btn-play,
+  .video-control .btn-mute {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .video-control .text-time {
+    font-size: 1.5rem;
+    top: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .video-control .btn-fullscreen {
+    padding: 14px 10px 2px 10px;
+    font-size: 1.5rem;
+    border-radius: 25px;
+    border: 2px solid white;
+    margin-top: 2px;
+  }
+
+  .info-wrapper {
+    padding: 20px 26px;
+    border: 2px solid #ffd3e8;
+    height: 34rem;
+  }
+
+  .info-wrapper .baby-name-label {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .info-wrapper .baby-name {
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    line-height: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-wrapper .caption {
+    font-size: 1.2rem;
+    border: 1px solid #F99EC6;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem 0 2rem;
+    height: 16rem;
+  }
+
+
+  .info-wrapper .user-info .avatar {
+    width: 3.5rem;
+    margin-right: 1rem;
+  }
+
+  .info-wrapper .user-info .username {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .btn-send-submission {
+    margin-top: -5rem;
+  }
+}
