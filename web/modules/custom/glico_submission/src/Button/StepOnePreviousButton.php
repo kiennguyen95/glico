@@ -24,7 +24,7 @@ class StepOnePreviousButton extends BaseButton {
   public function build() {
     return [
       '#type' => 'markup',
-      '#markup' => '<div type="button" id="back-to-home-page" class="button js-form-submit form-submit ui-button ui-corner-all ui-widget">Quay lại trang chủ</div>',
+      '#markup' => '<div type="button" id="back-to-home-page" class="back-to-previous button js-form-submit form-submit ui-button ui-corner-all ui-widget">Quay lại trang chủ</div>',
     ];
   }
 

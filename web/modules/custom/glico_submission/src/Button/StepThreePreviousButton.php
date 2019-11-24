@@ -5,11 +5,11 @@ namespace Drupal\glico_submission\Button;
 use Drupal\glico_submission\Step\StepsEnum;
 
 /**
- * Class StepTwoPreviousButton.
+ * Class StepThreePreviousButton.
  *
  * @package Drupal\glico_submission\Button
  */
-class StepTwoPreviousButton extends BaseButton {
+class StepThreePreviousButton extends BaseButton {
 
   /**
    * {@inheritdoc}
@@ -24,8 +24,9 @@ class StepTwoPreviousButton extends BaseButton {
   public function build() {
     return [
       '#type' => 'submit',
-      '#value' => t('Chọn lại video'),
-      '#goto_step' => StepsEnum::STEP_ONE,
+//      '#submit' => [],
+      '#value' => t('Chọn lại khung'),
+      '#goto_step' => StepsEnum::STEP_TWO,
       '#skip_validation' => TRUE,
       '#attributes' => [
         'class' => ['submission-btn back-to-previous'],
