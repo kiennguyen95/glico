@@ -571,10 +571,6 @@ form.glico-submission-form input {
   font-size: 2rem;
 }
 
-form.glico-submission-form * {
-  line-height: 1;
-}
-
 form.glico-submission-form #messages-wrapper {
   display: none;
 }

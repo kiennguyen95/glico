@@ -450,6 +450,10 @@ html * {
   animation-iteration-count: infinite;
 }
 
+form.glico-submission-form * {
+  line-height: 1;
+}
+
 @media screen and (max-width: 767px) {
   /*html {*/
     /*font-size: 45%;*/
