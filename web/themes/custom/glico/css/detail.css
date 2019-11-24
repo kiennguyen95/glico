@@ -1,7 +1,3 @@
-html {
-  font-size: 62.5%;
-}
-
 #btn-apply .ajax-progress {
   position: fixed;
   top: 0;
@@ -37,7 +33,7 @@ html {
 #content-wrapper #banner-img {
   margin-top: 7vw;
   width: 27vw;
-  max-width: 38rem;
+  max-width: 23.8rem;
 }
 
 #content-wrapper #banner-img img {
@@ -128,7 +124,7 @@ html {
 
 .video-control .btn-play {
   background-image: url(/modules/custom/glico_submission/upload/btn-play-control.png);
-  margin-right: 0.5rem;
+  margin-right: 0.3rem;
 }
 
 .video-control .btn-mute {

@@ -54,7 +54,6 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 62.5%;
 }
 
 html * {
@@ -83,8 +82,8 @@ html * {
 
 #content-wrapper #banner-img {
   width: 27vw;
-  margin: 7vw auto 2rem;
-  max-width: 38rem;
+  margin: 7vw auto 1.25rem;
+  max-width: 23.75rem;
 }
 
 #content-wrapper #banner-img img {
@@ -92,27 +91,27 @@ html * {
 }
 
 #content-wrapper #btn-wrapper {
-  margin-top: 2rem;
+  margin-top: 1.25rem;
   text-align: center;
 }
 
 #content-wrapper #btn-wrapper div {
   display: inline-block;
   font-family: SVN-Cookies, cursive;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   color: white;
   background-image: url(/themes/custom/glico/images/front/rules/btn-bg-tab.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  width: 27rem;
-  height: 6rem;
-  line-height: 5rem;
-  margin: 0 0.5rem;
+  width: 17rem;
+  height: 3.75rem;
+  line-height: 3.1rem;
+  margin: 0 0.3rem;
   cursor: pointer;
   transition: background ease 0.2s;
   text-shadow: 0 2px 3px #777777;
   text-align: left;
-  padding-left: 3rem;
+  padding-left: 1.9rem;
 }
 
 #content-wrapper #btn-wrapper div:hover,
@@ -134,14 +133,14 @@ html * {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 4rem auto;
+  margin: 2.5rem auto;
   max-width: 1000px;
   width: 85%;
 }
 
 #content-wrapper .video-list .views-row {
   width: 48%;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   position: relative;
 }
 
@@ -204,8 +203,8 @@ html * {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 5rem;
-  height: 5rem;
+  width: 3.1rem;
+  height: 3.1rem;
   margin: auto;
   background-image: url(/modules/custom/glico_submission/upload/btn-play.png);
   background-size: 100% 100%;
@@ -216,8 +215,8 @@ html * {
   right: 0;
   top: 45%;
   display: block;
-  width: 4rem;
-  height: 4rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-image: url(/themes/custom/glico/images/discover/btn-next.png);
   background-size: 100% 100%;
 }
@@ -227,8 +226,8 @@ html * {
   left: 0;
   top: 45%;
   display: block;
-  width: 4rem;
-  height: 4rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-image: url(/themes/custom/glico/images/discover/btn-prev.png);
   background-size: 100% 100%;
 }
@@ -246,17 +245,17 @@ html * {
   font-family: Baloo Tammudu, cursive;
   font-size: 1.83vw;
   color: #DA4F82;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   background-color: #FFD4E8;
-  padding: 4rem 7rem;
+  padding: 2.5rem 4.4rem;
   width: 80vw;
   max-width: 800px;
-  margin: 5rem auto;
+  margin: 3.1rem auto;
 }
 
 .empty-message p:nth-child(2) {
   line-height: 1.5;
-  margin-top: 2rem;
+  margin-top: 1.25rem;
 }
 
 .empty-message-img {

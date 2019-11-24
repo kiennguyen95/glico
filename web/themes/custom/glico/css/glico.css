@@ -15,7 +15,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 62.5% !important;
+  /*font-size: 62.5% !important;*/
 }
 
 html * {

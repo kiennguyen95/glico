@@ -433,7 +433,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Discover
+      title: 'Khám phá'
       header: {  }
       footer: {  }
       empty:
