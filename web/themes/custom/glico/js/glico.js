@@ -7,12 +7,12 @@
       $(".header-menu").slideDown();
     });
 
-      $(".header-menu-bg, .header-menu li a").click(function () {
-        if ($(window).width() <= 400) {
-          $(".header-menu-bg").hide();
-          $(".header-menu").slideUp();
-        }
-      });
+    $(".header-menu-bg, .header-menu li a").click(function () {
+      if ($(window).width() <= 400) {
+        $(".header-menu-bg").hide();
+        $(".header-menu").slideUp();
+      }
+    });
   });
 
 }(jQuery));
