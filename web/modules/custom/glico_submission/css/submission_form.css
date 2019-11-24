@@ -43,25 +43,42 @@ body .ui-dialog.ui-widget.ui-widget-content .pick-frame {
   background-color: #FFD4E8;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 8rem;
-  height: 4rem;
+  width: 11rem;
+  height: 6.5rem;
   margin: 0.5rem;
   border-radius: 0.5rem;
+  position: relative;
 }
 
-body .ui-dialog.ui-widget.ui-widget-content .pick-frame.frame-1 {
-  background-image: url("../upload/frame-1.png");
-  background-size: cover;
+body .ui-dialog.ui-widget.ui-widget-content .pick-frame:before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-size: 100% 100%;
 }
 
-body .ui-dialog.ui-widget.ui-widget-content .pick-frame.frame-2 {
-  background-image: url("../upload/frame-2.png");
-  background-size: cover;
+body .ui-dialog.ui-widget.ui-widget-content .pick-frame.frame-1:before {
+  background-image: url("/modules/custom/glico_submission/upload/frame-1.png");
+  width: 102%;
+  height: 105%;
+  top: -3.5%;
+  left: -2%;
 }
 
-body .ui-dialog.ui-widget.ui-widget-content .pick-frame.frame-3 {
-  background-image: url("../upload/frame-3.png");
-  background-size: cover;
+body .ui-dialog.ui-widget.ui-widget-content .pick-frame.frame-2:before {
+  background-image: url("/modules/custom/glico_submission/upload/frame-2.png");
+  width: 105%;
+  height: 123%;
+  top: -14.5%;
+  left: -4%;
+}
+
+body .ui-dialog.ui-widget.ui-widget-content .pick-frame.frame-3:before {
+  background-image: url("/modules/custom/glico_submission/upload/frame-3.png");
+  width: 106%;
+  height: 110%;
+  top: -5.1%;
+  left: -2.5%;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content {
@@ -73,15 +90,15 @@ body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-cont
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions {
-  margin-right: 60px;
+  margin-right: 150px;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions button.submission-btn,
 body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions button.submission-to-preview-btn {
-  width: 200px;
+  width: 160px;
   font-size: 1.2rem;
   height: 2.3rem;
-  line-height: 2.3rem;
+  line-height: 2rem;
   border-radius: 15px;
   background-color: #F99EC7;
   color: #FFFFFF;
@@ -99,7 +116,7 @@ body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-name-and
 }
 
 body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-baby-name"] {
-  height: 35px;
+  height: 39px;
   width: 100%;
   border-radius: 20px;
   margin: 10px 0;
@@ -107,10 +124,12 @@ body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-baby-nam
   font-size: 1.2rem;
   color: #5D5D5D;
   font-family: Baloo Tammudu, cursive;
+  border: 1px solid pink;
+  padding-top: 20px;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-caption"] {
-  height: 300px;
+  height: 11.5rem;
   width: 100%;
   border-radius: 20px;
   margin: 10px 0;
@@ -118,6 +137,8 @@ body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-caption"
   font-size: 1.2rem;
   color: #5D5D5D;
   font-family: Baloo Tammudu, cursive;
+  padding-top: 15px;
+  border: 1px solid pink;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content div.preview-wrapper {
@@ -140,7 +161,8 @@ body .ui-dialog.ui-widget.ui-widget-content div.preview-wrapper .right-part {
 }
 
 form.glico-submission-form video {
-  width: 27rem;
+  width: 18rem;
+  height: 10.13rem;
   display: block;
   margin: 0 auto 1rem;
 }
@@ -186,26 +208,13 @@ form.glico-submission-form #form-wrapper .form-actions .ajax-progress .throbber 
 .pick-frame-wrapper {
   display: flex;
   flex-wrap: wrap;
-  width: 18rem;
+  width: 24rem;
   margin: 0 auto;
 }
 
 .pick-frame-wrapper .pick-frame {
   position: relative;
   cursor: pointer;
-}
-
-.pick-frame-wrapper .pick-frame:hover:after,
-.pick-frame-wrapper .pick-frame.is-active:after {
-  display: block;
-  content: "";
-  width: 103%;
-  height: 104%;
-  position: absolute;
-  top: -3%;
-  left: -2%;
-  border: 2px solid #f376a1;
-  border-radius: 0.5rem;
 }
 
 .preview-wrapper {
@@ -240,8 +249,13 @@ form.glico-submission-form #form-wrapper .form-actions .ajax-progress .throbber 
   border-radius: 1vw;
 }
 
+.pick-frame-video-wrapper {
+  text-align: center;
+}
+
 .field-video {
   position: relative;
+  display: inline-block;
 }
 
 .field-video:before {
@@ -288,16 +302,13 @@ form.glico-submission-form #form-wrapper .form-actions .ajax-progress .throbber 
 }
 
 .video-control {
-  margin-top: 2%;
-  padding-top: 1%;
-  border-top: 3px solid white;
   position: relative;
 }
 
 .video-control .btn-play,
 .video-control .btn-mute {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-size: 100% 100%;
   display: inline-block;
   cursor: pointer;
@@ -305,7 +316,6 @@ form.glico-submission-form #form-wrapper .form-actions .ajax-progress .throbber 
 
 .video-control .btn-play {
   background-image: url(/modules/custom/glico_submission/upload/btn-play-control.png);
-  margin-right: 0.1rem;
 }
 
 .video-control .btn-mute {
@@ -450,25 +460,71 @@ button.submission-to-submit-btn {
   background-size: 100% 100%;
 }
 
-div#back-to-home-page,
+div#back-to-home-page {
+  width: 160px;
+  font-size: 1.2rem;
+  height: 2.3rem;
+  line-height: 2rem;
+  border-radius: 15px;
+  background-color: white;
+  color: #676767;
+  border: 1px solid #F99EC7;
+  font-family: Baloo Tammudu, cursive;
+  cursor: pointer;
+  position: absolute;
+  bottom: 34px;
+  left: 150px;
+}
+
 button.back-to-previous {
   width: 215px;
   font-size: 1.2rem;
   height: 2.3rem;
   line-height: 2.3rem;
   border-radius: 15px;
-  background-color: #F99EC7;
-  color: #FFFFFF;
+  background-color: white!important;
+  color: #676767!important;
+  border: 1px solid #F99EC7!important;
   margin: 0 0 2rem 0;
-  border: none;
   font-family: Baloo Tammudu, cursive;
   position: absolute;
   bottom: 3px;
   left: 70px;
 }
 
+button.step-one-next {
+  width: 160px!important;
+}
+
+button.step-two-prev {
+  width: 180px!important;
+  margin-left: 60px!important;
+  text-align: center;
+  font-size: 1.2rem;
+  height: 2.3rem;
+  line-height: 2.8rem;
+  border-radius: 15px;
+  background-color: white;
+  color: #676767;
+  border: 1px solid #F99EC7;
+  font-family: Baloo Tammudu, cursive;
+  cursor: pointer;
+}
+
+button.step-three-prev {
+  width: 180px!important;
+  margin-left: 60px!important;
+}
+
+button.step-two-next {
+  position: absolute;
+  bottom: 3px;
+  right: 150px;
+}
+
 .toggle-pick-frame {
-  width: 150px;
+  width: 180px;
+  text-align: center;
   font-size: 1.2rem;
   height: 2.3rem;
   line-height: 2.8rem;
@@ -483,23 +539,18 @@ button.back-to-previous {
 
 form.glico-submission-form #pick-frame-video video {
   width: 18rem;
-}
-
-form.glico-submission-form #pick-frame-video:before {
-  width: 51%;
-  height: 116%;
-  top: -8%;
-  left: 24%;
+  margin-bottom: 0;
 }
 
 .pick-frame-video-wrapper .video-control .btn-play {
   position: absolute;
-  top: -118px;
+  top: -115px;
   right: 287px;
 }
 
 div#pick-frame-wrapper-div {
   visibility: hidden;
+  margin-top: 0.5rem;
 }
 
 /* UPLOAD MODAL FORM */
@@ -516,9 +567,12 @@ body .ui-dialog .ui-dialog-content {
 
 form.glico-submission-form,
 form.glico-submission-form input {
-  /*position: relative;*/
   font-family: Baloo Tammudu, cursive;
   font-size: 2rem;
+}
+
+form.glico-submission-form #messages-wrapper {
+  display: none;
 }
 
 html {
@@ -568,12 +622,12 @@ form.glico-submission-form .form-item-frame label {
 }
 
 form.glico-submission-form .form-item-video-file label.submit-video {
-  height: 18rem;
+  height: 13rem;
   background-color: white;
   border-radius: 0.8rem;
   border: 2px solid #EAC6DA;
   text-align: center;
-  padding-top: 8rem;
+  padding-top: 6rem;
   width: 27rem;
   margin: 0 auto;
   font-size: 1.2rem!important;
@@ -604,4 +658,166 @@ form.glico-submission-form #submit-video-submission {
   margin: 0 auto;
   color: #676767;
   cursor: pointer;
+}
+
+.pick-frame-wrapper .pick-frame-text {
+  background-image: url(/modules/custom/glico_submission/upload/btn-bg-select.png);
+  font-size: 1rem;
+  background-position: center;
+  text-align: center;
+  background-size: 100% 100%;
+  width: 5rem;
+  height: 2rem;
+  margin: 0 auto;
+  color: #DB75AF;
+  line-height: 2.3rem;
+  margin-top: 2.5rem;
+}
+
+@media all and (max-width: 767px) {
+  form.glico-submission-form:before {
+    width: 11rem;
+    height: 10.5rem;
+    top: -9rem;
+  }
+
+  form.glico-submission-form .form-item-video-file label,
+  form.glico-submission-form .form-item-frame label {
+    font-size: 1.2rem!important;
+    margin: 2.5rem 1.5rem 1.5rem;
+    border-bottom: 1px solid white;
+  }
+
+  body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-name-and-comment"] span.fieldset-legend {
+    font-size: 1.2rem!important;
+    border-bottom: 1px solid white;
+    margin: 2rem 0 0;
+    width: 100%;
+  }
+
+  form.glico-submission-form .form-item-video-file label.submit-video {
+    height: 9rem;
+    border: 2px solid #EAC6DA;
+    padding-top: 4rem;
+    width: 18rem;
+    font-size: 1rem!important;
+  }
+
+  button.step-one-next,
+  button.step-two-next {
+    width: 110px !important;
+    height: 2rem !important;
+    font-size: 1rem !important;
+    line-height: 1.8rem !important;
+    margin-right: 2.5rem !important;
+  }
+
+  button.step-two-next {
+    margin-right: 0 !important;
+  }
+
+  div#back-to-home-page,
+  button.step-two-prev,
+  button.step-three-prev {
+    width: 110px !important;
+    height: 2rem !important;
+    font-size: 1rem !important;
+    line-height: 1.8rem !important;
+    left: 2.5rem;
+  }
+
+  button.step-two-prev {
+    left: -2rem;
+    width: 140px !important;
+  }
+
+  button.step-three-prev {
+    left: -2rem;
+    width: 145px !important;
+  }
+
+  .toggle-pick-frame {
+    width: 140px !important;
+    height: 2rem !important;
+    font-size: 1rem !important;
+    line-height: 2.4rem !important;
+  }
+
+  body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions {
+    margin-right: 0;
+  }
+
+  form.glico-submission-form video {
+    width: 13rem;
+    height: 7.3rem;
+    margin: 0 auto 0.5rem;
+  }
+
+  form.glico-submission-form .select-video-real input[name="video_file_remove_button"] {
+    width: 110px;
+    font-size: 1rem;
+    height: 2rem;
+    line-height: 2.3rem;
+    margin: 0 0 2rem 0;
+  }
+
+  form.glico-submission-form .select-video-real .ajax-progress .throbber,
+  form.glico-submission-form #form-wrapper .form-actions .ajax-progress .throbber {
+    width: 2.5rem;
+    height: 2.5rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
+  }
+
+  button.step-two-next {
+    right: 2rem;
+  }
+
+  .pick-frame-video-wrapper .video-control .btn-play {
+    top: -93px;
+    right: 127px;
+  }
+
+  body .ui-dialog.ui-widget.ui-widget-content .pick-frame {
+    width: 8rem;
+    height: 4.5rem;
+  }
+
+  .pick-frame-wrapper {
+    width: 18rem;
+  }
+
+  .pick-frame-wrapper .pick-frame-text {
+    margin-top: 1.3rem;
+  }
+
+  body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-baby-name"] {
+    height: 30px;
+    margin: 0;
+    padding: 10px;
+    font-size: 1rem;
+    padding-top: 20px;
+  }
+
+  body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-caption"] {
+    height: 7.5rem;
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+
+  form.glico-submission-form #pick-frame-video video {
+    width: 13rem;
+  }
+
+  body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-name-and-comment"] div.fieldset-wrapper {
+    margin: 15px;
+  }
+
+  body .ui-dialog.ui-widget.ui-widget-content .ui-dialog-buttonpane.ui-widget-content .ui-dialog-buttonset.form-actions button.submission-to-preview-btn {
+    width: 110px !important;
+    height: 2rem !important;
+    font-size: 1rem !important;
+    line-height: 1.8rem !important;
+    margin-right: 1.5rem !important;
+  }
 }

@@ -25,6 +25,7 @@ class StepThreeNextButton extends BaseButton {
     return [
       '#type' => 'submit',
       '#value' => t('Xong'),
+      '#goto_step' => StepsEnum::STEP_FINALIZE,
       '#submit_handler' => 'submitValues',
       '#attributes' => [
         'class' => ['submission-to-preview-btn'],

@@ -115,11 +115,11 @@ class GlicoSubmissionForm extends FormBase {
           ];
         }
 
-        if ($this->step->getStep() === StepsEnum::STEP_FINALIZE) {
-          $form['wrapper']['actions'][$button->getKey()]['#ajax']['progress'] = [
-            'type' => 'none'
-          ];
-        }
+//        if ($this->step->getStep() === StepsEnum::STEP_FINALIZE) {
+//          $form['wrapper']['actions'][$button->getKey()]['#ajax']['progress'] = [
+//            'type' => 'none'
+//          ];
+//        }
       }
 
       $callable = [$this, $button->getSubmitHandler()];
@@ -232,7 +232,7 @@ class GlicoSubmissionForm extends FormBase {
     if (isset($triggering_element['#submit_handler'])) {
       $this->{$triggering_element['#submit_handler']}($form, $form_state);
     }
-    if ($this->step->getStep() !== StepsEnum::STEP_THREE) {
+    if ($this->step->getStep() !== StepsEnum::STEP_FINALIZE) {
       $form_state->setRebuild(TRUE);
     } else {
       $form_state->setRebuild(TRUE);

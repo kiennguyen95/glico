@@ -1,4 +1,5 @@
-#section-banner .ajax-progress {
+#section-banner .ajax-progress,
+#section-videos .ajax-progress {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,7 +9,8 @@
   z-index: 101;
 }
 
-#section-banner .ajax-progress-throbber .throbber {
+#section-banner .ajax-progress-throbber .throbber,
+#section-videos .ajax-progress-throbber .throbber {
   position: fixed;
   top: 50%;
   left: 50%;

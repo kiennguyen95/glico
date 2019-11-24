@@ -277,6 +277,14 @@
   color: white;
 }
 
+#btn-apply a.no-sp {
+  display: initial;
+}
+
+#btn-apply a.no-pc {
+  display: none;
+}
+
 #discover-section-winning-list .nutrients img {
   position: absolute;
 }
@@ -372,6 +380,16 @@
 @keyframes fly-up-5 {
   from { -webkit-transform: rotate(0deg) translateX(2vw) rotate(0deg); }
   to   { -webkit-transform: rotate(360deg) translateX(2vw) rotate(-360deg); }
+}
+
+@media screen and (max-width: 767px) {
+  #btn-apply a.no-pc {
+    display: initial;
+  }
+
+  #btn-apply a.no-sp {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 400px) {

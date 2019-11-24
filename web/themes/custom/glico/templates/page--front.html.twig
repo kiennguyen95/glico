@@ -223,7 +223,7 @@
   </div>
   <div class="btn-join-glow"></div>
   {% if logged_in %}
-    <a href="{{ path('glico_submission.glico_submission_form') }}" class="use-ajax btn-join" data-dialog-type="modal" data-dialog-options='{"width":650, "height":550}'>Tham gia ngay</a>
+    <a href="{{ path('glico_submission.glico_submission_form') }}" class="use-ajax btn-join" data-dialog-type="modal" data-dialog-options='{"width":650, "height":450}'>Tham gia ngay</a>
   {% else %}
     <a href="{{ path('social_auth_facebook.redirect_to_fb') }}" class="btn-join">Tham gia ngay</a>
   {% endif %}
@@ -232,7 +232,7 @@
 <div id="section-videos">
   <div class="btn-join-glow-sp" ></div>
   {% if logged_in %}
-    <a href="{{ path('glico_submission.glico_submission_form') }}" class="use-ajax btn-join-sp" data-dialog-type="modal" data-dialog-options='{"width":500, "height":550}'>Tham gia ngay</a>
+    <a href="{{ path('glico_submission.glico_submission_form') }}" class="use-ajax btn-join-sp" data-dialog-type="modal" data-dialog-options='{"width":320, "height":350}'>Tham gia ngay</a>
   {% else %}
     <a href="{{ path('social_auth_facebook.redirect_to_fb') }}" class="btn-join-sp">Tham gia ngay</a>
   {% endif %}

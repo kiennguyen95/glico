@@ -26,6 +26,12 @@
   Drupal.behaviors.toggleFrames = {
     attach: function (context, settings) {
       $(".toggle-pick-frame").click(function () {
+        if ($(window).width() < 768) {
+          $("body .ui-dialog.ui-widget.ui-widget-content").css("height", "535px");
+        }
+        else {
+          $("body .ui-dialog.ui-widget.ui-widget-content").css("height", "650px");
+        }
         $("div#pick-frame-wrapper-div").css("visibility", "visible");
       });
     }
@@ -34,8 +40,10 @@
   Drupal.behaviors.pickFrame = {
     attach: function (context, settings) {
       $(".pick-frame-wrapper .pick-frame").click(function () {
-        $(this).addClass("is-active");
-        $(this).siblings(".pick-frame").removeClass("is-active");
+        if (!$(this).children(".pick-frame-text").hasClass("pick-frame-text-4")) {
+          $(this).children(".pick-frame-text").html("đã chọn");
+        }
+        $(this).siblings(".pick-frame").children(".pick-frame-text:not(.pick-frame-text-4)").html("chọn");
         var frame = $(this).attr("data-frame-value");
         $('form.glico-submission-form input[name="frame"]').val(frame);
         $('#pick-frame-video').removeClass().addClass('field-video video-frame-' + frame);
@@ -45,7 +53,7 @@
 
   Drupal.behaviors.submissionRedirect = {
     attach: function (context, settings) {
-      console.log('2');
+      // console.log('2');
       $('button.submission-to-preview-btn').click(function () {
         // var nid = drupalSettings.variables.nid;
         console.log('asd');

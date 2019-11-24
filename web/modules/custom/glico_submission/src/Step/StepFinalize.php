@@ -35,19 +35,7 @@ class StepFinalize extends BaseStep {
   public function buildStepFormElements() {
 
     $form['completed'] = [
-      '#markup' => '<p class="message-share">Bố mẹ hãy chia sẻ bài dự thi về Facebook để được tính là hợp lệ nhé!</p><p class="btn-share-fake">CHIA SẺ NGAY</p>',
-    ];
-    $tempstore = \Drupal::service('user.private_tempstore')
-      ->get('glico_submission');
-    $nid = $tempstore->get('nid');
-    $host = \Drupal::request()->getSchemeAndHttpHost();
-    $link = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
-    $form['#attached'] = [
-      'drupalSettings' => [
-        'variables' => [
-          'link' => $host . $link,
-        ],
-      ],
+      '#markup' => '<p class="message-share">Đang xử lý bài dự thi...</p>',
     ];
 
     return $form;

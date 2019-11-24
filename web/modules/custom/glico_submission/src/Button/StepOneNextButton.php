@@ -28,7 +28,7 @@ class StepOneNextButton extends BaseButton {
       '#goto_step' => StepsEnum::STEP_TWO,
       '#submit_handler' => 'storeValues',
       '#attributes' => [
-        'class' => ['submission-btn'],
+        'class' => ['submission-btn step-one-next'],
       ],
     ];
   }

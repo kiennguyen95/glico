@@ -287,6 +287,14 @@ html * {
   color: white;
 }
 
+#btn-apply a.no-sp {
+  display: initial;
+}
+
+#btn-apply a.no-pc {
+  display: none;
+}
+
 #discover-section-winning-list .nutrients img {
   position: absolute;
 }
@@ -445,6 +453,14 @@ html * {
 @media screen and (max-width: 767px) {
   html {
     font-size: 45%;
+  }
+
+  #btn-apply a.no-pc {
+    display: initial;
+  }
+
+  #btn-apply a.no-sp {
+    display: none;
   }
 }
 
