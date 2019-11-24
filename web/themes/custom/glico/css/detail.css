@@ -37,7 +37,7 @@ html {
 #content-wrapper #banner-img {
   margin-top: 7vw;
   width: 27vw;
-  margin-top: 7vw;
+  max-width: 38rem;
 }
 
 #content-wrapper #banner-img img {
@@ -49,7 +49,7 @@ html {
 }
 
 .submission-content-wrapper {
-  max-width: 1200px;
+  max-width: 1460px;
   width: 90vw;
   margin: 0 auto;
   display: flex;
