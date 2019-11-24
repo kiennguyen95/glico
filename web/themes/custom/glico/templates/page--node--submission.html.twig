@@ -71,7 +71,9 @@
   <div class="page-node-content">
     {{ page.content }}
   </div>
-  <div id="btn-apply">Tham gia ngay</div>
+  <div id="btn-apply">
+    <a href="{{ path('glico_submission.glico_submission_form') }}" class="use-ajax btn-join" data-dialog-type="modal" data-dialog-options='{"width":650, "height":550}'>Tham gia ngay</a>
+  </div>
   <div id="discover-section-winning-list">
     <div class="nutrients">
       <img src="/themes/custom/glico/images/front/list/nucle.png" alt="nucleotides">
