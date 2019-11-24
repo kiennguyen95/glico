@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.submission.field_approved
     - field.field.node.submission.field_caption
     - field.field.node.submission.field_frame
     - field.field.node.submission.field_score
@@ -17,6 +18,16 @@ targetEntityType: node
 bundle: submission
 mode: default
 content:
+  field_approved:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_caption:
     weight: 1
     label: hidden

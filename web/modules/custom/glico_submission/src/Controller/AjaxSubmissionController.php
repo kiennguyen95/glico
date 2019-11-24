@@ -27,7 +27,7 @@ class AjaxSubmissionController extends ControllerBase {
     if (empty($nid)) return $response;
     $node = Node::load($nid);
     if (empty($node)) return $response;
-    $node->setPublished();
+    $node->set('field_approved', 1);
     $node->save();
     return $response;
   }

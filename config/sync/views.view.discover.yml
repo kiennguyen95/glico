@@ -379,10 +379,10 @@ display:
                 value: '1'
           entity_type: user
           plugin_id: user_current
-        status:
-          id: status
-          table: node_field_data
-          field: status
+        field_approved_value:
+          id: field_approved_value
+          table: node__field_approved
+          field: field_approved_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -414,8 +414,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: status
           plugin_id: boolean
       sorts:
         created:

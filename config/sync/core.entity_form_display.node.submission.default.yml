@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.submission.field_approved
     - field.field.node.submission.field_caption
     - field.field.node.submission.field_frame
     - field.field.node.submission.field_score
@@ -23,6 +24,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_approved:
+    weight: 27
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_caption:
     weight: 6
     settings:
