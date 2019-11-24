@@ -674,6 +674,10 @@ form.glico-submission-form #submit-video-submission {
   margin-top: 2.5rem;
 }
 
+form.glico-submission-form div[aria-label="Error message"] {
+  display: none;
+}
+
 @media all and (max-width: 767px) {
   form.glico-submission-form:before {
     width: 11rem;
