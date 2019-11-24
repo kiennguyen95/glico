@@ -451,9 +451,9 @@ html * {
 }
 
 @media screen and (max-width: 767px) {
-  html {
-    font-size: 45%;
-  }
+  /*html {*/
+    /*font-size: 45%;*/
+  /*}*/
 
   #btn-apply a.no-pc {
     display: initial;
@@ -465,9 +465,9 @@ html * {
 }
 
 @media screen and (max-width: 467px) {
-  html {
-    font-size: 30%;
-  }
+  /*html {*/
+    /*font-size: 30%;*/
+  /*}*/
 
   #content-wrapper .video-list {
     width: 80%;
