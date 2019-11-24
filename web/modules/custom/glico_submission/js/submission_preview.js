@@ -33,25 +33,9 @@
           button.siblings(".message-share").html("Gửi bài dự thi thành công!");
           button.replaceWith('<a href="/" class="btn-back">VỀ TRANG CHỦ</a>');
 
-          // $.ajax({
-          //   type: "POST",
-          //   url: "/submission/complete/" + $(this).attr("data-id") + "/1",
-          //   async: true,
-          //   // success: function (response) {
-          //   //   var url = response[0].url;
-          //   //   if (url !== null) {
-          //   //     window.location.href = url;
-          //   //   }
-          //   //   console.log(url);
-          //   // }
-          // });
-
-
-        } else {
-          $(".share-modal-bg").fadeOut();
           $.ajax({
             type: "POST",
-            url: "/submission/complete/" + $(this).attr("data-id") + "/0",
+            url: "/submission/complete",
             async: true,
           });
         }

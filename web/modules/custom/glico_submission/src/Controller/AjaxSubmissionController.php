@@ -7,6 +7,8 @@ use Drupal\Core\Ajax\CloseModalDialogCommand;
 use Drupal\Core\Ajax\RedirectCommand;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\node\Entity\Node;
+use function dump;
+use function Psy\sh;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -16,27 +18,17 @@ class AjaxSubmissionController extends ControllerBase {
 
   /**
    * Create.
-   *
-   * @return \Drupal\Core\Ajax\AjaxResponse
-   *   Return Hello string.
    */
-  public function submission($flg) {
-    $response = new AjaxResponse();
-    $tempstore = \Drupal::service('user.private_tempstore')
-      ->get('glico_submission');
+  public function complete() {
+    $response = new Response();
+    $tempstore = \Drupal::service('user.private_tempstore')->get('glico_submission');
     $nid = $tempstore->get('nid');
+    $tempstore->delete('nid');
+    if (empty($nid)) return $response;
     $node = Node::load($nid);
-    if ($node === NULL) {
-      return $response;
-    }
-
-    if ($flg == 'not-shared') {
-      $node->delete();
-    }
-
-    if ($flg == 'shared') {
-      $response->addCommand(new RedirectCommand($node->toUrl()->toString()));
-    }
+    if (empty($node)) return $response;
+    $node->setPublished();
+    $node->save();
     return $response;
   }
 }

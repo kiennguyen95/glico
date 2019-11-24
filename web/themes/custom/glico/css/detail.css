@@ -24,8 +24,6 @@ html {
 
 .page-node-content {
   margin-top: 7vw;
-  background-image: url(/themes/custom/glico/images/discover/discovery-bg.png);
-  background-size: 100%;
 }
 
 .submission-content-wrapper {
@@ -190,7 +188,7 @@ html {
 }
 
 .field-flag .action-unflag > a {
-  background-image: url(/themes/custom/glico/images/discover/btn-like.png);
+  background-image: url(/themes/custom/glico/images/discover/btn-unlike.png);
 }
 
 .field-flag .action-flag > a {

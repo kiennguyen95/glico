@@ -6,11 +6,10 @@ glico_submission.glico_submission_form:
   requirements:
     _access: 'TRUE'
 
-glico_submission.create_submission_controller_create:
-  path: '/submission/complete/{nid}/{shared}'
+glico_submission.submission_complete:
+  path: '/submission/complete'
   defaults:
-    _controller: '\Drupal\glico_submission\Controller\AjaxSubmissionController::submission'
-    _title: 'delete'
+    _controller: '\Drupal\glico_submission\Controller\AjaxSubmissionController::complete'
   requirements:
     _permission: 'access content'
 

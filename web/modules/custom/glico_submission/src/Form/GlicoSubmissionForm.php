@@ -155,7 +155,6 @@ class GlicoSubmissionForm extends FormBase {
     if ($this->step->getStep() === StepsEnum::STEP_THREE) {
       $tempstore = \Drupal::service('user.private_tempstore')->get('glico_submission');
       $nid = $tempstore->get('nid');
-      $response->addCommand(new CloseModalDialogCommand());
       $response->addCommand(new RedirectCommand(Url::fromRoute('glico_submission.submission_preview', ['nid' => $nid])->toString()));
     }
     return $response;
@@ -265,5 +264,9 @@ class GlicoSubmissionForm extends FormBase {
     ]);
     $node->save();
     $tempstore->set('nid', $node->id());
+    $tempstore->delete('file');
+    $tempstore->delete('frame');
+    $tempstore->delete('baby_name');
+    $tempstore->delete('caption');
   }
 }

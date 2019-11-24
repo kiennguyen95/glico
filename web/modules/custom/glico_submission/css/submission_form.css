@@ -3,7 +3,7 @@ form.glico-submission-form #form-wrapper {
 }
 
 .ajax-progress .message {
-  display:none;
+  /*display:none;*/
 }
 
 body .ui-dialog.ui-widget.ui-widget-content {
@@ -145,32 +145,32 @@ form.glico-submission-form video {
 }
 
 form.glico-submission-form .select-video-real input[value="Remove"] {
-  display: none;
+  /*display: none;*/
 }
 
 form.glico-submission-form .select-video-real .ajax-progress {
-  position: absolute;
-  display: block;
-  width: 23rem;
-  height: 14rem;
-  top: 9rem;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  background-color: white;
+  /*position: absolute;*/
+  /*display: block;*/
+  /*width: 23rem;*/
+  /*height: 14rem;*/
+  /*top: 9rem;*/
+  /*margin: 0 auto;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*background-color: white;*/
 }
 
 form.glico-submission-form .select-video-real .ajax-progress .throbber {
-  position: absolute;
-  display: block;
-  top: 50%;
-  left: 50%;
-  width: 6rem;
-  height: 6rem;
-  background-image: url(/modules/custom/glico_submission/images/loading.gif);
-  background-size: 100% 100%;
-  z-index: 102;
-  transform: translate(-50%, -50%);
+  /*position: absolute;*/
+  /*display: block;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*width: 6rem;*/
+  /*height: 6rem;*/
+  /*background-image: url(/modules/custom/glico_submission/images/loading.gif);*/
+  /*background-size: 100% 100%;*/
+  /*z-index: 102;*/
+  /*transform: translate(-50%, -50%);*/
 }
 
 form.glico-submission-form input[name="frame"] {
@@ -178,20 +178,20 @@ form.glico-submission-form input[name="frame"] {
 }
 
 form.glico-submission-form #form-wrapper .form-actions .ajax-progress {
-  display: block;
-  margin-top: 2rem;
+  /*display: block;*/
+  /*margin-top: 2rem;*/
 }
 
 form.glico-submission-form #form-wrapper .form-actions .ajax-progress .throbber {
-  display: block;
-  width: 3rem;
-  height: 3rem;
-  background-image: url(/modules/custom/glico_submission/images/loading.gif);
-  background-size: 100% 100%;
-  margin: 0 auto;
-  bottom: 1rem;
-  right: 1rem;
-  position: absolute;
+  /*display: block;*/
+  /*width: 3rem;*/
+  /*height: 3rem;*/
+  /*background-image: url(/modules/custom/glico_submission/images/loading.gif);*/
+  /*background-size: 100% 100%;*/
+  /*margin: 0 auto;*/
+  /*bottom: 1rem;*/
+  /*right: 1rem;*/
+  /*position: absolute;*/
 }
 
 .pick-frame-wrapper {
@@ -449,7 +449,7 @@ form.glico-submission-form #form-wrapper .form-actions .ajax-progress .throbber 
   text-shadow: 0 2px 4px #777777;
 }
 
-button.submission-to-submit-btn ơ{
+button.submission-to-submit-btn {
   display: none;
 }
 
@@ -510,4 +510,89 @@ form.glico-submission-form #pick-frame-video:before {
 
 div#pick-frame-wrapper-div {
   visibility: hidden;
+}
+
+/* UPLOAD MODAL FORM */
+
+body .ui-widget-overlay {
+  background: #a5dcfdc7;
+  opacity: 1;
+}
+
+body .ui-dialog .ui-dialog-content {
+  overflow: visible;
+  position: static;
+}
+
+form.glico-submission-form,
+form.glico-submission-form input {
+  /*position: relative;*/
+  font-family: Baloo Tammudu, cursive;
+  font-size: 2rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+form.glico-submission-form:before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url(/themes/custom/glico/images/discover/bear-decor-1.png);
+  width: 14rem;
+  height: 13.5rem;
+  top: -12rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-size: 100% 100%;
+  z-index: 5;
+}
+
+form.glico-submission-form .select-video-real input[name="files[video_file]"]{
+  /*display: none;*/
+}
+
+form.glico-submission-form .form-item-video-file label,
+form.glico-submission-form .form-item-frame label {
+  font-size: 1.5rem!important;
+  margin: 2.5rem 2rem;
+  display: block;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+
+form.glico-submission-form fieldset[data-drupal-selector="edit-name-and-comment"] span {
+  font-size: 1.45rem!important;
+  margin: 2.5rem 2rem -0.5rem;
+  display: block;
+  text-align: center;
+  border-bottom: 2px solid white;
+  width: 36rem;
+}
+
+form.glico-submission-form .form-item-frame label {
+  margin-bottom: 1.5rem;
+}
+
+form.glico-submission-form .submit-video {
+  height: 18rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  border: 2px solid #EAC6DA;
+  text-align: center;
+  padding-top: 8rem;
+  width: 27rem;
+  margin: 0 auto;
+}
+
+form.glico-submission-form #submit-video-submission {
+  font-size: 1.2rem;
+  border-bottom: 1px solid #676767;
+  display: block;
+  width: 12rem;
+  margin: 0 auto;
+  color: #676767;
+  cursor: pointer;
 }
