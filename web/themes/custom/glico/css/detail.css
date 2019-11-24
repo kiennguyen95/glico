@@ -119,8 +119,8 @@ html {
 
 .video-control .btn-play,
 .video-control .btn-mute {
-  width: 5rem;
-  height: 5rem;
+  width: 3.5vw;
+  height: 3.5vw;
   background-size: 100% 100%;
   display: inline-block;
   cursor: pointer;
@@ -136,23 +136,23 @@ html {
 }
 
 .video-control .text-time {
-  font-size: 2.5rem;
+  font-size: 1.74vw;
   color: white;
   position: absolute;
-  top: 2.5rem;
-  margin-left: 1.5rem;
+  top: 1.74vw;
+  margin-left: 1.1vw;
 }
 
 .video-control .btn-fullscreen {
-  padding: 14px 10px 2px 10px;
+  padding: 0.97vw 0.7vw 0.14vw 0.7vw;
   float: right;
   display: inline-block;
-  font-size: 2.2rem;
+  font-size: 1.52vw;
   color: white;
   background-color: #F99EC6;
-  border-radius: 25px;
-  border: 2px solid white;
-  margin-top: 2px;
+  border-radius: 1.74vw;
+  border: 0.14vw solid white;
+  margin-top: 0.14vw;
   cursor: pointer;
 }
 
@@ -160,39 +160,39 @@ html {
   background-color: white;
   flex-grow: 1;
   border-radius: 3vw;
-  padding: 20px 26px;
-  border: 2px solid #ffd3e8;
-  height: 55rem;
+  padding: 1.4vw 1.8vw;
+  border: 0.14vw solid #ffd3e8;
+  height: 38.19vw;
   max-width: 29%;
 }
 
 .info-wrapper .baby-name-label {
-  font-size: 2.5rem;
+  font-size: 1.74vw;
   color: #F99EC7;
   text-align: center;
-  margin: 1rem 0;
+  margin: 0.7vw 0;
 }
 
 .info-wrapper .baby-name {
-  font-size: 2.5rem;
+  font-size: 1.74vw;
   color: white;
   text-align: center;
   background-color: #F99EC7;
-  border-radius: 2rem;
-  line-height: 3rem;
-  padding-top: 1.4rem;
+  border-radius: 1.4vw;
+  line-height: 2.1vw;
+  padding-top: 0.97vw;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4vw;
 }
 
 .info-wrapper .caption {
-  font-size: 2rem;
+  font-size: 1.4vw;
   color: #6081C4;
-  border: 1px solid #F99EC6;
-  padding: 2rem 1rem 1rem 1rem;
-  border-radius: 2rem;
-  margin: 1rem 0 2rem;
-  height: 19rem;
+  border: 0.07vw solid #F99EC6;
+  padding: 1.4vw 0.7vw 0.7vw 0.7vw;
+  border-radius: 1.4vw;
+  margin: 0.7vw 0 1.4vw;
+  height: 13.19vw;
   overflow: hidden;
 }
 
@@ -203,10 +203,10 @@ html {
 
 .field-flag .flag > a {
   display: block;
-  width: 4.3rem;
-  height: 4rem;
+  width: 2.98vw;
+  height: 2.77vw;
   background-size: 100% 100%;
-  margin-right: 1rem;
+  margin-right: 0.7vw;
 }
 
 .field-flag .action-unflag > a {
@@ -219,18 +219,18 @@ html {
 
 .field-flag .flag .like-count,
 #btn-share {
-  font-size: 2rem;
+  font-size: 1.4vw;
   color: #F691BE;
 }
 
 #btn-share {
-  font-size: 2rem;
-  padding-left: 5.3rem;
+  font-size: 1.4vw;
+  padding-left: 3.68vw;
   background-image: url(/themes/custom/glico/images/discover/btn-share.png);
-  background-size: 4rem 4.3rem;
+  background-size: 2.77vw 2.98vw;
   background-repeat: no-repeat;
-  line-height: 5rem;
-  margin-top: 1rem;
+  line-height: 3.47vw;
+  margin-top: 0.69vw;
   cursor: pointer;
 }
 
@@ -240,23 +240,26 @@ html {
 }
 
 .info-wrapper .user-info .avatar {
-  width: 5rem;
+  width: 3.5vw;
   border-radius: 50%;
-  margin-right: 1rem;
+  margin-right: 0.7vw;
 }
 
 .info-wrapper .user-info .username {
-  font-size: 2.5rem;
+  font-size: 1.74vw;
   color: #6081C4;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 0.7vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 #btn-apply {
-  display: inline-block;
+  position: absolute;
+  display: block;
+  left: calc(50% - 20.8vw);
+  top: 83vw;
   font-family: SVN-Cookies, cursive;
   font-size: 4.63vw;
   color: white;
@@ -324,10 +327,10 @@ html {
 
 #discover-section-winning-list .nutrients img:nth-child(3) {
   left: 53vw;
-  width: 16vw;
+  width: 13vw;
   animation: fly-up-3 17s;
   animation-iteration-count: infinite;
-  top: 178vw;
+  top: 170vw;
 }
 
 @keyframes fly-up-3 {
@@ -343,10 +346,10 @@ html {
 }
 
 #discover-section-winning-list .nutrients img:nth-child(4) {
-  top: 146vw;
-  left: 24vw;
+  top: 135vw;
+  left: 31vw;
   width: 19.5vw;
-  animation: fly-up-4 25s;
+  animation: fly-up-4 15s;
   animation-iteration-count: infinite;
 }
 
@@ -355,7 +358,7 @@ html {
     transform: translateY(0%);
   }
   50% {
-    transform: translateY(-40%);
+    transform: translateY(-20%);
   }
   100% {
     transform: translateY(0%);
@@ -375,114 +378,4 @@ html {
   to   { -webkit-transform: rotate(360deg) translateX(2vw) rotate(-360deg); }
 }
 
-/*css for Ipad Pro*/
-@media only screen and (max-width: 1279px) {
-  #block-glico-content .info-wrapper {
-    height: 35rem;
-  }
 
-  #block-glico-content .info-wrapper .user-info {
-    height: 9%;
-  }
-
-  #block-glico-content .info-wrapper .user-info .avatar {
-    width: 4vw;
-  }
-
-  #block-glico-content .info-wrapper .user-info .username {
-    font-size: 2.3vw;
-    padding-top: 1vw;
-  }
-
-  #block-glico-content .info-wrapper .baby-name-label {
-    font-size: 1.5vw;
-    margin: 0.5rem 0;
-  }
-
-  #block-glico-content .info-wrapper .baby-name {
-    font-size: 2vw;
-    height: 4vw;
-    display: inline-flex;
-    align-items: center;
-    width: 100%;
-    padding-left: 18%;
-    margin-bottom: 0;
-  }
-
-  #block-glico-content .caption div {
-    font-size: 0.9em;
-  }
-
-  .video-control .btn-play, .video-control .btn-mute {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  .video-control .text-time {
-    font-size: 1.5rem;
-    top: 1.5rem;
-  }
-
-  .video-control .btn-fullscreen {
-    padding: 10px 10px 2px 10px;
-    font-size: 1.5rem;
-  }
-
-  #block-glico-content .info-wrapper {
-    height: 43vw;
-    max-height: 50%;
-  }
-
-  .field-flag .action-flag > a {
-    width: 2vw;
-    height: 2vw;
-    margin-right: 1.2vw;
-  }
-
-  #btn-share {
-    background-size: 2vw;
-    font-size: 1.7vw;
-    margin-top: 0.4vw;
-    line-height: 3vw;
-    padding-left: 3.2vw;
-  }
-
-  .info-wrapper .caption {
-    height: 17vw;
-    margin-bottom: 1.5vw;
-  }
-
-  .field-flag .flag {
-    margin-top: -0.8vw;
-  }
-
-  .field-flag .flag .like-count {
-    font-size: 1.7vw;
-    color: #F691BE;
-    line-height: 2vw;
-    margin-top: 0.8vw;
-  }
-
-  #btn-apply {
-    margin-top: 60vw;
-  }
-
-  #discover-section-winning-list .nutrients img:nth-child(3) {
-    top: 171vw;
-  }
-  #discover-section-winning-list .nutrients img:nth-child(4) {
-    top: 143vw;
-  }
-}
-
-@media only screen and (min-width: 780px) and (max-width: 1279px) {
-  .info-wrapper .caption {
-    height: 17vw;
-    margin-bottom: 2.5vw;
-  }
-}
-
-/*css for Ipad*/
-@media only screen and (max-width: 1023px) {
-
-}
