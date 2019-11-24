@@ -93,7 +93,7 @@ class GlicoSubmissionForm extends FormBase {
       $form['wrapper']['actions'][$button->getKey()] = $button->build();
       if ($button->ajaxify()) {
         // Add ajax to button.
-        if ($button instanceof StepOneNextButton) {
+        if ($button instanceof StepThreeNextButton) {
           $form['wrapper']['actions'][$button->getKey()]['#ajax'] = [
             'callback' => [$this, 'previewloadStep'],
             'wrapper' => 'form-wrapper',
