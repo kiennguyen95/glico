@@ -458,6 +458,44 @@ form.glico-submission-form * {
   /*html {*/
     /*font-size: 45%;*/
   /*}*/
+  #content-wrapper #btn-wrapper div {
+    font-size: 3.35vw;
+    width: 35.5vw;
+    height: 7.8vw;
+    line-height: 6.5vw;
+    margin: 0 0.65vw;
+    padding-left: 4vw;
+  }
+
+  #content-wrapper .video-list .views-field-nothing a .btn-play {
+    width: 6.5vw;
+    height: 6.5vw;
+  }
+
+  #content-wrapper nav .js-pager__items a[rel="next"] {
+    width: 5.3vw;
+    height: 5.3vw;
+  }
+
+  #content-wrapper nav .js-pager__items a[rel="prev"] {
+    width: 5.3vw;
+    height: 5.3vw;
+  }
+
+  #content-wrapper .video-list {
+    margin: 2.78vw auto;
+  }
+
+  #content-wrapper .video-list .views-row {
+    margin-bottom: 2.78vw;
+  }
+
+  .empty-message {
+    font-size: 1.83vw;
+    border-radius: 1.3vw;
+    padding: 5.3vw 9.2vw;
+    margin: 6.5vw;
+  }
 
   #btn-apply a.no-pc {
     display: initial;
@@ -477,11 +515,6 @@ form.glico-submission-form * {
     width: 80%;
   }
 
-  #content-wrapper #btn-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
 }
 
 @media screen and (max-width: 400px) {
@@ -491,10 +524,6 @@ form.glico-submission-form * {
 
   #btn-apply {
     top: 160vw;
-  }
-
-  #content-wrapper #btn-wrapper div {
-    font-size: 3.3vw;
   }
 
   #discover-section-winning-list .nutrients img:nth-child(1) {
