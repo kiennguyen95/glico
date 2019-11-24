@@ -26,6 +26,7 @@ class StepThree extends BaseStep {
    */
   public function getButtons() {
     return [
+      new StepThreePreviousButton(),
       new StepThreeNextButton(),
     ];
   }
@@ -47,7 +48,7 @@ class StepThree extends BaseStep {
       ),
       '#size' => 60,
       '#maxlength' => 128,
-      '#required' => TRUE,
+      '#require' => TRUE,
     ];
 
     $form['name_and_comment']['caption'] = [
