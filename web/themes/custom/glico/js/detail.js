@@ -44,11 +44,11 @@
       if(isPlay == 0) {
         $('.field-video video').get(0).play();
         // Change pause image here
-        // $('.video-control .btn-play').css("background-image", "url(/modules/custom/glico_submission/upload/btn-play-control.png)");
+        $('.video-control .btn-play').css("background-image", "url(/modules/custom/glico_submission/upload/btn-pause.png)");
         isPlay = 1;
       } else {
         $('.field-video video').get(0).pause();
-        // $('.video-control .btn-play').css("background-image", "url(/modules/custom/glico_submission/upload/btn-play-control.png)");
+        $('.video-control .btn-play').css("background-image", "url(/modules/custom/glico_submission/upload/btn-play.png)");
         isPlay = 0;
       }
     });

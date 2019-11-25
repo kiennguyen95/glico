@@ -125,7 +125,8 @@ html * {
 
 #content-wrapper video[style] {
   width: 100% !important;
-  height: auto !important;
+  height: 20vw!important;
+  max-height: 268px;
   border-radius: 1vw;
 }
 
@@ -455,35 +456,39 @@ form.glico-submission-form * {
 }
 
 @media screen and (max-width: 767px) {
-  /*html {*/
-    /*font-size: 45%;*/
-  /*}*/
+  #content-wrapper {
+    background-image: url(/themes/custom/glico/images/discover/discovery-bg-sp.png);
+    height: 216.5vw;
+    margin-top: 13vw;
+  }
+
+  #content-wrapper #banner-img {
+    width: 40vw;
+    padding-top: 3vw;
+  }
+
   #content-wrapper #btn-wrapper div {
     font-size: 3.35vw;
-    width: 35.5vw;
-    height: 7.8vw;
+    width: 38vw;
+    height: 8.5vw;
     line-height: 6.5vw;
     margin: 0 0.65vw;
-    padding-left: 4vw;
+    padding-left: 5vw;
   }
 
   #content-wrapper .video-list .views-field-nothing a .btn-play {
-    width: 6.5vw;
-    height: 6.5vw;
+    width: 5.5vw;
+    height: 5.5vw;
   }
 
-  #content-wrapper nav .js-pager__items a[rel="next"] {
-    width: 5.3vw;
-    height: 5.3vw;
-  }
-
+  #content-wrapper nav .js-pager__items a[rel="next"],
   #content-wrapper nav .js-pager__items a[rel="prev"] {
-    width: 5.3vw;
-    height: 5.3vw;
+    width: 4.5vw;
+    height: 4.5vw;
   }
 
   #content-wrapper .video-list {
-    margin: 2.78vw auto;
+    margin: 6vw auto;
   }
 
   #content-wrapper .video-list .views-row {
@@ -491,10 +496,14 @@ form.glico-submission-form * {
   }
 
   .empty-message {
-    font-size: 1.83vw;
-    border-radius: 1.3vw;
-    padding: 5.3vw 9.2vw;
-    margin: 6.5vw;
+    font-size: 3.5vw;
+    border-radius: 5vw;
+    padding: 5.3vw 3.2vw 0;
+    margin: 5vw auto;
+  }
+
+  .empty-message-img {
+    width: 65%;
   }
 
   #btn-apply a.no-pc {
@@ -504,53 +513,76 @@ form.glico-submission-form * {
   #btn-apply a.no-sp {
     display: none;
   }
-}
 
-@media screen and (max-width: 467px) {
-  /*html {*/
-    /*font-size: 30%;*/
-  /*}*/
-
-  #content-wrapper .video-list {
-    width: 80%;
-  }
-
-}
-
-@media screen and (max-width: 400px) {
-  #content-wrapper #banner-img {
-    margin-top: 13vw;
+  #content-wrapper #btn-wrapper {
+    margin-top: 3vw;
   }
 
   #btn-apply {
-    top: 160vw;
+    left: calc(50% - 27vw);
+    top: 188vw;
+    font-size: 5.63vw;
+    background-size: 100% 100%;
+    width: 54vw;
+    height: 14vw;
+    line-height: 11vw;
+    padding-left: 5vw;
   }
 
-  #discover-section-winning-list .nutrients img:nth-child(1) {
-    top: 135vw;
-  }
-
-  @keyframes fly-up-1 {
-    0%   {
-      transform: translateY(0%);
-    }
-    50% {
-      transform: translateY(70%);
-    }
-    100% {
-      transform: translateY(0%);
-    }
+  .empty-message p:nth-child(2) {
+    line-height: 1.3;
+    margin-top: 2vw;
   }
 
   #discover-section-winning-list .nutrients img:nth-child(2) {
-    top: 167vw;
+    top: 157vw;
+    left: 24.5vw;
+    width: 23vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(5) {
+    top: 147vw;
+    left: 41.5vw;
+    width: 20vw;
   }
 
   #discover-section-winning-list .nutrients img:nth-child(3) {
-    top: 176vw;
+    left: 54vw;
+    width: 16vw;
+    top: 165vw;
   }
 
   #discover-section-winning-list .nutrients img:nth-child(4) {
-    top: 143vw;
+    top: 144vw;
+    left: 8vw;
+    width: 20.5vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(1) {
+    top: 157vw;
+    left: 3vw;
+    width: 19.5vw;
+  }
+
+  #content-wrapper .video-list {
+    width: 95%;
+  }
+
+  #content-wrapper video[style] {
+    width: 40vw !important;
+    height: 23vw!important;
+  }
+
+  #content-wrapper .video-list .views-field-nothing a > div:before {
+    top: -2.5%;
+    height: 102%;
+  }
+
+  #content-wrapper nav .js-pager__items a[rel="next"] {
+    right: -4vw;
+  }
+
+  #content-wrapper nav .js-pager__items a[rel="prev"] {
+    left: -4vw;
   }
 }

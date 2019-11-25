@@ -43,7 +43,8 @@ html {
 
 .preview-wrapper .field-video-wrapper video {
   width: 100% !important;
-  height: auto !important;
+  height: 35.5vw !important;
+  max-height: 575px;
   border-radius: 1vw;
 }
 
@@ -295,6 +296,17 @@ html {
 .btn-back {
   padding-left: 4rem;
   display: block;
+}
+
+@media all and (max-width: 767px) {
+  .btn-share-fb,
+  .btn-back {
+    font-size: 5.8vw;
+    width: 57vw;
+    height: 11vw;
+    line-height: 9vw;
+    padding-left: 10vw;
+  }
 }
 
 /*==================RESPONSIVE SP BACKUP===================*/

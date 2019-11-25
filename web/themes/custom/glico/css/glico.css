@@ -1497,7 +1497,7 @@ body.toolbar-vertical #section-header {
   }
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 767px) {
   #section-header {
     height: 13vw;
   }

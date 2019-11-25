@@ -59,7 +59,8 @@
 
 .submission-content-wrapper .field-video-wrapper video[style] {
   width: 100% !important;
-  height: auto !important;
+  height: 35.5vw !important;
+  max-height: 575px;
   border-radius: 1vw;
 }
 
@@ -185,10 +186,15 @@
   font-size: 1.4vw;
   color: #6081C4;
   border: 0.07vw solid #F99EC6;
-  padding: 1.4vw 0.7vw 0.7vw 0.7vw;
+  padding: 1.2vw 1vw;
   border-radius: 1.4vw;
   margin: 0.7vw 0 1.4vw;
   height: 13.19vw;
+  overflow: hidden;
+}
+
+.info-wrapper .caption > div {
+  height: 100%;
   overflow: hidden;
 }
 
@@ -386,6 +392,13 @@
   to   { -webkit-transform: rotate(360deg) translateX(2vw) rotate(-360deg); }
 }
 
+.no-sp {
+  display: initial;
+}
+.no-pc {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   #btn-apply a.no-pc {
     display: initial;
@@ -394,10 +407,223 @@
   #btn-apply a.no-sp {
     display: none;
   }
-}
 
-@media screen and (max-width: 400px) {
   #content-wrapper #banner-img {
+    width: 40vw;
+    padding-top: 3vw;
+    margin-top: 0;
+  }
+
+  .submission-content-wrapper {
+    flex-wrap: wrap;
+    width: 87vw;
+  }
+
+  .submission-content-wrapper .field-video-wrapper {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .info-wrapper {
+    max-width: 100%;
+    height: 34vw;
+  }
+
+  .submission-content-wrapper .field-video-wrapper video[style] {
+    width: 100% !important;
+    height: 50vw !important;
+    border-radius: 3vw;
+  }
+
+  .field-video:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 102%;
+    height: 100%;
+    background-size: 100% 100%;
+    top: -1.5%;
+    left: -2%;
+  }
+
+  .field-video.video-frame-3:before {
+    width: 106%;
+    height: 106%;
+    top: -4.2%;
+    left: -2.5%;
+  }
+
+  .page-node-content {
+    margin-top: 4vw;
+  }
+
+  .video-control {
+    border-top: 2px solid white;
+  }
+
+  .video-control .btn-play {
+    margin-right: 0;
+  }
+
+  .video-control .btn-play, .video-control .btn-mute {
+    width: 5.5vw;
+    height: 5.5vw;
+  }
+
+  .video-control .text-time {
+    font-size: 3.74vw;
+    top: 2.3vw;
+  }
+
+  .video-control .btn-fullscreen {
+    padding: 0;
+    width: 32vw;
+    height: 5vw;
+    text-align: center;
+    line-height: 6.5vw;
+    font-size: 3vw;
+    border-radius: 4vw;
+    margin-top: 0.14vw;
+  }
+
+  #content-wrapper {
+    background-image: url(/themes/custom/glico/images/discover/discovery-bg-sp.png);
+    height: 216.5vw;
     margin-top: 13vw;
+  }
+
+
+  #discover-section-winning-list .nutrients img:nth-child(2) {
+    top: 157vw;
+    left: 24.5vw;
+    width: 23vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(5) {
+    top: 152vw;
+    left: 41.5vw;
+    width: 20vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(3) {
+    left: 54vw;
+    width: 16vw;
+    top: 170vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(4) {
+    top: 152vw;
+    left: 8vw;
+    width: 20.5vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(1) {
+    top: 157vw;
+    left: 3vw;
+    width: 19.5vw;
+  }
+
+  #btn-apply {
+    left: calc(50% - 27vw);
+    top: 188vw;
+    font-size: 5.63vw;
+    background-size: 100% 100%;
+    width: 54vw;
+    height: 14vw;
+    line-height: 11vw;
+    padding-left: 5vw;
+    margin: 0;
+  }
+
+  .info-wrapper .user-info .avatar {
+    width: 6.5vw;
+    margin-right: 1vw;
+  }
+
+  .info-wrapper .user-info .username {
+    font-size: 3.4vw;
+    padding-top: 2vw;
+    width: 29vw;
+    text-align: left;
+  }
+
+  .no-pc {
+    display: initial;
+  }
+
+  .no-sp {
+    display: none;
+  }
+
+  .info-wrapper {
+    padding: 1.4vw 3vw;
+    position: relative;
+  }
+
+  .info-wrapper .baby-name-label.no-pc {
+    font-size: 3vw;
+    width: 28vw;
+    display: block;
+  }
+
+  .baby-name-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 1vw;
+  }
+
+  .info-wrapper .baby-name {
+    font-size: 4vw;
+    border-radius: 1.4vw;
+    padding-top: 1vw;
+    height: 7vw;
+    line-height: 7vw;
+    flex-grow: 1;
+    margin-left: 2vw;
+    width: 51vw;
+  }
+
+  .info-wrapper .baby-name > span {
+    width: 100%;
+    padding: 0 2vw;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .info-wrapper .caption {
+    font-size: 2.5vw;
+    border: 1px solid #F99EC6;
+    padding: 1.5vw 2vw;
+    margin: 0.7vw 0 1.4vw;
+    height: 13vw;
+  }
+
+  .field-flag {
+    position: absolute;
+    top: 2vw;
+    left: 40vw;
+  }
+
+  .field-flag .flag > a {
+    width: 5vw;
+    height: 4.6vw;
+    margin-right: 1vw;
+  }
+
+  .field-flag .flag .like-count, #btn-share {
+    font-size: 2.4vw;
+    color: #F691BE;
+    padding-top: 1vw;
+  }
+
+  #btn-share {
+    position: absolute;
+    top: 1.5vw;
+    left: 70vw;
+    font-size: 2.4vw;
+    padding-left: 5vw;
+    background-size: 4.2vw 4.2vw;
   }
 }
