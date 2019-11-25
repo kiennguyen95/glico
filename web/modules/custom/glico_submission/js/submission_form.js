@@ -28,6 +28,7 @@
       $(".toggle-pick-frame").click(function () {
         if ($(window).width() < 768) {
           $("body .ui-dialog.ui-widget.ui-widget-content").css("height", "535px");
+          $("body .ui-dialog.ui-widget.ui-widget-content").css("top", "100px");
         }
         else {
           $("body .ui-dialog.ui-widget.ui-widget-content").css("height", "650px");
