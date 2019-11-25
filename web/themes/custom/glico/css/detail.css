@@ -33,7 +33,7 @@
 #content-wrapper #banner-img {
   margin-top: 7vw;
   width: 27vw;
-  max-width: 23.8rem;
+  /*max-width: 23.8rem;*/
 }
 
 #content-wrapper #banner-img img {
@@ -45,7 +45,7 @@
 }
 
 .submission-content-wrapper {
-  max-width: 1460px;
+  /*max-width: 1460px;*/
   width: 90vw;
   margin: 0 auto;
   display: flex;
@@ -60,7 +60,7 @@
 .submission-content-wrapper .field-video-wrapper video[style] {
   width: 100% !important;
   height: 35.5vw !important;
-  max-height: 575px;
+  /*max-height: 575px;*/
   border-radius: 1vw;
 }
 
