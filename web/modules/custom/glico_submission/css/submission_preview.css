@@ -311,6 +311,15 @@ html {
     display: none;
   }
 
+  .btn-share-fb,
+  .btn-back {
+    font-size: 5.8vw;
+    width: 57vw;
+    height: 11vw;
+    line-height: 9vw;
+    padding-left: 10vw;
+  }
+
   .preview-bg {
     background-image: url(/themes/custom/glico/images/discover/discovery-bg-sp.png);
     height: 216.5vw;
@@ -559,14 +568,14 @@ html {
   /*}*/
 /*}*/
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   #content-wrapper #banner-img {
     margin-top: 13vw;
   }
 
   .share-modal .message-share {
-    font-size: 1.2rem;
-    width: 90%;
+    font-size: 5vw;
+    width: 96vw;
     line-height: 1.3;
   }
 }
