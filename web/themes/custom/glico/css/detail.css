@@ -392,9 +392,6 @@
   to   { -webkit-transform: rotate(360deg) translateX(2vw) rotate(-360deg); }
 }
 
-.no-sp {
-  display: initial;
-}
 .no-pc {
   display: none;
 }

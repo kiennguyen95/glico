@@ -298,7 +298,20 @@ html {
   display: block;
 }
 
+
+.no-pc {
+  display: none;
+}
+
 @media all and (max-width: 767px) {
+  .no-pc {
+    display: initial;
+  }
+
+  .no-sp {
+    display: none;
+  }
+
   .btn-share-fb,
   .btn-back {
     font-size: 5.8vw;
