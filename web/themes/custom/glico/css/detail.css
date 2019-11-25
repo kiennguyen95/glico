@@ -192,6 +192,10 @@
   overflow: hidden;
 }
 
+.field-flag .ajax-progress {
+  display: none;
+}
+
 .field-flag .flag {
   display: flex;
   align-items: center;

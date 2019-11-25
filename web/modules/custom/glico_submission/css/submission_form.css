@@ -301,46 +301,17 @@ form.glico-submission-form #form-wrapper .form-actions .ajax-progress .throbber 
   border-radius: 8%;
 }
 
-.video-control {
-  position: relative;
-}
-
-.video-control .btn-play,
-.video-control .btn-mute {
+#pick-frame-video .btn-play {
   width: 2.5rem;
   height: 2.5rem;
   background-size: 100% 100%;
   display: inline-block;
   cursor: pointer;
-}
-
-.video-control .btn-play {
   background-image: url(/modules/custom/glico_submission/upload/btn-play-control.png);
-}
-
-.video-control .btn-mute {
-  background-image: url(/modules/custom/glico_submission/upload/btn-mute-control.png);
-}
-
-.video-control .text-time {
-  font-size: 1.5rem;
-  color: white;
   position: absolute;
-  top: 1.5rem;
-  margin-left: 1rem;
-}
-
-.video-control .btn-fullscreen {
-  padding: 14px 10px 2px 10px;
-  float: right;
-  display: inline-block;
-  font-size: 1.5rem;
-  color: white;
-  background-color: #F99EC6;
-  border-radius: 25px;
-  border: 2px solid white;
-  margin-top: 2px;
-  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .info-wrapper {
@@ -540,12 +511,6 @@ button.step-two-next {
 form.glico-submission-form #pick-frame-video video {
   width: 18rem;
   margin-bottom: 0;
-}
-
-.pick-frame-video-wrapper .video-control .btn-play {
-  position: absolute;
-  top: -115px;
-  right: 287px;
 }
 
 div#pick-frame-wrapper-div {
@@ -775,11 +740,6 @@ form.glico-submission-form div[aria-label="Error message"] {
 
   button.step-two-next {
     right: 2rem;
-  }
-
-  .pick-frame-video-wrapper .video-control .btn-play {
-    top: -93px;
-    right: 127px;
   }
 
   body .ui-dialog.ui-widget.ui-widget-content .pick-frame {
