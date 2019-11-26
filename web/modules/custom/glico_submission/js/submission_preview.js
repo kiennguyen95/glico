@@ -23,7 +23,7 @@
         // link: $(this).attr("data-share-url"),
         link: 'https://www.google.com/',
         caption: 'Test Caption',
-        hashtag: '#GlicoDance',
+        hashtag: '#Glico_Icreo',
         // quote: 'Test',
         id: '748106385614500'
       }, function (response) {

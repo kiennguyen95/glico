@@ -35,6 +35,20 @@
 
     setFullscreen();
 
+    // vid.addEventListener('timeupdate', function() {
+    //   currentPos = vid.currentTime; //get currentime
+    //   maxduration = vid.duration; //get video duration
+    //   percentage = (100 * currentPos / maxduration)+'%';
+    //   if(percentage === 'NaN%') {
+    //     percentage= '0%';
+    //   }
+    //   // current.text(currentPos);
+    //   // time.css('width', percentage);
+    //   // $('.trythis').text('im working');
+    //
+    //   console.log('currentPos: '+ currentPos);
+    //   console.log('percentage: '+ percentage);
+    // });
   });
 
   function videoControl() {

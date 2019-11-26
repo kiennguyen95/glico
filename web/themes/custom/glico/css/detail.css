@@ -372,7 +372,7 @@
     transform: translateY(0%);
   }
   50% {
-    transform: translateY(-20%);
+    transform: translateY(-10%);
   }
   100% {
     transform: translateY(0%);
@@ -676,7 +676,7 @@
   }
 
   #discover-section-winning-list .nutrients img:nth-child(4) {
-    top: 61vw;
+    top: 62vw;
     left: 31vw;
     width: 16.5vw;
   }
@@ -688,7 +688,7 @@
   }
 
   #discover-section-winning-list .nutrients img:nth-child(1) {
-    top: 61vw;
+    top: 70vw;
     left: 1vw;
     width: 14.5vw;
   }
