@@ -195,7 +195,7 @@
 
 .info-wrapper .caption > div {
   height: 100%;
-  overflow: hidden;
+  word-break: break-word;
 }
 
 .field-flag .ajax-progress {
@@ -312,7 +312,7 @@
     transform: translateY(0%);
   }
   50% {
-    transform: translateY(100%);
+    transform: translateY(20%);
   }
   100% {
     transform: translateY(0%);
@@ -332,7 +332,7 @@
     transform: translateY(0%);
   }
   50% {
-    transform: translateY(30%);
+    transform: translateY(20%);
   }
   100% {
     transform: translateY(0%);
@@ -622,5 +622,91 @@
     font-size: 2.4vw;
     padding-left: 5vw;
     background-size: 4.2vw 4.2vw;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  #content-wrapper #banner-img {
+    width: 20vw;
+  }
+
+  .page-node-content {
+    margin-top: 3vw;
+  }
+
+  .submission-content-wrapper {
+    width: 80vw;
+  }
+
+  .submission-content-wrapper .field-video-wrapper video[style] {
+    height: 31.6vw !important;
+  }
+
+  .info-wrapper .user-info .avatar {
+    width: 3vw;
+  }
+
+  .info-wrapper .user-info .username {
+    font-size: 1.5vw;
+  }
+
+  .info-wrapper .baby-name-label {
+    font-size: 1.5vw;
+    margin: 0.5vw 0;
+  }
+
+  .info-wrapper .baby-name {
+    font-size: 1.5vw;
+    line-height: 1.6vw;
+    padding-top: 0.7vw;
+    margin-bottom: 1.1vw;
+  }
+
+  .info-wrapper .caption {
+    font-size: 1.3vw;
+  }
+
+  .info-wrapper {
+    height: 36vw;
+  }
+
+  #btn-apply {
+    top: 75vw;
+    margin: 0;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(4) {
+    top: 61vw;
+    left: 31vw;
+    width: 16.5vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(5) {
+    top: 65vw;
+    left: 60.5vw;
+    width: 17vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(1) {
+    top: 61vw;
+    left: 1vw;
+    width: 14.5vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(2) {
+    top: 80vw;
+    left: 14.5vw;
+    width: 14.5vw;
+  }
+
+  #discover-section-winning-list .nutrients img:nth-child(3) {
+    left: 55vw;
+    width: 12vw;
+    top: 86vw;
+  }
+
+  #content-wrapper {
+    height: 103vw;
+    background-position-y: -73vw;
   }
 }
