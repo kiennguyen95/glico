@@ -17,19 +17,30 @@
 
     videoControl();
 
+    var durmins, dursecs, curmins, cursecs;
+    var seekslider = $('#seekslider');
     var vid = $('.field-video video').get(0);
+
+    seekslider.change(function () {
+      var seekto = vid.duration * (seekslider.val()/ 100);
+      vid.currentTime = seekto;
+    });
+
+
     vid.addEventListener('loadedmetadata', function() {
       // Set video current time/ duration time
-      var durmins = Math.floor(vid.duration / 60);
-      var dursecs = Math.floor(vid.duration - durmins * 60);
+       durmins = Math.floor(vid.duration / 60);
+       dursecs = Math.floor(vid.duration - durmins * 60);
       if(dursecs < 10){ dursecs = "0"+dursecs; };
       if(durmins < 10){ durmins = "0"+durmins; };
       setInterval(function () {
-        var curmins = Math.floor(vid.currentTime / 60);
-        var cursecs = Math.floor(vid.currentTime - curmins * 60);
+         curmins = Math.floor(vid.currentTime / 60);
+         cursecs = Math.floor(vid.currentTime - curmins * 60);
         if(cursecs < 10){ cursecs = "0"+cursecs; };
         if(curmins < 10){ curmins = "0"+curmins; };
         $('.video-control .text-time').text(curmins+":"+cursecs+" / "+durmins+":"+dursecs);
+        var nt = vid.currentTime * (100 / vid.duration);
+        seekslider.val(nt);
       },500);
     }, false);
 
