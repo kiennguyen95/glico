@@ -785,3 +785,15 @@ form.glico-submission-form div[aria-label="Error message"] {
     margin-right: 1.5rem !important;
   }
 }
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+  @media {
+    form.glico-submission-form fieldset[data-drupal-selector="edit-name-and-comment"] span {
+      padding-top: 2.5rem;
+    }
+    body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-baby-name"] {
+      padding-top: 10px;
+      line-height: 1.5;
+    }
+  }
+}
