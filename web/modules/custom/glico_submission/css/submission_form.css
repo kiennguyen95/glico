@@ -125,7 +125,8 @@ body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-baby-nam
   color: #5D5D5D;
   font-family: Baloo Tammudu, cursive;
   border: 1px solid pink;
-  padding-top: 20px;
+  /*padding-top: 20px;*/
+  line-height: 1.5;
 }
 
 body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-caption"] {
@@ -604,7 +605,8 @@ form.glico-submission-form .form-item-video-file label.submit-video {
 
 form.glico-submission-form fieldset[data-drupal-selector="edit-name-and-comment"] span {
   font-size: 1.45rem!important;
-  margin: 2.5rem 2rem -0.5rem;
+  margin: 0 2rem -0.5rem;
+  padding-top: 2.5rem;
   display: block;
   text-align: center;
   border-bottom: 2px solid white;
