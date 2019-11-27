@@ -25,14 +25,16 @@
 
   Drupal.behaviors.toggleFrames = {
     attach: function (context, settings) {
-      $(".toggle-pick-frame").click(function () {
+      $(".toggle-pick-frame", context).once('toggleFrames').click(function () {
         if ($(window).width() < 768) {
           $("body .ui-dialog.ui-widget.ui-widget-content").css("height", "535px");
           $("body .ui-dialog.ui-widget.ui-widget-content").css("top", "100px");
         }
         else {
+          var curTop = $("body .ui-dialog.ui-widget.ui-widget-content").css("top").match(/(\d+)/)[0];
+          curTop = curTop - 100;
           $("body .ui-dialog.ui-widget.ui-widget-content").css("height", "650px");
-          $("body .ui-dialog.ui-widget.ui-widget-content").css("top", "150px");
+          $("body .ui-dialog.ui-widget.ui-widget-content").css("top", curTop + "px");
         }
         $("div#pick-frame-wrapper-div").css("visibility", "visible");
       });
