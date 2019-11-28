@@ -41,7 +41,7 @@
         $('.video-control .text-time').text(curmins+":"+cursecs+" / "+durmins+":"+dursecs);
         var nt = vid.currentTime * (100 / vid.duration);
         seekslider.val(nt);
-      },500);
+      },100);
     }, false);
 
     setFullscreen();
