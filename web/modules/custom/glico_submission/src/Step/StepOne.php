@@ -40,7 +40,7 @@ class StepOne extends BaseStep {
       '#required' => TRUE,
       '#default_value' => isset($this->getValues()['video_file']) ? $this->getValues()['video_file'] : NULL,
       '#upload_validators' => array(
-        'file_validate_extensions' => array('mp4 mkv flv m4v avi wmv mov'),
+        'file_validate_extensions' => array('mp4 mkv flv m4v avi wmv mov webm'),
         // Pass the maximum file size in bytes
         'file_validate_size' => array(1024*1024*1024),
       ),
