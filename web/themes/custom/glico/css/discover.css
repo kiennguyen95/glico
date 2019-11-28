@@ -298,6 +298,7 @@ html * {
 
 #discover-section-winning-list .nutrients img {
   position: absolute;
+  pointer-events: none;
 }
 
 #discover-section-winning-list .nutrients img:nth-child(1) {
