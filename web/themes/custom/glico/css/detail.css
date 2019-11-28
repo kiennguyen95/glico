@@ -65,7 +65,21 @@
 }
 
 .field-video {
+  background-color: black;
   position: relative;
+  font-size: 0;
+}
+
+.field-video.video-frame-3 {
+  border-radius: 5vw;
+}
+
+.field-video.video-frame-2 {
+  border-radius: 6vw;
+}
+
+.field-video.video-frame-1 {
+  border-radius: 1vw;
 }
 
 .field-video:before {
@@ -75,7 +89,7 @@
   width: 102%;
   height: 105%;
   background-size: 100% 100%;
-  top: -3.5%;
+  top: -2.5%;
   left: -2%;
 }
 
@@ -86,19 +100,19 @@
 .field-video.video-frame-2:before {
   background-image: url(/modules/custom/glico_submission/upload/frame-2.png);
   width: 105%;
-  height: 123%;
+  height: 124%;
   top: -14.5%;
-  left: -4%;
+  left: -3.5%;
 }
 
 .submission-content-wrapper .field-video-wrapper .video-frame-2 video[style] {
-  border-radius: 4vw;
+  border-radius: 6vw;
 }
 
 .field-video.video-frame-3:before {
   background-image: url(/modules/custom/glico_submission/upload/frame-3.png);
   width: 106%;
-  height: 110%;
+  height: 111%;
   top: -5.1%;
   left: -2.5%;
 }
@@ -135,7 +149,7 @@
   font-size: 1.74vw;
   color: white;
   position: absolute;
-  top: 3vw;
+  top: 4vw;
   margin-left: 1.1vw;
 }
 
@@ -471,24 +485,6 @@
     border-radius: 3vw;
   }
 
-  .field-video:before {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 102%;
-    height: 100%;
-    background-size: 100% 100%;
-    top: -1.5%;
-    left: -2%;
-  }
-
-  .field-video.video-frame-3:before {
-    width: 106%;
-    height: 106%;
-    top: -4.2%;
-    left: -2.5%;
-  }
-
   .page-node-content {
     margin-top: 4vw;
   }
@@ -508,7 +504,7 @@
 
   .video-control .text-time {
     font-size: 3.74vw;
-    top: 2.3vw;
+    top: 6.5vw;
   }
 
   .video-control .btn-fullscreen {
@@ -662,6 +658,20 @@
     padding-left: 5vw;
     background-size: 4.2vw 4.2vw;
   }
+
+  #seekslider {
+    height: 2vw;
+  }
+
+  #seekslider::-webkit-slider-thumb {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+
+  #seekslider::-moz-range-thumb {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
 }
 
 @media all and (min-width: 1024px) {
@@ -747,5 +757,27 @@
   #content-wrapper {
     height: 103vw;
     background-position-y: -73vw;
+  }
+
+  .video-control .text-time {
+    top: 3.8vw;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .video-control .text-time {
+    top: 3.5vw;
+  }
+}
+
+@media all and (width: 768px) {
+  .video-control .text-time {
+    top: 5vw;
+  }
+}
+
+@media all and (width: 320px) {
+  .video-control .text-time {
+    top: 7vw;
   }
 }

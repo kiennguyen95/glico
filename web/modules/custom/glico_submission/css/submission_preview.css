@@ -27,7 +27,7 @@ html {
 }
 
 .preview-wrapper * {
-  font-size: 1.5rem;
+  /*font-size: 1.5rem;*/
 }
 
 .preview-wrapper .field-video-wrapper {
@@ -40,11 +40,24 @@ html {
   height: 35.5vw !important;
   /*max-height: 575px;*/
   border-radius: 1vw;
-  object-fit: fill;
 }
 
 .field-video {
+  background-color: black;
   position: relative;
+  font-size: 0;
+}
+
+.field-video.video-frame-3 {
+  border-radius: 5vw;
+}
+
+.field-video.video-frame-2 {
+  border-radius: 6vw;
+}
+
+.field-video.video-frame-1 {
+  border-radius: 1vw;
 }
 
 .field-video:before {
@@ -52,9 +65,9 @@ html {
   content: "";
   display: block;
   width: 102%;
-  height: 103%;
+  height: 105%;
   background-size: 100% 100%;
-  top: -3%;
+  top: -2.5%;
   left: -2%;
 }
 
@@ -74,19 +87,19 @@ html {
   border-radius: 8vw;
 }
 
-.preview-wrapper .field-video-wrapper .video-frame-2 video[style] {
+.preview-wrapper .field-video-wrapper .video-frame-2 video {
   border-radius: 4vw;
 }
 
 .field-video.video-frame-3:before {
   background-image: url(/modules/custom/glico_submission/upload/frame-3.png);
   width: 106%;
-  height: 110%;
+  height: 111%;
   top: -5.1%;
   left: -2.5%;
 }
 
-.preview-wrapper .field-video-wrapper .video-frame-3 video[style] {
+.field-video-wrapper .video-frame-3 video {
   border-radius: 8%;
 }
 
@@ -396,26 +409,9 @@ html {
     border-radius: 3vw;
   }
 
-  .field-video:before {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 102%;
-    height: 100%;
-    background-size: 100% 100%;
-    top: -1.5%;
-    left: -2%;
-  }
-
-  .field-video.video-frame-3:before {
-    width: 106%;
-    height: 106%;
-    top: -4.2%;
-    left: -2.5%;
-  }
-
   .video-control {
     border-top: 2px solid white;
+    margin-bottom: 2vw;
   }
 
   .video-control .btn-play {
@@ -429,7 +425,7 @@ html {
 
   .video-control .text-time {
     font-size: 3.74vw;
-    top: 2.3vw;
+    top: 7.3vw;
   }
 
   .video-control .btn-fullscreen {
@@ -514,7 +510,24 @@ html {
   .preview-wrapper .field-video-wrapper video {
     width: 100% !important;
     height: 50vw !important;
-    border-radius: 3vw;
+  }
+
+  .field-video.video-frame-2 video {
+    border-radius: 6vw;
+  }
+
+  #seekslider {
+    height: 2vw;
+  }
+
+  #seekslider::-webkit-slider-thumb {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+
+  #seekslider::-moz-range-thumb {
+    width: 3.5vw;
+    height: 3.5vw;
   }
 }
 
@@ -668,5 +681,27 @@ html {
 
   .info-wrapper {
     height: 36vw;
+  }
+
+  .video-control .text-time {
+    top: 3.8vw;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .video-control .text-time {
+    top: 2.8vw;
+  }
+}
+
+@media all and (width: 768px) and (max-width: 1023px) {
+  .video-control .text-time {
+    top: 4.5vw;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+  .video-control .text-time {
+    top: 5.5vw;
   }
 }
