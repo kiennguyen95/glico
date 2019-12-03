@@ -8,7 +8,7 @@
     });
 
     $(".header-menu-bg, .header-menu li a").click(function () {
-      if ($(window).width() <= 400) {
+      if ($(window).width() <= 767) {
         $(".header-menu-bg").hide();
         $(".header-menu").slideUp();
       }

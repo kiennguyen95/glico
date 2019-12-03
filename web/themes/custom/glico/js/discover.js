@@ -1,6 +1,12 @@
 (function ($) {
 
   $(document).ready(function ($) {
+    $("#content-wrapper video").each(function () {
+      if ($(this)[0].videoWidth < $(this)[0].videoHeight) {
+        $(this).css('object-fit', 'contain');
+      }
+    });
+
     setBtnCommand();
   });
 
