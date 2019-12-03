@@ -76,8 +76,12 @@
       </div>
     </div>
     <div id="btn-apply">
-      <a href="{{ path('glico_submission.glico_submission_form') }}" class="use-ajax btn-join no-sp" data-dialog-type="modal" data-dialog-options='{"width":650, "height":450}'>Tham gia ngay</a>
-      <a href="{{ path('glico_submission.glico_submission_form') }}" class="use-ajax btn-join no-pc" data-dialog-type="modal" data-dialog-options='{"width":320, "height":350}'>Tham gia ngay</a>
+      {% if logged_in %}
+        <a href="{{ path('glico_submission.glico_submission_form') }}" class="use-ajax btn-join no-sp" data-dialog-type="modal" data-dialog-options='{"width":650, "height":450}'>Tham gia ngay</a>
+        <a href="{{ path('glico_submission.glico_submission_form') }}" class="use-ajax btn-join no-pc" data-dialog-type="modal" data-dialog-options='{"width":320, "height":350}'>Tham gia ngay</a>
+      {% else %}
+        <a href="{{ path('social_auth_facebook.redirect_to_fb') }}" class="btn-join">Tham gia ngay</a>
+      {% endif %}
     </div>
     <div id="discover-section-winning-list">
     <div class="nutrients">

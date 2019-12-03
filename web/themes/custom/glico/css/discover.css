@@ -125,10 +125,9 @@ html * {
 
 #content-wrapper video[style] {
   width: 100% !important;
-  height: 20vw!important;
-  max-height: 268px;
+  height: 20.2vw!important;
+  max-height: 270px;
   border-radius: 1vw;
-  object-fit: fill;
 }
 
 #content-wrapper .video-list {
