@@ -82,7 +82,7 @@ html * {
 
 #content-wrapper #banner-img {
   width: 27vw;
-  margin: 7vw auto 1.25rem;
+  margin: 0 auto 1.25rem;
   max-width: 23.75rem;
 }
 
@@ -587,5 +587,13 @@ html * {
 
   #content-wrapper nav .js-pager__items a[rel="prev"] {
     left: -4vw;
+  }
+}
+
+
+/*==============================LARGE SCREEN============================*/
+@media all and (min-width: 1280px) {
+  #content-wrapper {
+    margin-top: 89.6px;
   }
 }

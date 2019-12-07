@@ -781,3 +781,11 @@
     top: 7vw;
   }
 }
+
+
+/*==============================LARGE SCREEN============================*/
+@media all and (min-width: 1280px) {
+  #content-wrapper #banner-img {
+    margin-top: 89.6px;
+  }
+}
