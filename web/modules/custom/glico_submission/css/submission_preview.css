@@ -705,3 +705,10 @@ html {
     top: 5.5vw;
   }
 }
+
+/*==============================LARGE SCREEN============================*/
+@media all and (min-width: 1280px) {
+  .preview-bg {
+    padding-top: 89.6px;
+  }
+}

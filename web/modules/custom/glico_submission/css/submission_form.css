@@ -645,6 +645,10 @@ form.glico-submission-form div[aria-label="Error message"] {
 }
 
 @media all and (max-width: 767px) {
+  form.glico-submission-form fieldset[data-drupal-selector="edit-name-and-comment"] span {
+    padding-top: 0;
+  }
+
   form.glico-submission-form:before {
     width: 11rem;
     height: 10.5rem;
@@ -784,6 +788,10 @@ form.glico-submission-form div[aria-label="Error message"] {
     font-size: 1rem !important;
     line-height: 1.8rem !important;
     margin-right: 1.5rem !important;
+  }
+
+  .message-share {
+    font-size: 4vw;
   }
 }
 

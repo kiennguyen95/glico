@@ -590,10 +590,48 @@ html * {
   }
 }
 
-
 /*==============================LARGE SCREEN============================*/
 @media all and (min-width: 1280px) {
   #content-wrapper {
     margin-top: 89.6px;
   }
 }
+
+/*Fix line height modal form only discover page*/
+form.glico-submission-form {
+  line-height: 1;
+}
+
+
+/*==============================SHORT BOTTOM ITEM========================*/
+/*@media all and (min-width: 1200px) {*/
+
+  /*#discover-section-winning-list .nutrients img:nth-child(1) {*/
+    /*top: 71vw;*/
+  /*}*/
+
+   /*#discover-section-winning-list .nutrients img:nth-child(2) {*/
+    /*top: 107vw;*/
+  /*}*/
+
+  /*#discover-section-winning-list .nutrients img:nth-child(3) {*/
+    /*top: 115vw;*/
+  /*}*/
+
+  /*#discover-section-winning-list .nutrients img:nth-child(4) {*/
+    /*top: 80vw;*/
+  /*}*/
+
+  /*#discover-section-winning-list .nutrients img:nth-child(5) {*/
+    /*top: 84vw;*/
+  /*}*/
+
+  /*#btn-apply {*/
+    /*top: 99vw;*/
+  /*}*/
+
+  /*#content-wrapper {*/
+    /*background-position-y: -55vw;*/
+    /*height: 120.5vw;*/
+  /*}*/
+/*}*/
