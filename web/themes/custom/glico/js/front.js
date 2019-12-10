@@ -60,7 +60,7 @@
     });
 
     // Play video in modal
-    $(".js-video-button").modalVideo();
+    // $(".js-video-button").modalVideo();
 
     //disco light sparkle
     setInterval(sparkle, 100);
