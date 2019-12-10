@@ -11,6 +11,12 @@
       }, function(response){});
     });
 
+    // var ua = navigator.userAgent;
+    // var isSP = ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0;
+    // if (isSP) {
+    //   $('.field-video video').get(0).controls = true;
+    // }
+
     $('.video-control .btn-play').click(function(){
       $('.field-video video').get(0).play();
     });
