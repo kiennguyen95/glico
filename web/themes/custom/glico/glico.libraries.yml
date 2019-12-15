@@ -10,6 +10,7 @@ global-styling:
   js:
     js/lib/jquery-modal-video.min.js: {}
     js/lib/modal-video.min.js: {}
+    js/lib/iphone-inline-video.min.js: {}
     js/glico.js: {}
   dependencies:
     - core/jquery
