@@ -28,15 +28,16 @@
 <!DOCTYPE html>
 <html{{ html_attributes }}>
 <head>
+  <meta property="og:url"                content="{{ url('<current>') }}" />
+  <meta property="og:type"               content="article" />
+  <meta property="og:title"              content="Glico Dance" />
+  <meta property="og:description"        content="Cùng xem bài dự thi của mình tại Glico Dance" />
+  <meta property="og:image"              content="{{ url('<front>')|render ~ 'themes/custom/glico/images/other/glico-share-thumbnail.png'}}" />
+
   <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
       <js-placeholder token="{{ placeholder_token }}">
-  {#<meta property="og:url"           content="https://www.your-domain.com/your-page.html" />#}
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Cùng xem bài dự thi của mình tại Glico Dance" />
-  <meta property="og:description"   content="Chỉ là mô tả" />
-  <meta property="og:image"         content="/themes/custom/glico/images/other/glico-share-thumbnail.png" />
 </head>
 <body{{ attributes }}>
 {#

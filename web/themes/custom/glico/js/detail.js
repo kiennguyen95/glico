@@ -7,7 +7,6 @@
         method: 'share',
         href: window.location.href,
         hashtag: '#GlicoDance',
-        quote: 'quote',
       }, function(response){});
     });
 

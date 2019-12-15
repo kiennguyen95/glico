@@ -83,6 +83,7 @@
   background-color: black;
   position: relative;
   font-size: 0;
+  border-radius: 1vw;
 }
 
 .field-video.video-frame-3 {
