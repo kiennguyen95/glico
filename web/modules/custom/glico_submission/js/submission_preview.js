@@ -20,14 +20,12 @@
     $('#btn-share-fb').click(function () {
       FB.ui({
         method: 'feed',
-        // link: $(this).attr("data-share-url"),
-        link: 'https://www.google.com/',
+        link: $(this).attr("data-share-url"),
         caption: 'Test Caption',
         hashtag: '#Glico_Icreo',
         // quote: 'Test',
         id: '748106385614500'
       }, function (response) {
-        // console.log(response);
         if (typeof response !== 'undefined') {
           button = $("#btn-share-fb");
           button.siblings(".message-share").html("Gửi bài dự thi thành công!");
