@@ -1508,7 +1508,7 @@
 #part-footer .messenger {
   position: fixed;
   align-items: center;
-  z-index: 99;
+  z-index: 2147483646;
   bottom: 24pt;
   right: 70pt;
   display: none;
