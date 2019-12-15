@@ -5,6 +5,11 @@
     if ($("#redirected").length) {
       $(".btn-join").click();
     }
+
+    setTimeout(function () {
+      $("#part-footer .messenger").fadeIn();
+    }, 2000);
+
     // Tabs control
     $("#part-info ul.tabs li").click(function () {
       $(this).addClass("is-active");

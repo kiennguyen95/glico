@@ -1507,27 +1507,21 @@
 
 #part-footer .messenger {
   position: fixed;
-  bottom: 2vw;
-  right: 2vw;
-  display: flex;
   align-items: center;
   z-index: 99;
+  bottom: 24pt;
+  right: 70pt;
+  display: none;
 }
 
 #part-footer .messenger .mess {
   background-color: #6697D3;
-  height: 3.3vw;
-  line-height: 3.3vw;
   color: white;
-  width: 15vw;
-  border-radius: 2vw;
-  font-size: 1.3vw;
-  margin-right: 0.5vw;
-}
-
-#part-footer .messenger .mess-icon {
-  width: 6vw;
-  cursor: pointer;
+  height: 30pt;
+  line-height: 30pt;
+  width: 150pt;
+  border-radius: 16pt;
+  font-size: 17px;
 }
 
 @media all and (max-width: 768px) {
@@ -3476,31 +3470,6 @@
   #part-footer .social-links a:nth-child(2) img {
     width: 3.5rem;
     margin-left: 1.5rem;
-  }
-
-  #part-footer .messenger {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    display: flex;
-    align-items: center;
-    z-index: 99;
-  }
-
-  #part-footer .messenger .mess {
-    background-color: #6697D3;
-    height: 3.3rem;
-    line-height: 3.3rem;
-    color: white;
-    width: 15rem;
-    border-radius: 2rem;
-    font-size: 1.3rem;
-    margin-right: 0.5rem;
-  }
-
-  #part-footer .messenger .mess-icon {
-    width: 6rem;
-    cursor: pointer;
   }
 
 
