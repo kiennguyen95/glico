@@ -87,7 +87,7 @@
 }
 
 .field-video.video-frame-3 {
-  border-radius: 5vw;
+  border-radius: 3vw;
 }
 
 .field-video.video-frame-2 {
@@ -466,6 +466,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  .field-video.video-frame-3 {
+    border-radius: 5vw;
+  }
+
   #btn-apply a.no-pc {
     display: initial;
   }
