@@ -26,6 +26,9 @@
       }
     }
 
+    // Play video in modal
+    $(".js-video-button").modalVideo();
+
     setTimeout(function () {
       $("#part-footer .messenger").fadeIn();
     }, 2000);
