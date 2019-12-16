@@ -19,6 +19,7 @@ function glico_preprocess_file_link(&$variables) {
       '#attributes' => [
         'src' => $url,
         'controls' => TRUE,
+        'preload' => 'auto',
       ],
     ];
     $variables['link'] = render($video_build);
