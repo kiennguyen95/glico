@@ -2,8 +2,28 @@
 
   $(document).ready(function ($) {
 
-    if ($("#redirected").length) {
-      $(".btn-join").click();
+    var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+          return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+      }
+    };
+
+    if (getUrlParameter('redirect') === 'fb') {
+      if ($(window).width() < 768) {
+        $(".btn-join-sp").click();
+      }
+      else {
+        $(".btn-join").click();
+      }
     }
 
     setTimeout(function () {
@@ -54,18 +74,12 @@
       }
 
       if ($("#section-winning-list .view-frontpage-wrapper").isInViewport()) {
-        if ($(window).width() >= 1280) {
-          mHeight = '1881px';
-        }
-        else {
-          mHeight = '147vw';
-        }
-        $(".music-stream-3-wrapper").css("height", mHeight);
+        $(".music-stream-3-wrapper").css("height", "147vw");
       }
     });
 
     // Play video in modal
-    // $(".js-video-button").modalVideo();
+    $(".js-video-button").modalVideo();
 
     //disco light sparkle
     setInterval(sparkle, 100);
