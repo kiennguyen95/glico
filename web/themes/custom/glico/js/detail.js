@@ -25,7 +25,6 @@
     var durmins, dursecs, curmins, cursecs;
     var seekslider = $('#seekslider');
     var vid = $('.field-video video').get(0);
-    enableInlineVideo(video);
 
     seekslider.change(function () {
       var seekto = vid.duration * (seekslider.val()/ 100);
@@ -71,7 +70,7 @@
   function videoControl() {
     var isPlay = 0;
     var isMute = 0;
-    $('.video-control .btn-play').addEventListener('click',function(){
+    $('.video-control .btn-play').click(function(){
       if(isPlay == 0) {
         $('.field-video video').get(0).play();
         // Change pause image here
@@ -101,7 +100,6 @@
   function setFullscreen() {
     $('.video-control .btn-fullscreen').click(function () {
       var vid = $('.field-video video').get(0);
-      vid.webkitEnterFullScreen();
       if (vid.requestFullscreen) {
         vid.requestFullscreen();
       } else if (vid.mozRequestFullScreen) { /* Firefox */
