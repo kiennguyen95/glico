@@ -669,6 +669,10 @@ form.glico-submission-form div[aria-label="Error message"] {
     width: 100%;
   }
 
+  body.on-iphone .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-name-and-comment"] span.fieldset-legend {
+    padding-top: 2rem;
+  }
+
   form.glico-submission-form .form-item-video-file label.submit-video {
     height: 9rem;
     border: 2px solid #EAC6DA;
@@ -766,6 +770,10 @@ form.glico-submission-form div[aria-label="Error message"] {
     padding: 10px;
     font-size: 1rem;
     padding-top: 20px;
+  }
+
+  body.on-iphone .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-baby-name"] {
+    padding: 0 10px;
   }
 
   body .ui-dialog.ui-widget.ui-widget-content [data-drupal-selector="edit-caption"] {
