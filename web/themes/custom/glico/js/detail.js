@@ -1,12 +1,19 @@
 (function ($) {
 
   $(document).ready(function ($) {
+
+    function br2nl(str, replaceMode) {
+      var replaceStr = (replaceMode) ? "\n" : '';
+      // Includes <br>, <BR>, <br />, </br>
+      return str.replace(/<\s*\/?br\s*[\/]?>/gi, replaceStr);
+    }
+
     $(".info-wrapper #btn-share").click(function() {
       FB.ui({
         method: 'share',
         href: window.location.href,
         hashtag: '#GlicoDance',
-        quote: $('.info-wrapper .caption > div').html(),
+        quote: br2nl($('.info-wrapper .caption > div').html(), true),
       }, function(response){});
     });
 
