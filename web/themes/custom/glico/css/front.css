@@ -1942,7 +1942,23 @@
 /*=================================LARGE SCREEN====================================*/
 @media all and (min-width: 1280px) {
 
+  @media all and (max-width: 1900px) {
+    .bg-grand {
+      zoom: 0.9;
+    }
+  }
 
+  @media all and (max-width: 1580px) {
+    .bg-grand {
+      zoom: 0.8;
+    }
+  }
+
+  @media all and (max-width: 1420px) {
+    .bg-grand {
+      zoom: 0.7;
+    }
+  }
 
   html {
     font-size: 12.8px;
