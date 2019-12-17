@@ -13,7 +13,13 @@
  * @ingroup themeable
  */
 #}
-<video preload="{{ player_attributes.preload }}" {{ player_attributes.controls ? 'controls' : '' }} style="width:{{ player_attributes.width }}px;height:{{ player_attributes.height }}px;" {{ player_attributes.autoplay ? 'autoplay' : '' }} {{ player_attributes.loop ? 'loop' : '' }} {{ player_attributes.muted ? 'muted' : '' }}>
+{#<video class="video-js" preload="{{ player_attributes.preload }}" controls="true" playsinline style="width:{{ player_attributes.width }}px;height:{{ player_attributes.height }}px;" {{ player_attributes.autoplay ? 'autoplay' : '' }} {{ player_attributes.loop ? 'loop' : '' }} {{ player_attributes.muted ? 'muted' : '' }}>#}
+{#  {% for user in items %}#}
+{#    <source src="{{ user }}"/>#}
+{#  {% endfor %}#}
+{#</video>#}
+
+<video class="video-js vjs-theme-sea" playsinline width={{ player_attributes.width }} height={{ player_attributes.height }} data-setup='{"controls": true, "preload": "auto", "fluid": true}'>
   {% for user in items %}
     <source src="{{ user }}"/>
   {% endfor %}
