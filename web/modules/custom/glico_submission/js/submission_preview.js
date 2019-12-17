@@ -28,8 +28,8 @@
       FB.ui({
         method: 'feed',
         link: $(this).attr("data-share-url"),
-        caption: 'Test Caption',
-        hashtag: '#glicodance_vudieuphattrientoandien',
+        // caption: 'Test Caption',
+        hashtag: '#glicodance_vudieutoandien',
         quote: br2nl($('.info-wrapper .caption > div').html(), true),
         id: '748106385614500'
       }, function (response) {

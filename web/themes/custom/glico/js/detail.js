@@ -12,7 +12,7 @@
       FB.ui({
         method: 'share',
         href: window.location.href,
-        hashtag: '#glicodance_vudieuphattrientoandien',
+        hashtag: '#glicodance_vudieutoandien',
         quote: br2nl($('.info-wrapper .caption > div').html(), true),
       }, function(response){});
     });
