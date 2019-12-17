@@ -1,12 +1,12 @@
 (function ($) {
 
   $(document).ready(function ($) {
-
     $(".info-wrapper #btn-share").click(function() {
       FB.ui({
         method: 'share',
         href: window.location.href,
         hashtag: '#GlicoDance',
+        quote: $('.info-wrapper .caption > div').html(),
       }, function(response){});
     });
 
