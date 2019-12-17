@@ -5,12 +5,15 @@ global-styling:
       https://fonts.googleapis.com/css?family=Baloo+Tammudu&display=swap : { type: external }
       https://fonts.googleapis.com/css?family=Comfortaa&display=swap : { type: external }
       css/lib/modal-video.min.css: {}
+      css/lib/video-js.min.css: {}
+      css/lib/sea-index.css: {}
       css/glico.admin.extra.css: {}
       css/glico.css: {}
       css/reset.css: {}
   js:
     js/lib/jquery-modal-video.min.js: {}
     js/lib/modal-video.min.js: {}
+    js/lib/video.min.js: {}
     js/glico.js: {}
   dependencies:
     - core/jquery
