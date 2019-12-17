@@ -29,7 +29,7 @@
         method: 'feed',
         link: $(this).attr("data-share-url"),
         // caption: 'Test Caption',
-        hashtag: '#glicodance_vudieutoandien',
+        hashtag: '#Glicodance_vudieutoandien',
         quote: br2nl($('.info-wrapper .caption > div').html(), true),
         id: '748106385614500'
       }, function (response) {
