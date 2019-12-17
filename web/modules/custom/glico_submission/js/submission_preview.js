@@ -1,6 +1,13 @@
 (function ($) {
 
   $(document).ready(function ($) {
+
+    function br2nl(str, replaceMode) {
+      var replaceStr = (replaceMode) ? "\n" : '';
+      // Includes <br>, <BR>, <br />, </br>
+      return str.replace(/<\s*\/?br\s*[\/]?>/gi, replaceStr);
+    }
+
     window.fbAsyncInit = function() {
       FB.init({
         appId      : '748106385614500',
@@ -22,8 +29,8 @@
         method: 'feed',
         link: $(this).attr("data-share-url"),
         caption: 'Test Caption',
-        hashtag: '#Glico_Icreo',
-        // quote: 'Test',
+        hashtag: '#glicodance_vudieuphattrientoandien',
+        quote: br2nl($('.info-wrapper .caption > div').html(), true),
         id: '748106385614500'
       }, function (response) {
         if (typeof response !== 'undefined') {
