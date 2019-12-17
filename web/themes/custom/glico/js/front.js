@@ -30,7 +30,7 @@
     $(".js-video-button").modalVideo();
 
     setTimeout(function () {
-      $("#part-footer .messenger").fadeIn();
+      $("#fb-messenger").fadeIn();
     }, 2000);
 
     // Tabs control

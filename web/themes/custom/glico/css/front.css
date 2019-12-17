@@ -1505,7 +1505,7 @@
   margin-left: 1.5vw;
 }
 
-#part-footer .messenger {
+#fb-messenger {
   position: fixed;
   align-items: center;
   z-index: 2147483646;
@@ -1514,7 +1514,7 @@
   display: none;
 }
 
-#part-footer .messenger .mess {
+#fb-messenger .mess {
   background-color: #6697D3;
   color: white;
   height: 30pt;
@@ -1522,6 +1522,8 @@
   width: 150pt;
   border-radius: 16pt;
   font-size: 17px;
+  font-family: UTM-Cookies, cursive;
+  text-align: center;
 }
 
 @media all and (max-width: 768px) {
@@ -1896,11 +1898,7 @@
     width: 18vw;
   }
 
-  #part-footer .messenger .mess-icon {
-    width: 10vw;
-  }
-
-  #part-footer .messenger .mess {
+  #fb-messenger .mess {
     display: none;
   }
 
