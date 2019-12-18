@@ -1,0 +1,12 @@
+uuid: 79f29e87-c63a-4404-9858-21ee8035c1f1
+langcode: en
+status: true
+dependencies: {  }
+id: node__submission
+label: 'Content: Submission'
+tags:
+  og_description: 'Cùng xem bài dự thi của mình tại Glico Dance'
+  og_image: '[node:field_thumbnail:entity:url]'
+  og_title: 'Bé [node:title]'
+  og_type: website
+  og_url: '[node:url]'

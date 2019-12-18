@@ -8,9 +8,12 @@ dependencies:
     - field.field.node.submission.field_frame
     - field.field.node.submission.field_score
     - field.field.node.submission.field_shorten_link
+    - field.field.node.submission.field_thumbnail
     - field.field.node.submission.field_video
+    - image.style.thumbnail
     - node.type.submission
   module:
+    - image
     - path
     - video
 id: node.submission.default
@@ -54,6 +57,14 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
+  field_thumbnail:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_video:
     weight: 8
     settings:

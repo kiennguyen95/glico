@@ -1,0 +1,6 @@
+ffmpeg_binary: 'D:\ffmpeg\ffmpeg.exe'
+ffprobe_binary: 'D:\ffmpeg\ffprobe.exe'
+execution_timeout: 5
+threads_amount: 0
+_core:
+  default_config_hash: KJntKxIgLpYRqWKWptZislICddAvWd6Ccdffj8rOBl0

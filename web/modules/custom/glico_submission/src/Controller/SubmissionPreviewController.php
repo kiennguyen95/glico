@@ -34,10 +34,14 @@ class SubmissionPreviewController extends ControllerBase {
     if (!$node->field_video->isEmpty()) {
       $video_url = file_url_transform_relative(file_create_url($node->field_video->entity->getFileUri()));
     }
+    if (!$node->field_thumbnail->isEmpty()) {
+      $thumbnail_url = file_url_transform_relative(file_create_url($node->field_thumbnail->entity->getFileUri()));
+    }
     $variables = [
       'username' => $username,
       'avatar_src' => $avatar_url,
       'video_src' => $video_url,
+      'thumbnail_src' => $thumbnail_url,
       'video_frame' => $node->field_frame->value,
       'baby_name' => $node->getTitle(),
       'caption' => $node->field_caption->value,
