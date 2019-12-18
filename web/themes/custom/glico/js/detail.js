@@ -5,7 +5,12 @@
     function br2nl(str, replaceMode) {
       var replaceStr = (replaceMode) ? "\n" : '';
       // Includes <br>, <BR>, <br />, </br>
-      return str.replace(/<\s*\/?br\s*[\/]?>/gi, replaceStr);
+      if (typeof str != 'undefined') {
+        return str.replace(/<\s*\/?br\s*[\/]?>/gi, replaceStr);
+      }
+      else {
+        return str;
+      }
     }
 
     $(".info-wrapper #btn-share").click(function() {
