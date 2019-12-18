@@ -97,6 +97,7 @@ class SubmissionManageForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $data = \Drupal::request()->request->all();
+    $options = [];
 
     // Trigger save
     if (isset($data['save'])) {
@@ -129,8 +130,6 @@ class SubmissionManageForm extends FormBase {
             'type' => $data['type'],
           ],
         ];
-      } else {
-        $options = [];
       }
     }
     $form_state->setRedirect('glico_custom.submission_manage_form', [], $options);
