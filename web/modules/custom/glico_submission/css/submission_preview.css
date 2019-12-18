@@ -46,8 +46,6 @@ html {
   background-color: black;
   position: relative;
   font-size: 0;
-  border-radius: 1vw;
-  overflow: hidden;
 }
 
 .field-video .detail-field-thumbnail {
@@ -56,6 +54,7 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
 }
 
 .field-video .detail-field-thumbnail img {
@@ -68,11 +67,23 @@ html {
   border-radius: 3vw;
 }
 
+.field-video.video-frame-3 .detail-field-thumbnail {
+  border-radius: 3vw;
+}
+
 .field-video.video-frame-2 {
   border-radius: 6vw;
 }
 
+.field-video.video-frame-2 .detail-field-thumbnail {
+  border-radius: 6vw;
+}
+
 .field-video.video-frame-1 {
+  border-radius: 1vw;
+}
+
+.field-video.video-frame-1 .detail-field-thumbnail {
   border-radius: 1vw;
 }
 
@@ -459,6 +470,10 @@ html {
   }
 
   .field-video.video-frame-3 {
+    border-radius: 5vw;
+  }
+
+  .field-video.video-frame-3 .detail-field-thumbnail {
     border-radius: 5vw;
   }
 
