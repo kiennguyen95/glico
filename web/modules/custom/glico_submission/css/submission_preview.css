@@ -46,6 +46,8 @@ html {
   background-color: black;
   position: relative;
   font-size: 0;
+  border-radius: 1vw;
+  cursor: pointer;
 }
 
 .field-video .detail-field-thumbnail {
@@ -55,6 +57,20 @@ html {
   left: 0;
   right: 0;
   overflow: hidden;
+  border-radius: 1vw;
+}
+
+.field-video .detail-field-thumbnail:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 4vw);
+  left: calc(50% - 4vw);
+  width: 8vw;
+  height: 8vw;
+  background-image: url("/modules/custom/glico_submission/upload/btn-play-thumb.png");
+  background-size: 100% 100%;
+  opacity: 0.8;
 }
 
 .field-video .detail-field-thumbnail img {
@@ -188,7 +204,7 @@ html {
 
 .video-control .btn-play {
   background-image: url(/modules/custom/glico_submission/upload/btn-play.png);
-  margin-right: 0.1rem;
+  margin-right: 0.3rem;
 }
 
 .video-control .btn-mute {
@@ -480,10 +496,6 @@ html {
   .video-control {
     border-top: 2px solid white;
     margin-bottom: 2vw;
-  }
-
-  .video-control .btn-play {
-    margin-right: 0;
   }
 
   .video-control .btn-play, .video-control .btn-mute {

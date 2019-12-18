@@ -51,7 +51,7 @@
 
     function videoPlayToggle() {
       if(isPlay == 0) {
-        $('.field-video .detail-field-thumbnail').hide();
+        $('.field-video .detail-field-thumbnail').fadeOut('fast');
         $('.field-video video').get(0).play();
         // Change pause image here
         $('.video-control .btn-play').css("background-image", "url(/modules/custom/glico_submission/upload/btn-pause.png)");
