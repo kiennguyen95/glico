@@ -1,5 +1,5 @@
-ffmpeg_binary: 'D:\ffmpeg\ffmpeg.exe'
-ffprobe_binary: 'D:\ffmpeg\ffprobe.exe'
+ffmpeg_binary: ''
+ffprobe_binary: ''
 execution_timeout: 5
 threads_amount: 0
 _core:

@@ -93,9 +93,6 @@
             }
         },
         "patches": {
-            "drupal/php_ffmpeg": {
-                "Fix warning": "patches/cache_needs_to_return_string-2851222-7.patch"
-            }
         }
     }
 }
