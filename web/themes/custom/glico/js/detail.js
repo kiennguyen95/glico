@@ -33,8 +33,9 @@
     var isPlay = 0;
     var isMute = 0;
 
-    $('.field-video video').click(function(){
+    function videoPlayToggle() {
       if(isPlay == 0) {
+        $('.field-video .detail-field-thumbnail').hide();
         $('.field-video video').get(0).play();
         // Change pause image here
         $('.video-control .btn-play').css("background-image", "url(/modules/custom/glico_submission/upload/btn-pause.png)");
@@ -44,19 +45,10 @@
         $('.video-control .btn-play').css("background-image", "url(/modules/custom/glico_submission/upload/btn-play.png)");
         isPlay = 0;
       }
-    });
+    }
 
-    $('.video-control .btn-play').click(function(){
-      if(isPlay == 0) {
-        $('.field-video video').get(0).play();
-        // Change pause image here
-        $('.video-control .btn-play').css("background-image", "url(/modules/custom/glico_submission/upload/btn-pause.png)");
-        isPlay = 1;
-      } else {
-        $('.field-video video').get(0).pause();
-        $('.video-control .btn-play').css("background-image", "url(/modules/custom/glico_submission/upload/btn-play.png)");
-        isPlay = 0;
-      }
+    $('.field-video video, .video-control .btn-play, .field-video .detail-field-thumbnail').click(function(){
+      videoPlayToggle();
     });
 
     $('.video-control .btn-mute').click(function(){
@@ -119,10 +111,6 @@
     //   console.log('percentage: '+ percentage);
     // });
   });
-
-  function videoControl() {
-
-  }
 
   function setFullscreen() {
     $('.video-control .btn-fullscreen').click(function () {

@@ -4,12 +4,12 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_frame
-    - field.storage.node.field_video
+    - field.storage.node.field_thumbnail
     - node.type.submission
   module:
+    - image
     - node
     - user
-    - video
 id: discover
 label: Discover
 module: views
@@ -207,15 +207,15 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_video:
-          id: field_video
-          table: node__field_video
-          field: field_video
+        field_thumbnail:
+          id: field_thumbnail
+          table: node__field_thumbnail
+          field: field_thumbnail
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -256,15 +256,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: video_player
+          type: image
           settings:
-            width: '854'
-            height: '480'
-            controls: false
-            autoplay: false
-            loop: false
-            muted: false
-            preload: auto
+            image_style: ''
+            image_link: ''
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -287,7 +282,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="/video/{{ nid }}"><div class="video-frame-{{ field_frame }}">{{ field_video }}<span class="btn-play"></span></div></a>'
+            text: '<a href="/video/{{ nid }}" class="a-video-frame-{{ field_frame }}"><div class="video-frame-{{ field_frame }}">{{ field_thumbnail }}<span class="btn-play"></span></div></a>'
             make_link: false
             path: ''
             absolute: false
@@ -475,7 +470,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_frame'
-        - 'config:field.storage.node.field_video'
+        - 'config:field.storage.node.field_thumbnail'
   page_1:
     display_plugin: page
     id: page_1
@@ -496,4 +491,4 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_frame'
-        - 'config:field.storage.node.field_video'
+        - 'config:field.storage.node.field_thumbnail'

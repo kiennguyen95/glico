@@ -28,7 +28,9 @@
         "drupal/devel": "^2.1",
         "drupal/facebook_mcc": "^1.2",
         "drupal/flag": "^4.0@beta",
+        "drupal/metatag": "^1.10",
         "drupal/pathauto": "^1.5",
+        "drupal/php_ffmpeg": "^1.0",
         "drupal/shorten": "^1.0",
         "drupal/social_auth_facebook": "^1.0",
         "drupal/video": "^1.4",
@@ -91,6 +93,9 @@
             }
         },
         "patches": {
+            "drupal/php_ffmpeg": {
+                "Fix warning": "patches/cache_needs_to_return_string-2851222-7.patch"
+            }
         }
     }
 }
