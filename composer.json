@@ -91,12 +91,6 @@
             }
         },
         "patches": {
-            "drupal/views_data_export": {
-                "Fix format path": "patches/views_data_export_format_path-2957085-19.patch"
-            },
-            "drupal/social_auth_facebook": {
-                "Custom redirect when cancel": "patches/custom-redirect-when-cancel-fb-login.patch"
-            }
         }
     }
 }
