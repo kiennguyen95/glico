@@ -307,7 +307,7 @@ form.glico-submission-form #form-wrapper .form-actions .ajax-progress .throbber 
   background-size: 100% 100%;
   display: inline-block;
   cursor: pointer;
-  background-image: url(/modules/custom/glico_submission/upload/btn-play-control.png);
+  background-image: url(/modules/custom/glico_submission/upload/btn-play.png);
   position: absolute;
   top: 50%;
   left: 50%;

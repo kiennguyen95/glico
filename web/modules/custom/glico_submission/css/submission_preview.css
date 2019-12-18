@@ -122,7 +122,7 @@ html {
   border-radius: 5px;
   background: #d3d3d3;
   outline: none;
-  opacity: 0.7;
+  opacity: 1;
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
@@ -137,7 +137,7 @@ html {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #EE7BA3;
+  background: #ff77a6;
   cursor: pointer;
 }
 
@@ -145,7 +145,7 @@ html {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #EE7BA3;
+  background: #ff77a6;
   cursor: pointer;
 }
 
@@ -159,12 +159,12 @@ html {
 }
 
 .video-control .btn-play {
-  background-image: url(/modules/custom/glico_submission/upload/btn-play-control.png);
+  background-image: url(/modules/custom/glico_submission/upload/btn-play.png);
   margin-right: 0.1rem;
 }
 
 .video-control .btn-mute {
-  background-image: url(/modules/custom/glico_submission/upload/btn-mute-control.png);
+  background-image: url(/modules/custom/glico_submission/upload/btn-mute.png);
 }
 
 .video-control .text-time {
@@ -173,7 +173,7 @@ html {
   position: absolute;
   top: 3vw;
   margin-left: 1.1vw;
-  text-shadow: 2px 2px #8c8383;
+  text-shadow: 2px 1px 7px #232323;
 }
 
 .video-control .btn-fullscreen {
@@ -184,7 +184,7 @@ html {
   color: white;
   background-color: #F99EC6;
   border-radius: 1.74vw;
-  border: 0.14vw solid white;
+  border: 0.14vw solid #ff77a6;
   margin-top: 0.14vw;
   cursor: pointer;
 }
