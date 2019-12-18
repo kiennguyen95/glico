@@ -131,15 +131,17 @@
   function setFullscreen() {
     $('.video-control .btn-fullscreen').click(function () {
       var vid = $('.field-video video').get(0);
-      if (vid.requestFullscreen) {
-        vid.requestFullscreen();
-      } else if (vid.mozRequestFullScreen) { /* Firefox */
-        vid.mozRequestFullScreen();
-      } else if (vid.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-        vid.webkitRequestFullscreen();
-      } else if (vid.msRequestFullscreen) { /* IE/Edge */
-        vid.msRequestFullscreen();
-      }
+      // if (vid.requestFullscreen) {
+      //   vid.requestFullscreen();
+      // } else if (vid.mozRequestFullScreen) { /* Firefox */
+      //   vid.mozRequestFullScreen();
+      // } else if (vid.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+      //   vid.webkitRequestFullscreen();
+      // } else if (vid.msRequestFullscreen) { /* IE/Edge */
+      //   vid.msRequestFullscreen();
+      // }
+      vid.webkitEnterFullscreen();
+      vid.enterFullscreen();
     });
   }
 
