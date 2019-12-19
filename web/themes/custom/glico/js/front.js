@@ -27,9 +27,7 @@
     }
 
     // Play video in modal
-    $("body:not(.on-iphone) .js-video-button").modalVideo();
-    // For Iphone
-    $("body.on-iphone .js-video-button").click(function (e) {
+    $(".js-video-button").click(function (e) {
       e.preventDefault();
 
       var theModal = $('#video-modal'),
