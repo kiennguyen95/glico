@@ -41,10 +41,10 @@
       video.load();
       video.play();
 
-      $(theModal).fadeIn();
+      $(theModal).fadeIn('fast');
       $(theModal).click(function(){
         video.pause();
-        $(this).fadeOut();
+        $(this).fadeOut('fast');
       }).children().click(function(e) {
         return false;
       });
