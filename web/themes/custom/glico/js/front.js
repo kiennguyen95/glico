@@ -27,7 +27,28 @@
     }
 
     // Play video in modal
-    $(".js-video-button").modalVideo();
+    $("body:not(.on-iphone) .js-video-button").modalVideo();
+    // For Iphone
+    $("body.on-iphone .js-video-button").click(function (e) {
+      e.preventDefault();
+
+      var theModal = $('#video-modal'),
+          videoSRC = $(this).attr('data-video-url'),
+          videoSRCauto = videoSRC + "";
+
+      $('#video-modal source').attr('src', videoSRCauto);
+      var video = $('#video-modal video').get(0);
+      video.load();
+      video.play();
+
+      $(theModal).fadeIn();
+      $(theModal).click(function(){
+        video.pause();
+        $(this).fadeOut();
+      }).children().click(function(e) {
+        return false;
+      });
+    });
 
     setTimeout(function () {
       $("#fb-messenger").fadeIn();
