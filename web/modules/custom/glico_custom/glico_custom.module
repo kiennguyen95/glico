@@ -5,6 +5,7 @@
  * Contains glico_custom.module.
  */
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 use Drupal\node\NodeInterface;
@@ -96,4 +97,15 @@ function glico_custom_views_query_alter(ViewExecutable $view, QueryPluginBase $q
     $query->addField('node', 'nid', 'node_nid', array('function' => 'groupby'));
     $query->addGroupBy('node.nid');
   }
+}
+
+function glico_custom_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $title = [
+    '#markup' => '<p class="form-title">GLICO DANCE ADMINISTRATION</p>',
+    '#weight' => -1,
+  ];
+  $form['title'] = $title;
+  unset($form['name']['#description']);
+  unset($form['pass']['#description']);
+  $form['#attached']['library'][] = 'glico/login-form';
 }
