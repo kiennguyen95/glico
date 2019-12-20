@@ -8,6 +8,8 @@
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 use Drupal\node\NodeInterface;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
 use FFMpeg\Coordinate\TimeCode;
 use Drupal\file\Entity\File;
 
@@ -82,5 +84,16 @@ function glico_custom_node_insert(NodeInterface $node) {
     ];
 
     $node->save();
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ * Fix duplicate node when using flagging relationship
+ */
+function glico_custom_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() == 'submission') {
+    $query->addField('node', 'nid', 'node_nid', array('function' => 'groupby'));
+    $query->addGroupBy('node.nid');
   }
 }
