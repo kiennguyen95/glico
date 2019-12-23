@@ -79,6 +79,10 @@
   border-radius: 1vw;
 }
 
+.submission-content-wrapper .field-video-wrapper video.no-border-radius {
+  border-radius: 0!important;
+}
+
 .field-video {
   background-color: black;
   position: relative;
