@@ -149,7 +149,6 @@
             $('.field-video video').attr('controls', false).removeClass('no-border-radius');
           }
         });
-
       }
       vid.webkitEnterFullscreen();
       vid.enterFullscreen();

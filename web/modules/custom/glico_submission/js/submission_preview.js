@@ -131,6 +131,16 @@
       // } else if (vid.msRequestFullscreen) { /* IE/Edge */
       //   vid.msRequestFullscreen();
       // }
+      if (vid.mozRequestFullScreen) { /* Firefox */
+        vid.mozRequestFullScreen();
+        document.addEventListener('fullscreenchange', (event) => {
+          if (document.fullscreenElement) {
+            $('.field-video video').attr('controls', true).addClass('no-border-radius');
+          } else {
+            $('.field-video video').attr('controls', false).removeClass('no-border-radius');
+          }
+        });
+      }
       vid.webkitEnterFullscreen();
       vid.enterFullscreen();
     });
