@@ -704,6 +704,12 @@
   font-size: 1.85vw;
 }
 
+#content-prizes .row-3 .title > div:last-child span.no-sp {
+  font-size: 1.6vw;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+}
+
 #content-prizes .row-2 .title > div > p,
 #content-prizes .row-3 .title > div > p {
   line-height: 1.15;
@@ -2676,6 +2682,12 @@
     font-size: 1.85rem;
   }
 
+  #content-prizes .row-3 .title > div:last-child span.no-sp {
+    font-size: 1.6rem;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+  }
+
   #content-prizes .row-2 .title > div > p,
   #content-prizes .row-3 .title > div > p {
     line-height: 1.15;
@@ -3834,7 +3846,10 @@
 
   #content-prizes .row-3 p.no-pc {
     color: #f99ec6;
-    font-size: 3vw;
-    white-space: nowrap;
+    font-size: 2.5vw;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    margin-top: 0.5vw;
+    display: block;
   }
 }
