@@ -722,7 +722,7 @@
   display: flex;
   align-items: flex-end;
   margin: 2vw auto 0;
-  width: 61.5vw;
+  width: 64.5vw;
 }
 
 #content-prizes .row-3 #prize-weekly-img {
@@ -2694,7 +2694,7 @@
     display: flex;
     align-items: flex-end;
     margin: 2rem auto 0;
-    width: 61.5rem;
+    width: 64.5rem;
   }
 
   #content-prizes .row-3 #prize-weekly-img {
@@ -3812,5 +3812,29 @@
   #video-modal .video-wrapper {
     width: 100vw;
     height: 56.25vw;
+  }
+}
+
+.no-pc {
+  display: none;
+}
+
+.no-sp {
+  display: initial;
+}
+
+@media all and (max-width: 767px) {
+  .no-pc {
+    display: initial;
+  }
+
+  .no-sp {
+    display: none;
+  }
+
+  #content-prizes .row-3 p.no-pc {
+    color: #f99ec6;
+    font-size: 3vw;
+    white-space: nowrap;
   }
 }
