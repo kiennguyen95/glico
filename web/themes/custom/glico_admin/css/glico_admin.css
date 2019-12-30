@@ -14,3 +14,11 @@
 #submission-manage-form a#edit-export {
   margin-left: 0;
 }
+
+#submission-manage-form .form-item-publish-score {
+  display: inline-block;
+}
+
+#submission-manage-form .form-item-publish-score label {
+  font-weight: bold;
+}

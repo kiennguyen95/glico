@@ -56,6 +56,12 @@ class SubmissionManageForm extends FormBase {
     $export_url->setOption('attributes', ['class' => ['button']]);
     $form['panel']['export'] = Link::fromTextAndUrl($this->t('Export data'), $export_url)->toRenderable();
 
+    $form['panel']['publish_score'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Publish weekly prizes'),
+      '#default_value' => \Drupal::config('glico_custom.settings')->get('config.publish_score'),
+    ];
+
     $view = Views::getView('submission');
     if (is_object($view)) {
       $view->setDisplay('page');
@@ -102,13 +108,15 @@ class SubmissionManageForm extends FormBase {
     // Trigger save
     if (isset($data['save'])) {
       $field_scores = $data['field_scores'];
+      $publish = $form_state->getValue('publish_score');
+      \Drupal::configFactory()->getEditable('glico_custom.settings')->set('config.publish_score', $publish)->save();
       foreach ($field_scores as $nid => $value) {
         $node = Node::load($nid);
         if (empty($node)) continue;
         $node->set('field_score', $value);
         $node->save();
       }
-      \Drupal::messenger()->addMessage('Scores of the submissions have been saved.');
+      \Drupal::messenger()->addMessage('Setting/scores have been saved.');
     }
 
     // Trigger recreate shorten URL

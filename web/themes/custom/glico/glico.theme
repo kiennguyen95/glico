@@ -33,6 +33,14 @@ function glico_preprocess_views_view(&$variables) {
   if ($variables['view_array']['#name'] == 'discover') {
     $variables['#attached']['library'][] = 'glico/view-discover';
   }
+
+  if ($variables['view_array']['#name'] == 'frontpage') {
+    $publish = \Drupal::config('glico_custom.settings')->get('config.publish_score');
+    if (!$publish) {
+      unset($variables['rows']);
+    }
+    $variables['#cache']['tags'][] = 'config:glico_custom.settings';
+  }
 }
 
 function glico_preprocess_node(&$variables) {
@@ -68,8 +76,6 @@ function glico_theme_suggestions_page_alter(array &$suggestions, array $variable
  * Implements hook_preprocess_page()
  */
 function glico_preprocess_page(&$variables) {
-//  dump(\Drupal::routeMatch()->getRouteName());
-
   if (\Drupal::routeMatch()->getRouteName() == 'view.frontpage.page_1') {
     $redirect = \Drupal::request()->query->get('redirect');
     if ($redirect == 'fb') {
