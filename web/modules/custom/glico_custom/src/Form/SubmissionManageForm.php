@@ -56,6 +56,18 @@ class SubmissionManageForm extends FormBase {
     $export_url->setOption('attributes', ['class' => ['button']]);
     $form['panel']['export'] = Link::fromTextAndUrl($this->t('Export data'), $export_url)->toRenderable();
 
+    $form['panel']['week_index'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Week'),
+      '#options' => [
+        '1' => '1',
+        '2' => '2',
+        '3' => '3',
+        '4' => '4',
+      ],
+      '#default_value' => \Drupal::config('glico_custom.settings')->get('config.week_index'),
+    ];
+
     $form['panel']['publish_score'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Publish weekly prizes'),
@@ -109,7 +121,12 @@ class SubmissionManageForm extends FormBase {
     if (isset($data['save'])) {
       $field_scores = $data['field_scores'];
       $publish = $form_state->getValue('publish_score');
-      \Drupal::configFactory()->getEditable('glico_custom.settings')->set('config.publish_score', $publish)->save();
+      $week_index = $form_state->getValue('week_index');
+      $config = \Drupal::configFactory()->getEditable('glico_custom.settings');
+      $config->set('config.publish_score', $publish);
+      $config->set('config.week_index', $week_index);
+      $config->save();
+
       foreach ($field_scores as $nid => $value) {
         $node = Node::load($nid);
         if (empty($node)) continue;

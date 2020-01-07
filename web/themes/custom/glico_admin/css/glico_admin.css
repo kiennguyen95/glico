@@ -8,17 +8,21 @@
 
 #submission-manage-form .form-item-type {
   display: inline-block;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.1em;
 }
 
 #submission-manage-form a#edit-export {
-  margin-left: 0;
+  margin: 0;
 }
 
 #submission-manage-form .form-item-publish-score {
-  display: inline-block;
+  margin: 1em 0;
 }
 
 #submission-manage-form .form-item-publish-score label {
   font-weight: bold;
+}
+
+select#edit-week-index {
+  width: 145px;
 }

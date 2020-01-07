@@ -81,5 +81,7 @@ function glico_preprocess_page(&$variables) {
     if ($redirect == 'fb') {
       $variables['redirected'] = 1;
     }
+    $variables['week_index'] = \Drupal::config('glico_custom.settings')->get('config.week_index');
+    $variables['#cache']['tags'][] = 'config:glico_custom.settings';
   }
 }
