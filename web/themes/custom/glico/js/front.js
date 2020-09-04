@@ -96,7 +96,7 @@
       }
 
       if ($("#section-winning-list .view-frontpage-wrapper").isInViewport()) {
-        $(".music-stream-3-wrapper").css("height", "147vw");
+        $(".music-stream-3-wrapper").css("height", $(window).width() > 1770 ? "2600px" : "147vw");
       }
     });
 
