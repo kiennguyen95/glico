@@ -85,3 +85,12 @@ function glico_preprocess_page(&$variables) {
     $variables['#cache']['tags'][] = 'config:glico_custom.settings';
   }
 }
+
+/**
+ * Implements hook_preprocess_html()
+ */
+function glico_preprocess_html(&$variables) {
+  if (\Drupal::routeMatch()->getRouteName() == 'view.frontpage.page_1') {
+    $variables['loader'] = 1;
+  }
+}

@@ -1,6 +1,9 @@
 (function ($) {
 
   $(document).ready(function ($) {
+    // Hide page loader
+    $(".loader").fadeOut("slow");
+    $(".loader-bg").delay(500).fadeOut("slow");
 
     var getUrlParameter = function getUrlParameter(sParam) {
       var sPageURL = window.location.search.substring(1),
